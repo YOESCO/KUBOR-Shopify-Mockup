@@ -1,20 +1,24 @@
 # KUBOR Mockup Build Status
 
-Current core review build: `2026.10.14-sprint1B`
+Current review build: `2026.10.14-sprint1C`
 
 ## Source of truth
 
 - Execution checklist: `docs/ui-ux-master-checklist.md`
 - Sprint 1 core: `docs/sprint-1-core-convergence.md`
 - Sprint 1B visual convergence: `docs/sprint-1b-visual-convergence.md`
+- Sprint 1C commerce/account: `docs/sprint-1c-commerce-account.md`
 - Navigation index: `site-map.html`
 - Shopify mapping: `docs/shopify-handoff-map.md`
 
-## Core pages currently on the shared system
+## Shared core now active on
 
 - `home-v2.html`
 - `collection-v2.html`
 - `product-v2.html`
+- `cart.html`
+- `search.html`
+- `account.html`
 
 Shared assets:
 
@@ -22,84 +26,73 @@ Shared assets:
 - `core-v4.js`
 - `sprint1b.css`
 - `sprint1b.js`
+- `sprint1c.css`
+- `sprint1c.js`
 
-## Sprint 1B changes now active
+## Current visual/UX state
 
-### Global shell
+### Shell
 
 - tighter header proportions;
-- compact search icon treatment;
-- expanded desktop MTB mega-menu;
-- Kids / BMX-Stunt / Cargo-Utility / Fitness-Commuter category shortcuts;
-- KUBOR / Terrafit / HYPERGOGO brand shortcuts;
-- native-JS menu, search and cart interactions remain critical-path;
-- drawer dialog semantics and ARIA state improvements;
-- active-page navigation treatment.
+- compact search action;
+- expanded desktop mega-menu;
+- native-JS mobile navigation / search / cart;
+- category and brand shortcuts;
+- shared footer;
+- accessibility state improvements for drawers and navigation.
 
-### Home
+### Home / PLP / PDP
 
-- hero proportions tightened toward approved mockup;
-- mini-specs and dual CTA;
-- overlapping category rail;
-- richer product-card states and actions;
-- dark trust strip;
-- engineering storytelling;
-- bike-selection / geometry decision-support;
-- Journal / community / launch modules;
-- brand universe and social/UGC strip;
-- dealer / support / warranty CTAs;
-- horizontal mobile rails.
+Sprint 1B is active: visual proportions, richer product-card states, mobile rails, PLP filters/compare, PDP tabs/specs/geometry/reviews and support modules.
 
-### PLP
+### Cart
 
-- compact MTB hero with discipline chips;
-- 230px desktop filter sidebar;
-- filters for discipline, suspension, wheel size, size, frame material, drivetrain, brakes, price and availability;
-- sort + active filter chips;
-- product cards with new / bestseller / sale / low-stock / sold-out visual states;
-- wishlist, quick-view, quick-add and compare controls;
-- embedded editorial card;
-- buying guide;
-- mobile sticky Filters / Sort toolbar;
-- floating compare tray.
+- uses same mock cart state as core pages;
+- quantity +/- and remove;
+- subtotal / total;
+- shipping progress;
+- empty state;
+- coupon feedback concept;
+- cross-sell and trust modules;
+- responsive summary layout.
 
-### PDP
+### Search
 
-- dark two-column first fold;
-- gallery + thumbnail rail;
-- price / MSI / color / size / stock / SKU hierarchy;
-- color image-swap mock and size state;
-- add-to-cart / wishlist / buy-now presentation;
-- icon-led six-cell spec strip;
-- keyboard-operable sticky tabs;
-- description/storytelling panel;
-- complete specification table including crankset, cassette, brakes and wheels;
-- geometry table by size;
-- shipping / returns and warranty panels;
-- related-products rail;
-- richer reviews;
-- FAQ and support/dealer/compare CTAs;
-- sticky mobile add-to-cart delegates to main cart action.
+- instant mock filtering;
+- search chips;
+- result-type tabs;
+- product / collection / content results;
+- no-results recovery state;
+- shared shell and mobile behavior.
 
-## Not final / do not mark approved yet
+### Account
 
-The core pages are still pending visual QA. Major remaining gaps:
+- shared shell;
+- account hero and sticky subnavigation;
+- Orders / Tracking / Wishlist / Warranties / Registered Bikes / Addresses cards;
+- recent order;
+- post-sale bike registration concept;
+- Customer Account / app ownership clearly separated.
 
-1. final owned KUBOR bike/product photography and controlled crops;
-2. desktop/mobile visual comparison against supplied screenshots;
-3. exact spacing and typography refinement;
-4. real PLP filter/sort behavior if needed for the HTML prototype;
-5. PDP fullscreen/zoom and media/video behavior;
-6. validated real product specs and geometry;
+## Still not final / do not mark approved yet
+
+1. visual QA against supplied desktop/mobile mockups;
+2. final owned KUBOR product imagery and controlled crops;
+3. exact spacing/type refinement;
+4. real PLP filtering/sort if required in HTML prototype;
+5. PDP fullscreen/zoom/media behavior;
+6. validated real specs/geometry data;
 7. responsive QA at 320 / 375 / 390 / 430 / 768 / 1024 / 1280 / 1440+;
-8. migrate Cart, Search and Account/customer pages to the same visual core;
-9. performance/dependency cleanup;
-10. remove legacy V2/V3 only when no remaining page depends on it.
+8. normalize all customer account subpages;
+9. normalize login/register/recover;
+10. normalize Compare / Wishlist / Help / FAQ / Contact / Dealers;
+11. performance/dependency cleanup;
+12. remove legacy V2/V3 only after no page depends on them.
 
 ## Next block
 
-Sprint 1C will focus on visual QA/proportion tuning and then migrate Cart + Search + Account shell onto the same system before broader secondary-page normalization.
+Normalize the full customer-account flow and decision/support pages onto the same visual core, then do the first full responsive/accessibility QA pass.
 
 ## Shopify handoff
 
-These files remain mockup code. Approved UI contracts will later map to Shopify section groups, sections, blocks, snippets, metafields/metaobjects, Customer Accounts and app-backed features according to `docs/shopify-handoff-map.md`.
+All current files remain HTML mockup contracts. Approved UI will later map to Shopify section groups, sections, blocks, snippets, metafields/metaobjects, Customer Accounts and app-backed features per `docs/shopify-handoff-map.md`.
