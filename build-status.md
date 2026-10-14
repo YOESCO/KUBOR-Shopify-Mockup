@@ -1,6 +1,6 @@
 # KUBOR Mockup Build Status
 
-Current review build: `2026.10.14-sprint1L-home-pdp-responsive`
+Current review build: `2026.10.14-sprint1M-core-responsive`
 
 ## Source of truth
 
@@ -10,6 +10,7 @@ Current review build: `2026.10.14-sprint1L-home-pdp-responsive`
 - Sprint 1J breathing pass: `docs/sprint-1j-breathing-pass.md`
 - Sprint 1K mobile grid/icon alignment: `docs/sprint-1k-mobile-grid.md`
 - Sprint 1L Home/PDP responsive: `docs/sprint-1l-home-pdp-responsive.md`
+- Sprint 1M Cart/Search/Account responsive: `docs/sprint-1m-cart-search-account-responsive.md`
 
 Earlier sprint documents remain in `docs/` for history and rationale.
 
@@ -17,7 +18,7 @@ Earlier sprint documents remain in `docs/` for history and rationale.
 
 `core-v4.js` owns the global shell and loads Sprint 1G. The later visual/data chain is:
 
-`Sprint 1G -> 1H -> 1I -> 1J loader -> 1K + 1L`
+`Sprint 1G -> 1H -> 1I -> 1J loader -> 1K + 1L + 1M`
 
 `sprint1j.js` is now a small loader. Its previous catalogue/search/compare cleanup lives in `sprint1j-runtime.js`.
 
@@ -32,6 +33,7 @@ Shared systems currently include:
 - `sprint1j-runtime.js`
 - `sprint1k.css`
 - `sprint1l.css/js`
+- `sprint1m.css`
 - account / support / landing / content shared flows
 
 ## Core commerce state
@@ -71,6 +73,13 @@ Shared systems currently include:
 - sticky Add bar respects safe areas and now uses the same cart contract as desktop;
 - tablet uses a deliberate single-column purchase flow rather than squeezing gallery + buybox.
 
+### Cart / Search / Account
+- Cart product rows, quantity controls, coupon and summary reflow for tablet/phone without overlap;
+- Search uses 2 columns on tablet and 1 column on narrow phones;
+- Search side navigation moves above results when the side rail would compress the page;
+- Account cards use 2 columns on tablet and 1 column on phones;
+- Account subnav/status metrics stay horizontally usable instead of squeezing into narrow cells.
+
 ### Secondary commerce
 - Search/predictive search no longer show X1 Pro or fabricated premium pricing;
 - Compare uses Mallory / Calypso 4 / Storm with unknown values clearly marked `por validar`;
@@ -101,8 +110,7 @@ HYPERGOGO: only a raster brand-reference board has been located. The original st
 
 ## Next execution block
 
-1. Continue 390 / 768 / 1024 / 1440 visual tuning, now that Header/Home/PLP/PDP share the same grid.
-2. Review Cart/Search/Account at the same breakpoints.
-3. Continue extracting verified KUBOR product imagery.
-4. Freeze approved mockup contracts.
-5. Begin Liquid migration only when explicitly authorized.
+1. Continue 390 / 768 / 1024 / 1440 visual tuning across support/content/brand landings.
+2. Continue extracting verified KUBOR product imagery.
+3. Freeze approved mockup contracts.
+4. Begin Liquid migration only when explicitly authorized.
