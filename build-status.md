@@ -213,6 +213,13 @@ Cards without verified model imagery/current commercial data are explicitly mark
 - fake filter counts and pre-checked Trail state are removed until Shopify Search & Discovery supplies real values;
 - PLP chips remain as UX controls for the mock, not implied live inventory.
 
+### Secondary commerce cleanup
+- Search results no longer expose X1 Pro or fabricated premium prices;
+- predictive search uses Mallory as the verified product and clearly marks concept models;
+- Compare now uses Mallory / Calypso 4 / Storm and only supported technical values; unknown commercial values are explicitly `por validar`;
+- concept comparison columns return to the catalogue instead of opening the Mallory PDP;
+- Cart no longer promotes a fabricated `Casco KUBOR Pro $2,499`; the upsell routes to the Accessories catalogue.
+
 ### Rule
 **Compact premium is not the same as compressed.** A surface is not approved if hierarchy depends on 7–8 px body copy, insufficient whitespace or forcing too many columns into the available width.
 
@@ -242,12 +249,11 @@ The primary layout now follows the supplied mockups more closely and the core ca
 
 1. screenshot-based crop/spacing/type comparison at 390 / 768 / 1024 / 1440 where tooling permits;
 2. continue extracting/verifying real model imagery from owned KUBOR sources;
-3. remove remaining fictional product references in Search / Cart / Compare secondary states;
-4. final content/editorial rhythm review;
-5. obtain and publish exact HYPERGOGO SVG when the original vector becomes available;
-6. remove transitional dependencies after regression;
-7. freeze approved mockup contracts;
-8. begin Liquid migration only when explicitly authorized.
+3. final content/editorial rhythm review;
+4. obtain and publish exact HYPERGOGO SVG when the original vector becomes available;
+5. remove transitional dependencies after regression;
+6. freeze approved mockup contracts;
+7. begin Liquid migration only when explicitly authorized.
 
 ## Shopify handoff
 
