@@ -20,7 +20,8 @@ Mobile UI uses one safe-area-aware left/right gutter. Icon + text groups are cen
 - desktop nav is removed from mobile layout instead of retaining an invisible column;
 - utility actions are forced to the right edge of the content grid;
 - cart/menu controls use consistent 42–44 px touch targets;
-- icon SVGs are centered inside their hit area.
+- icon SVGs are centered inside their hit area;
+- full desktop nav now collapses before ~1120 px so tablet/small-laptop widths do not squeeze navigation.
 
 ### PLP toolbar
 - Filter and Sort buttons center icon + label together;
@@ -39,15 +40,39 @@ Mobile UI uses one safe-area-aware left/right gutter. Icon + text groups are cen
 ### Product image treatment
 - the verified Mallory staging crop uses `object-fit: contain`, centered on white, avoiding the appearance of an over-zoomed crop in cards.
 
-## Breakpoint intent
-- <=820 px: one mobile master grid and right-aligned header actions;
-- <=520 px: 18 px visual gutter target where safe area permits;
-- <=390 px: tighter action spacing without losing alignment;
-- <=360 px: 14 px minimum gutter and smaller header utilities.
+## Breakpoint tuning
+
+### 390 / 430 mobile
+- direct response to the supplied iPhone screenshot;
+- 18 px target mobile gutter where safe area permits;
+- PLP hero reduced/tuned to ~306 px with a 44–46 px title;
+- copy line-height/width rebalanced;
+- toolbar icon groups centered;
+- product grid remains two columns where readable;
+- Mallory image uses contain rather than a crop;
+- site-map helper no longer overlays product media.
+
+### 768 tablet
+- PLP keeps two useful product columns;
+- hero and toolbar get additional breathing room;
+- card body padding/spacing increased;
+- full desktop nav is collapsed.
+
+### 1024 small desktop/tablet landscape
+- fixed sidebar is removed;
+- PLP uses the full content width with three columns;
+- toolbar/chips keep comfortable spacing;
+- header no longer tries to fit the entire desktop nav.
+
+### 1360 / 1440 desktop
+- sidebar returns at ~250 px;
+- product grid uses four columns;
+- ~34 px sidebar/content gap and ~20 px card gap;
+- hero copy receives a controlled maximum width.
 
 ## Still open
-- screenshot comparison at 390 / 768 / 1024 / 1440;
-- final PLP hero crop and line-length tuning;
+- browser/device screenshot validation at 768 / 1024 / 1440; current rules are static breakpoint tuning, not a claim of visual approval;
+- final PLP hero crop and line-length tuning after those screenshots;
 - product-card image quality remains limited by source asset quality for Mallory;
 - verified clean packshots are still required for the rest of the catalogue;
 - HYPERGOGO exact vector remains pending until the original SVG is available.
