@@ -5,6 +5,20 @@
     const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
     const icon=n=>`<i data-lucide="${n}"></i>`;
 
+    /* MOBILE MENU — clarify shopping vs guidance. */
+    const menu=$('[data-drawer="menu"] .k-drawer-body');
+    if(menu&&!$('.k-mobile-section-label',menu)){
+      const visual=$('.k-mobile-visual-grid',menu);
+      if(visual){
+        const buy=document.createElement('div');buy.className='k-mobile-section-label';buy.textContent='Comprar por disciplina';visual.parentNode.insertBefore(buy,visual);
+      }
+      const nav=$('.k-mobile-nav',menu);
+      if(nav){
+        const guide=document.createElement('div');guide.className='k-mobile-section-label';guide.textContent='Explorar y elegir';nav.parentNode.insertBefore(guide,nav);
+        const quick=document.createElement('div');quick.className='k-mobile-quick-row';quick.innerHTML=`<a href="compare.html">${icon('columns-3')}<span>Comparar</span></a><a href="size-guide.html">${icon('ruler')}<span>Tallas</span></a><a href="dealers.html">${icon('map-pin')}<span>Distribuidores</span></a>`;nav.parentNode.insertBefore(quick,nav);
+      }
+    }
+
     if(page==='home-v2.html'||page==='index.html'||page===''){
       const grid=$('.home-cat-grid');
       if(grid&&!$('.home-cat-head')){
@@ -49,8 +63,16 @@
       }
     }
 
-    /* Defensive PDP width guard: identify and contain accidental wide descendants without changing fixed drawers. */
     if(page==='product-v2.html'){
+      /* Classify each PDP rail so only the important ones keep explicit arrows on mobile. */
+      const classify=(selector,cls)=>$(selector)?.closest('.k-carousel-shell')?.classList.add(cls);
+      classify('.pdp-thumb-row','is-gallery-carousel');
+      classify('.pdp-tabs','is-tabs-carousel');
+      classify('.pdp-trust-mini','is-compact-carousel');
+      classify('.pdp-spec-strip','is-spec-carousel');
+      classify('.pdp-related-rail','is-product-carousel');
+
+      /* Defensive width guard: contain accidental wide descendants without changing fixed drawers. */
       const constrain=()=>{
         const vw=document.documentElement.clientWidth;
         if(document.documentElement.scrollWidth<=vw+2)return;
