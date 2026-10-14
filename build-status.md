@@ -1,6 +1,6 @@
 # KUBOR Mockup Build Status
 
-Current review build: `2026.10.14-sprint1H-mockup-convergence`
+Current review build: `2026.10.14-sprint1I-real-data-assets`
 
 ## Source of truth
 
@@ -13,12 +13,13 @@ Current review build: `2026.10.14-sprint1H-mockup-convergence`
 - Sprint 1F normalization/QA gate: `docs/sprint-1f-normalization-qa.md`
 - Sprint 1G responsive/a11y: `docs/sprint-1g-responsive-a11y.md`
 - Sprint 1H mockup convergence: `docs/sprint-1h-mockup-convergence.md`
+- Sprint 1I real data/assets: `docs/sprint-1i-real-data-assets.md`
 - Navigation index: `site-map.html`
 - Shopify mapping: `docs/shopify-handoff-map.md`
 
 ## Global shell
 
-`core-v4.js` owns the V5 navigation contract. It loads Sprint 1G globally, and Sprint 1G now loads the Sprint 1H visual-convergence layer.
+`core-v4.js` owns the V5 navigation contract. It loads Sprint 1G globally, and the shared visual layer now applies the Sprint 1H/1I catalogue normalization.
 
 Desktop mega menu includes:
 - Performance: MTB / Road / Gravel / Electric;
@@ -130,6 +131,16 @@ Mobile navigation exposes the same architecture through grouped accordion sectio
 - `content-flow.js`
 - `assets/icons/kubor-icons.svg`
 
+## Real/owned assets now in the repo
+
+- `assets/media/kubor-hero.jpg` — KUBOR lifestyle/brand asset; not treated as a model packshot.
+- `assets/products/mallory-orange.jpg` — verified Mallory product image derived only by cropping the KUBOR staging capture.
+- `assets/logos/KUBOR_only_clear.svg`
+- `assets/logos/KUBOR_only_dark.svg`
+- `assets/logos/TERRAFIT_dark.svg` — official supplied Terrafit mark.
+
+HYPERGOGO official SVG has been located in the user's Library but is not yet published into the repo; do not redraw it.
+
 Transitional:
 - `nav-v5.js` — global V5 navigation now lives in `core-v4.js`; compatibility file can be removed after regression QA.
 - defensive Sprint 1G loaders also remain in `sprint1b.js`, `sprint1c.js` and `account-shell.js`; duplicate loading is prevented by guards.
@@ -146,9 +157,31 @@ Transitional:
 - Home trust/storytelling/secondary modules reduced in height;
 - PLP hero/sidebar/chips/toolbar/cards/buying-guide made denser;
 - PDP first fold/gallery/buybox tightened;
-- PDP spec strip now visually overlaps the dark first fold;
+- PDP spec strip visually overlaps the dark first fold;
 - PDP tabs/story/tech/related/support spacing reduced;
 - footer density reduced.
+
+## Sprint 1I summary
+
+### Real product normalization
+- Mallory R29 21V replaces the fictional X1 Pro as the primary PDP product;
+- Home and PLP use the real Mallory packshot as the first verified product card;
+- Mallory visible specs and geometry now come from consolidated KUBOR technical sources rather than fictional Trail/Carbon/XT data;
+- the Mallory PDP is explicitly positioned as MTB FS Sport / recreational, not modern Trail;
+- Mallory gallery uses the same verified product image for full/frame/drivetrain/fork views rather than inventing additional bikes;
+- historical staging rating/price are treated as mock reference data, not live Shopify inventory;
+- stock is left for Shopify integration rather than copied from the historic screenshot.
+
+### Catalogue cleanup
+Visible fictional names were replaced in the core PLP/Home with real portfolio names:
+- Mallory;
+- Storm;
+- Tornado;
+- Calypso 4;
+- Alpine 5;
+- Sierra 7.
+
+Cards without verified model imagery/current commercial data are explicitly marked **Concepto visual** and use **Precio por validar** rather than pretending the temporary content is final.
 
 ### Interaction/performance reinforcement
 - visible Add to cart controls normalized where missing;
@@ -160,30 +193,34 @@ Transitional:
 ## Still not final / do not mark approved yet
 
 1. actual browser/device screenshot QA against supplied mockups;
-2. final owned KUBOR product photography / controlled crops;
-3. exact spacing and typography refinement after screenshot comparison;
-4. validated product specs and geometry;
-5. screenshot comparison at 390 / 768 / 1440 first, then full 320 / 375 / 430 / 1024 / 1280+ sweep;
-6. full screen-reader/browser accessibility validation;
-7. form loading / disabled / upload / failure states;
-8. real Shopify integrations for cart/search/customer data;
-9. real dealer/map integration;
-10. complete dependency/reference scan before deleting legacy V2/V3 assets;
-11. remove redundant transitional loaders / `nav-v5.js` only after regression;
-12. performance/dependency cleanup.
+2. real clean packshots for Tornado / Calypso 4 / Alpine / Storm / Sierra 7 and the rest of the catalogue;
+3. final colour-level product photography;
+4. exact spacing and typography refinement after screenshot comparison;
+5. current commercial price/spec/SKU validation per Shopify variant;
+6. screenshot comparison at 390 / 768 / 1440 first, then full 320 / 375 / 430 / 1024 / 1280+ sweep;
+7. full screen-reader/browser accessibility validation;
+8. form loading / disabled / upload / failure states;
+9. real Shopify integrations for cart/search/customer data;
+10. real dealer/map integration;
+11. complete dependency/reference scan before deleting legacy V2/V3 assets;
+12. remove redundant transitional loaders / `nav-v5.js` only after regression;
+13. publish official HYPERGOGO SVG and replace text-only brand marks;
+14. performance/dependency cleanup.
 
 ## Largest remaining visual gap
 
-The approved mockups rely on controlled image assets: isolated bicycle packshots, component closeups, deliberate action photography, and brand-specific crops. Many current surfaces still use temporary Unsplash imagery. Layout is now closer to the approved composition, but final visual approval should wait until those assets are replaced.
+The primary layout now follows the supplied mockups more closely and the core catalogue no longer relies entirely on invented products. The main remaining visual gap is **verified owned product photography**: isolated model packshots, real colour variants, component closeups and controlled discipline imagery.
 
 ## Next block
 
-1. screenshot-based crop/spacing/type comparison at 390 / 768 / 1440 where tooling permits;
-2. produce a final asset-gap list for KUBOR-owned product imagery;
-3. tighten Cart / Search / Account after core visual approval;
-4. remove transitional dependencies after regression;
-5. freeze approved mockup contracts;
-6. begin Liquid migration only when explicitly authorized.
+1. remove remaining fictional product references in secondary surfaces/search/related-product modules;
+2. publish official HYPERGOGO logo from the supplied SVG;
+3. continue extracting/verifying real model imagery from owned KUBOR sources;
+4. screenshot-based crop/spacing/type comparison at 390 / 768 / 1440 where tooling permits;
+5. tighten Cart / Search / Account after core visual approval;
+6. remove transitional dependencies after regression;
+7. freeze approved mockup contracts;
+8. begin Liquid migration only when explicitly authorized.
 
 ## Shopify handoff
 
