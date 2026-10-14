@@ -1,6 +1,6 @@
 # KUBOR Mockup Build Status
 
-Current review build: `2026.10.14-sprint1G-responsive-a11y`
+Current review build: `2026.10.14-sprint1H-mockup-convergence`
 
 ## Source of truth
 
@@ -12,12 +12,13 @@ Current review build: `2026.10.14-sprint1G-responsive-a11y`
 - Sprint 1E content/knowledge: `docs/sprint-1e-content-knowledge.md`
 - Sprint 1F normalization/QA gate: `docs/sprint-1f-normalization-qa.md`
 - Sprint 1G responsive/a11y: `docs/sprint-1g-responsive-a11y.md`
+- Sprint 1H mockup convergence: `docs/sprint-1h-mockup-convergence.md`
 - Navigation index: `site-map.html`
 - Shopify mapping: `docs/shopify-handoff-map.md`
 
 ## Global shell
 
-`core-v4.js` owns the V5 navigation contract and now also loads the Sprint 1G hardening layer globally.
+`core-v4.js` owns the V5 navigation contract. It loads Sprint 1G globally, and Sprint 1G now loads the Sprint 1H visual-convergence layer.
 
 Desktop mega menu includes:
 - Performance: MTB / Road / Gravel / Electric;
@@ -118,6 +119,8 @@ Mobile navigation exposes the same architecture through grouped accordion sectio
 - `sprint1c.js`
 - `sprint1g.css`
 - `sprint1g.js`
+- `sprint1h.css`
+- `sprint1h.js`
 - `account-flow.css`
 - `account-shell.js`
 - `support-flow.css`
@@ -131,43 +134,36 @@ Transitional:
 - `nav-v5.js` — global V5 navigation now lives in `core-v4.js`; compatibility file can be removed after regression QA.
 - defensive Sprint 1G loaders also remain in `sprint1b.js`, `sprint1c.js` and `account-shell.js`; duplicate loading is prevented by guards.
 
-## Sprint 1G summary
+## Sprint 1H summary
 
-### Responsive
-- explicit hardening for <=360, <=430, <=760, <=1024 and >=1440;
-- mobile header/logo/touch target adjustments;
-- Home rails retained instead of long mobile stacks;
-- PLP two-column compact mobile grid retained with progressive content reduction;
-- mobile sort uses a dedicated bottom sheet;
-- PDP gallery/specs/tabs/related modules tuned for small screens;
-- mobile PDP sticky purchase area respects safe-area inset.
+### Visual convergence against supplied mockups
+- topbar/header reduced to compact reference proportions;
+- desktop mega menu tightened and primary promo made image-led;
+- Home hero reduced to a compact storefront proportion;
+- Home copy/spec/CTA spacing tightened;
+- overlapping category rail made shallower and denser;
+- product cards cleaned and compacted;
+- Home trust/storytelling/secondary modules reduced in height;
+- PLP hero/sidebar/chips/toolbar/cards/buying-guide made denser;
+- PDP first fold/gallery/buybox tightened;
+- PDP spec strip now visually overlaps the dark first fold;
+- PDP tabs/story/tech/related/support spacing reduced;
+- footer density reduced.
 
-### Accessibility / interaction
-- skip-to-content link;
-- shared live region;
-- drawer dialog semantics;
-- focus trap and focus return;
-- mega/mobile accordion expanded-state synchronization;
-- PDP thumbnail state labels;
-- native-dialog PDP image zoom;
-- newsletter validation/feedback;
-- product action ARIA states.
-
-### Regression fixed
-
-A Sprint 1B listener was blocking delegated commerce actions by stopping propagation on card buttons. Sprint 1G restores delegated behavior for:
-- Add to cart
-- Wishlist
-- Compare
-- Quick view
+### Interaction/performance reinforcement
+- visible Add to cart controls normalized where missing;
+- PDP primary Add to cart normalized;
+- secondary images use lazy loading;
+- primary hero/product image receives eager/high-priority loading;
+- add-to-cart confirmation state added.
 
 ## Still not final / do not mark approved yet
 
-1. actual browser/device visual QA against supplied mockups;
+1. actual browser/device screenshot QA against supplied mockups;
 2. final owned KUBOR product photography / controlled crops;
-3. exact spacing and typography refinement;
+3. exact spacing and typography refinement after screenshot comparison;
 4. validated product specs and geometry;
-5. screenshot comparison at 320 / 375 / 390 / 430 / 768 / 1024 / 1280 / 1440+;
+5. screenshot comparison at 390 / 768 / 1440 first, then full 320 / 375 / 430 / 1024 / 1280+ sweep;
 6. full screen-reader/browser accessibility validation;
 7. form loading / disabled / upload / failure states;
 8. real Shopify integrations for cart/search/customer data;
@@ -176,10 +172,14 @@ A Sprint 1B listener was blocking delegated commerce actions by stopping propaga
 11. remove redundant transitional loaders / `nav-v5.js` only after regression;
 12. performance/dependency cleanup.
 
+## Largest remaining visual gap
+
+The approved mockups rely on controlled image assets: isolated bicycle packshots, component closeups, deliberate action photography, and brand-specific crops. Many current surfaces still use temporary Unsplash imagery. Layout is now closer to the approved composition, but final visual approval should wait until those assets are replaced.
+
 ## Next block
 
-1. visual crop/spacing/type comparison against approved Home / PLP / PDP mockups;
-2. build a final asset-gap list for KUBOR-owned product imagery;
+1. screenshot-based crop/spacing/type comparison at 390 / 768 / 1440 where tooling permits;
+2. produce a final asset-gap list for KUBOR-owned product imagery;
 3. tighten Cart / Search / Account after core visual approval;
 4. remove transitional dependencies after regression;
 5. freeze approved mockup contracts;
