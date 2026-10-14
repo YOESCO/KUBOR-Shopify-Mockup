@@ -1,3 +1,5 @@
+(()=>{if(!document.querySelector('link[href^="sprint1g.css"]')){const l=document.createElement('link');l.rel='stylesheet';l.href='sprint1g.css?v=20261014-s1g';document.head.appendChild(l)}if(!document.querySelector('script[src^="sprint1g.js"]')){const s=document.createElement('script');s.src='sprint1g.js?v=20261014-s1g';s.async=false;document.head.appendChild(s)}})();
+
 document.addEventListener('DOMContentLoaded',()=>{
   const mount=document.querySelector('[data-account-shell]');if(!mount)return;
   const page=(location.pathname.split('/').pop()||'account.html').toLowerCase();
