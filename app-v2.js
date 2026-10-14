@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded',()=>{
+  const BUILD='2026.10.13-1842';
+  window.KUBOR_BUILD=BUILD;
   if(window.lucide) lucide.createIcons({attrs:{'stroke-width':1.65}});
 
   const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -11,6 +13,13 @@ document.addEventListener('DOMContentLoaded',()=>{
     const raf=time=>{lenis.raf(time);requestAnimationFrame(raf)};
     requestAnimationFrame(raf);
   }
+
+  /* Visible build marker so review sessions can confirm cache freshness. */
+  const buildBadge=document.createElement('div');
+  buildBadge.textContent=`KUBOR build ${BUILD}`;
+  buildBadge.setAttribute('data-build',BUILD);
+  Object.assign(buildBadge.style,{position:'fixed',right:'8px',bottom:'8px',zIndex:'140',padding:'5px 8px',background:'rgba(6,16,25,.78)',color:'rgba(255,255,255,.66)',font:'600 9px/1 Inter,system-ui,sans-serif',letterSpacing:'.04em',border:'1px solid rgba(255,255,255,.12)',borderRadius:'4px',backdropFilter:'blur(8px)',pointerEvents:'none'});
+  document.body.appendChild(buildBadge);
 
   const header=document.querySelector('.kubor-header, header');
   const syncHeader=()=>{
@@ -72,16 +81,18 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   const renderCart=cart=>{
     const count=cartCount(cart);
-    document.querySelectorAll('[data-cart-count]').forEach(el=>el.textContent=String(count));
+    document.querySelectorAll('[data-cart-count], header span[class*="rounded-full"]').forEach(el=>{
+      if(el.hasAttribute('data-cart-count')||/^\d+$/.test(el.textContent.trim()))el.textContent=String(count);
+    });
 
     const list=document.querySelector('[data-cart-items]');
     if(list){
       if(!cart.items.length){
         list.innerHTML='<div class="py-12 text-center text-slate-400 text-xs">Tu carrito está vacío.</div>';
       }else{
-        list.innerHTML=cart.items.map((item,index)=>`<div class="cart-line" data-cart-index="${index}">
-          ${item.image?`<img src="${item.image}" alt="">`:'<div class="w-[76px] h-[66px] bg-slate-100"></div>'}
-          <div><b class="text-sm">${item.title}</b><p class="text-[10px] text-slate-500 mt-1">Talla ${item.size||'M'}</p><div class="cart-qty"><button data-cart-action="minus" aria-label="Restar">−</button><span>${item.qty}</span><button data-cart-action="plus" aria-label="Sumar">+</button></div></div>
+        list.innerHTML=cart.items.map((item,index)=>`<div class="cart-line grid grid-cols-[76px_1fr_auto] gap-3 py-4 border-b" data-cart-index="${index}">
+          ${item.image?`<img src="${item.image}" alt="" class="w-[76px] h-[66px] object-cover bg-slate-100">`:'<div class="w-[76px] h-[66px] bg-slate-100"></div>'}
+          <div><b class="text-sm">${item.title}</b><p class="text-[10px] text-slate-500 mt-1">Talla ${item.size||'M'}</p><div class="cart-qty flex items-center gap-2 mt-2"><button data-cart-action="minus" class="w-6 h-6 border" aria-label="Restar">−</button><span class="text-xs">${item.qty}</span><button data-cart-action="plus" class="w-6 h-6 border" aria-label="Sumar">+</button></div></div>
           <div class="text-right"><b class="text-xs">${item.price||''}</b><button data-cart-action="remove" class="block ml-auto mt-3 text-[9px] uppercase text-slate-400">Quitar</button></div>
         </div>`).join('');
       }
@@ -94,8 +105,8 @@ document.addEventListener('DOMContentLoaded',()=>{
   };
 
   const addMockItem=(sourceButton)=>{
-    const card=sourceButton.closest('[data-product-card], .product-card, .ref-card')||document;
-    const title=card.querySelector('h1,h2,h3')?.textContent.trim()||document.querySelector('h1')?.textContent.trim()||'KUBOR Bike';
+    const card=sourceButton.closest('[data-product-card], .product-card, .ref-card, article')||document;
+    const title=card.querySelector('h1,h2,h3,b')?.textContent.trim()||document.querySelector('h1')?.textContent.trim()||'KUBOR Bike';
     const price=card.querySelector('[data-price], .price')?.textContent.trim()||[...card.querySelectorAll('*')].find(el=>/^\$[\d,.]+/.test(el.textContent.trim()))?.textContent.trim()||'';
     const image=card.querySelector('img')?.src||document.querySelector('main img')?.src||'';
     const size=document.querySelector('.size-active')?.textContent.trim()||'M';
@@ -111,6 +122,32 @@ document.addEventListener('DOMContentLoaded',()=>{
   renderCart(readCart());
   window.addEventListener('kubor:cart-change',e=>renderCart(e.detail));
   window.addEventListener('storage',()=>renderCart(readCart()));
+
+  /* Lightweight predictive search mock. This will map to Shopify predictive search later. */
+  const searchCatalog=[
+    {title:'KUBOR X1 Pro',meta:'MTB Trail · 29”',price:'$49,999 MXN',href:'product-v2.html'},
+    {title:'KUBOR Trail 7',meta:'MTB Trail · 29”',price:'$29,999 MXN',href:'product-v2.html'},
+    {title:'KUBOR Trail 5',meta:'MTB · 29”',price:'$24,999 MXN',href:'product-v2.html'},
+    {title:'Colección MTB',meta:'36 productos',price:'',href:'collection-v2.html'},
+    {title:'Guía de tallas',meta:'Encuentra tu talla ideal',price:'',href:'#'}
+  ];
+  const searchAside=[...document.querySelectorAll('aside')].find(a=>/buscar/i.test(a.textContent||''));
+  if(searchAside){
+    const input=searchAside.querySelector('input');
+    if(input){
+      const results=document.createElement('div');
+      results.setAttribute('data-search-results','');
+      results.className='mt-5';
+      input.closest('label')?.insertAdjacentElement('afterend',results);
+      const renderSearch=query=>{
+        const q=query.trim().toLowerCase();
+        const matches=q?searchCatalog.filter(item=>(item.title+' '+item.meta).toLowerCase().includes(q)).slice(0,5):searchCatalog.slice(0,4);
+        results.innerHTML=`<div class="text-[9px] uppercase tracking-[.14em] text-slate-400 font-black mb-2">${q?'Resultados':'Sugerencias'}</div>${matches.map(item=>`<a href="${item.href}" class="flex items-center justify-between gap-4 py-3 border-b border-slate-100"><div><b class="text-xs text-[#07131b]">${item.title}</b><p class="text-[10px] text-slate-400 mt-1">${item.meta}</p></div><span class="text-[10px] font-bold text-[#07131b] whitespace-nowrap">${item.price||'→'}</span></a>`).join('')||'<div class="py-6 text-xs text-slate-400">No encontramos resultados.</div>'}`;
+      };
+      renderSearch('');
+      input.addEventListener('input',e=>renderSearch(e.target.value));
+    }
+  }
 
   document.addEventListener('click',event=>{
     const cartAction=event.target.closest('[data-cart-action]');
