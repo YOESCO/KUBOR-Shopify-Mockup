@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded',()=>{
-  const BUILD='2026.10.13-1842';
+  const BUILD='2026.10.13-qa1';
   window.KUBOR_BUILD=BUILD;
   if(window.lucide) lucide.createIcons({attrs:{'stroke-width':1.65}});
 
@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     requestAnimationFrame(raf);
   }
 
-  /* Visible build marker so review sessions can confirm cache freshness. */
   const buildBadge=document.createElement('div');
   buildBadge.textContent=`KUBOR build ${BUILD}`;
   buildBadge.setAttribute('data-build',BUILD);
@@ -105,7 +104,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   };
 
   const addMockItem=(sourceButton)=>{
-    const card=sourceButton.closest('[data-product-card], .product-card, .ref-card, article')||document;
+    const card=sourceButton.closest('[data-product-card], .product-card, .ref-card, article, a.plp-card')||document;
     const title=card.querySelector('h1,h2,h3,b')?.textContent.trim()||document.querySelector('h1')?.textContent.trim()||'KUBOR Bike';
     const price=card.querySelector('[data-price], .price')?.textContent.trim()||[...card.querySelectorAll('*')].find(el=>/^\$[\d,.]+/.test(el.textContent.trim()))?.textContent.trim()||'';
     const image=card.querySelector('img')?.src||document.querySelector('main img')?.src||'';
@@ -123,7 +122,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   window.addEventListener('kubor:cart-change',e=>renderCart(e.detail));
   window.addEventListener('storage',()=>renderCart(readCart()));
 
-  /* Lightweight predictive search mock. This will map to Shopify predictive search later. */
   const searchCatalog=[
     {title:'KUBOR X1 Pro',meta:'MTB Trail · 29”',price:'$49,999 MXN',href:'product-v2.html'},
     {title:'KUBOR Trail 7',meta:'MTB Trail · 29”',price:'$29,999 MXN',href:'product-v2.html'},
@@ -131,27 +129,32 @@ document.addEventListener('DOMContentLoaded',()=>{
     {title:'Colección MTB',meta:'36 productos',price:'',href:'collection-v2.html'},
     {title:'Guía de tallas',meta:'Encuentra tu talla ideal',price:'',href:'#'}
   ];
-  const searchAside=[...document.querySelectorAll('aside')].find(a=>/buscar/i.test(a.textContent||''));
-  if(searchAside){
-    const input=searchAside.querySelector('input');
-    if(input){
-      const results=document.createElement('div');
+
+  const searchInput=[...document.querySelectorAll('aside input')].find(input=>/buscar productos|buscar productos, categorías/i.test(input.getAttribute('placeholder')||''));
+  const searchAside=searchInput?.closest('aside');
+  if(searchAside&&searchInput){
+    const input=searchInput;
+    let results=searchAside.querySelector('[data-search-results]');
+    if(!results){
+      results=document.createElement('div');
       results.setAttribute('data-search-results','');
       results.className='mt-5';
       input.closest('label')?.insertAdjacentElement('afterend',results);
-      const renderSearch=query=>{
-        const q=query.trim().toLowerCase();
-        const matches=q?searchCatalog.filter(item=>(item.title+' '+item.meta).toLowerCase().includes(q)).slice(0,5):searchCatalog.slice(0,4);
-        results.innerHTML=`<div class="text-[9px] uppercase tracking-[.14em] text-slate-400 font-black mb-2">${q?'Resultados':'Sugerencias'}</div>${matches.map(item=>`<a href="${item.href}" class="flex items-center justify-between gap-4 py-3 border-b border-slate-100"><div><b class="text-xs text-[#07131b]">${item.title}</b><p class="text-[10px] text-slate-400 mt-1">${item.meta}</p></div><span class="text-[10px] font-bold text-[#07131b] whitespace-nowrap">${item.price||'→'}</span></a>`).join('')||'<div class="py-6 text-xs text-slate-400">No encontramos resultados.</div>'}`;
-      };
-      renderSearch('');
-      input.addEventListener('input',e=>renderSearch(e.target.value));
     }
+    const renderSearch=query=>{
+      const q=query.trim().toLowerCase();
+      const matches=q?searchCatalog.filter(item=>(item.title+' '+item.meta).toLowerCase().includes(q)).slice(0,5):searchCatalog.slice(0,4);
+      results.innerHTML=`<div class="text-[9px] uppercase tracking-[.14em] text-slate-400 font-black mb-2">${q?'Resultados':'Sugerencias'}</div>${matches.map(item=>`<a href="${item.href}" class="flex items-center justify-between gap-4 py-3 border-b border-slate-100"><div><b class="text-xs text-[#07131b]">${item.title}</b><p class="text-[10px] text-slate-400 mt-1">${item.meta}</p></div><span class="text-[10px] font-bold text-[#07131b] whitespace-nowrap">${item.price||'→'}</span></a>`).join('')||'<div class="py-6 text-xs text-slate-400">No encontramos resultados.</div>'}`;
+    };
+    renderSearch('');
+    input.addEventListener('input',e=>renderSearch(e.target.value));
   }
 
   document.addEventListener('click',event=>{
     const cartAction=event.target.closest('[data-cart-action]');
     if(cartAction){
+      event.preventDefault();
+      event.stopPropagation();
       const row=cartAction.closest('[data-cart-index]');
       const index=Number(row?.dataset.cartIndex);
       const cart=readCart();
@@ -167,6 +170,13 @@ document.addEventListener('DOMContentLoaded',()=>{
     const button=event.target.closest('button');
     if(!button)return;
     const label=button.textContent.trim();
+    const isQuickAdd=/agregar al carrito|añadir al carrito|add to cart/i.test(label);
+    const isHeart=!!(button.querySelector('[data-lucide="heart"]')||event.target.closest('[data-lucide="heart"]'));
+
+    if(isQuickAdd||isHeart){
+      const linkedCard=button.closest('a[href]');
+      if(linkedCard){event.preventDefault();event.stopPropagation();}
+    }
 
     if(/^(XS|S|M|L|XL)$/.test(label)){
       const group=button.parentElement;
@@ -176,10 +186,12 @@ document.addEventListener('DOMContentLoaded',()=>{
       }
     }
 
-    const heart=button.querySelector('[data-lucide="heart"]')||event.target.closest('[data-lucide="heart"]');
-    if(heart){button.classList.toggle('text-rose-500');button.classList.toggle('bg-rose-50');}
+    if(isHeart){
+      button.classList.toggle('text-rose-500');
+      button.classList.toggle('bg-rose-50');
+    }
 
-    if(/agregar al carrito|añadir al carrito|add to cart/i.test(label)) addMockItem(button);
+    if(isQuickAdd)addMockItem(button);
   });
 
   document.querySelectorAll('.grid.grid-cols-6').forEach(row=>{
