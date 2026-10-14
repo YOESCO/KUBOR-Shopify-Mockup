@@ -12,8 +12,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     requestAnimationFrame(raf);
   }
 
-  /* Header lives over the hero and becomes solid only after scrolling. */
-  const header=document.querySelector('header');
+  const header=document.querySelector('.kubor-header, header');
   const syncHeader=()=>{
     if(!header)return;
     header.classList.toggle('kubor-header-scrolled',window.scrollY>26);
@@ -36,12 +35,13 @@ document.addEventListener('DOMContentLoaded',()=>{
 
       const heroTitle=document.querySelector('[data-hero-title]');
       if(heroTitle){
-        const heroImage=document.querySelector('main > section:first-child img');
+        const heroImage=document.querySelector('.kubor-hero-media, main > section:first-child img');
         const tl=gsap.timeline({defaults:{ease:'power3.out'}});
-        if(heroImage)tl.fromTo(heroImage,{scale:1.055},{scale:1,duration:1.35,ease:'power2.out'});
-        tl.from('[data-hero-kicker]',{opacity:0,y:12,duration:.36},'-=.92')
-          .from(heroTitle,{opacity:0,y:42,duration:.76},'-=.18')
+        if(heroImage)tl.fromTo(heroImage,{scale:1.06},{scale:1,duration:1.45,ease:'power2.out'});
+        tl.from('[data-hero-kicker]',{opacity:0,y:12,duration:.36},'-=.96')
+          .from(heroTitle,{opacity:0,y:46,duration:.78},'-=.18')
           .from('[data-hero-copy]',{opacity:0,y:18,duration:.48},'-=.38')
+          .from('.kubor-hero-spec',{opacity:0,y:12,duration:.38,stagger:.05},'-=.26')
           .from('[data-hero-actions]',{opacity:0,y:12,duration:.42},'-=.28');
       }
     }
@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   const toast=document.createElement('div');
   toast.className='fixed left-1/2 bottom-6 z-[120] -translate-x-1/2 translate-y-6 opacity-0 pointer-events-none bg-[#07131b] text-white px-5 py-3 rounded-md shadow-2xl text-[10px] uppercase tracking-[.08em] font-black transition-all duration-300';
-  toast.textContent='Agregado al carrito';
   document.body.appendChild(toast);
   let toastTimer;
   const showToast=(text='Agregado al carrito')=>{
@@ -59,7 +58,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     toastTimer=setTimeout(()=>toast.classList.add('translate-y-6','opacity-0'),1700);
   };
 
-  /* Shared prototype store: intentionally mirrors the responsibilities a Shopify cart API layer will own later. */
   const STORE_KEY='kubor-mock-cart-v1';
   const readCart=()=>{
     try{return JSON.parse(localStorage.getItem(STORE_KEY))||{items:[]}}catch(e){return{items:[]}}
@@ -69,14 +67,31 @@ document.addEventListener('DOMContentLoaded',()=>{
     window.dispatchEvent(new CustomEvent('kubor:cart-change',{detail:cart}));
   };
   const cartCount=cart=>cart.items.reduce((sum,item)=>sum+(item.qty||1),0);
-  const updateCartBadges=cart=>{
+  const parseMoney=value=>Number(String(value||'').replace(/[^0-9.]/g,''))||0;
+  const formatMoney=value=>new Intl.NumberFormat('es-MX',{style:'currency',currency:'MXN',maximumFractionDigits:0}).format(value);
+
+  const renderCart=cart=>{
     const count=cartCount(cart);
-    document.querySelectorAll('[data-cart-count], header span[class*="rounded-full"]').forEach(el=>{
-      if(/^\d+$/.test(el.textContent.trim())||el.hasAttribute('data-cart-count'))el.textContent=String(count);
-    });
+    document.querySelectorAll('[data-cart-count]').forEach(el=>el.textContent=String(count));
+
+    const list=document.querySelector('[data-cart-items]');
+    if(list){
+      if(!cart.items.length){
+        list.innerHTML='<div class="py-12 text-center text-slate-400 text-xs">Tu carrito está vacío.</div>';
+      }else{
+        list.innerHTML=cart.items.map((item,index)=>`<div class="cart-line" data-cart-index="${index}">
+          ${item.image?`<img src="${item.image}" alt="">`:'<div class="w-[76px] h-[66px] bg-slate-100"></div>'}
+          <div><b class="text-sm">${item.title}</b><p class="text-[10px] text-slate-500 mt-1">Talla ${item.size||'M'}</p><div class="cart-qty"><button data-cart-action="minus" aria-label="Restar">−</button><span>${item.qty}</span><button data-cart-action="plus" aria-label="Sumar">+</button></div></div>
+          <div class="text-right"><b class="text-xs">${item.price||''}</b><button data-cart-action="remove" class="block ml-auto mt-3 text-[9px] uppercase text-slate-400">Quitar</button></div>
+        </div>`).join('');
+      }
+    }
+
+    const subtotal=cart.items.reduce((sum,item)=>sum+parseMoney(item.price)*(item.qty||1),0);
+    const subtotalEl=document.querySelector('[data-cart-subtotal]');
+    if(subtotalEl)subtotalEl.textContent=`${formatMoney(subtotal)} MXN`;
+    if(window.lucide) lucide.createIcons({attrs:{'stroke-width':1.65}});
   };
-  updateCartBadges(readCart());
-  window.addEventListener('kubor:cart-change',e=>updateCartBadges(e.detail));
 
   const addMockItem=(sourceButton)=>{
     const card=sourceButton.closest('[data-product-card], .product-card, .ref-card')||document;
@@ -93,27 +108,25 @@ document.addEventListener('DOMContentLoaded',()=>{
     showToast(`${title} agregado al carrito`);
   };
 
-  /* PDP thumbnail gallery. */
-  document.querySelectorAll('.grid.grid-cols-6').forEach(row=>{
-    const thumbs=[...row.querySelectorAll('button img')];
-    if(thumbs.length<3)return;
-    const gallery=row.previousElementSibling;
-    const main=gallery&&gallery.querySelector('img');
-    if(!main)return;
-    row.querySelectorAll('button').forEach(button=>{
-      button.addEventListener('click',()=>{
-        const img=button.querySelector('img');
-        if(!img)return;
-        row.querySelectorAll('button').forEach(b=>b.classList.remove('thumb-active'));
-        button.classList.add('thumb-active');
-        if(window.gsap&&!reduceMotion){
-          gsap.to(main,{opacity:.25,duration:.12,onComplete:()=>{main.src=img.src.replace(/w=300/g,'w=1400');gsap.to(main,{opacity:1,duration:.18})}});
-        }else main.src=img.src.replace(/w=300/g,'w=1400');
-      });
-    });
-  });
+  renderCart(readCart());
+  window.addEventListener('kubor:cart-change',e=>renderCart(e.detail));
+  window.addEventListener('storage',()=>renderCart(readCart()));
 
   document.addEventListener('click',event=>{
+    const cartAction=event.target.closest('[data-cart-action]');
+    if(cartAction){
+      const row=cartAction.closest('[data-cart-index]');
+      const index=Number(row?.dataset.cartIndex);
+      const cart=readCart();
+      const item=cart.items[index];
+      if(!item)return;
+      if(cartAction.dataset.cartAction==='plus') item.qty+=1;
+      if(cartAction.dataset.cartAction==='minus') item.qty=Math.max(1,item.qty-1);
+      if(cartAction.dataset.cartAction==='remove') cart.items.splice(index,1);
+      writeCart(cart);
+      return;
+    }
+
     const button=event.target.closest('button');
     if(!button)return;
     const label=button.textContent.trim();
@@ -127,20 +140,26 @@ document.addEventListener('DOMContentLoaded',()=>{
     }
 
     const heart=button.querySelector('[data-lucide="heart"]')||event.target.closest('[data-lucide="heart"]');
-    if(heart){
-      button.classList.toggle('text-rose-500');
-      button.classList.toggle('bg-rose-50');
-    }
+    if(heart){button.classList.toggle('text-rose-500');button.classList.toggle('bg-rose-50');}
 
     if(/agregar al carrito|añadir al carrito|add to cart/i.test(label)) addMockItem(button);
+  });
 
-    if(button.parentElement?.classList.contains('no-scrollbar') || button.parentElement?.classList.contains('overflow-x-auto')){
-      const siblings=[...button.parentElement.querySelectorAll('button')];
-      if(siblings.length>=3){
-        siblings.forEach(btn=>btn.classList.remove('bg-[#07131b]','text-white','border-kubor-cyan','border-b-2'));
-        if(button.classList.contains('pb-3')) button.classList.add('border-kubor-cyan','border-b-2');
-      }
-    }
+  document.querySelectorAll('.grid.grid-cols-6').forEach(row=>{
+    const thumbs=[...row.querySelectorAll('button img')];
+    if(thumbs.length<3)return;
+    const gallery=row.previousElementSibling;
+    const main=gallery&&gallery.querySelector('img');
+    if(!main)return;
+    row.querySelectorAll('button').forEach(button=>{
+      button.addEventListener('click',()=>{
+        const img=button.querySelector('img');
+        if(!img)return;
+        row.querySelectorAll('button').forEach(b=>b.classList.remove('thumb-active'));
+        button.classList.add('thumb-active');
+        if(window.gsap&&!reduceMotion){gsap.to(main,{opacity:.25,duration:.12,onComplete:()=>{main.src=img.src.replace(/w=300/g,'w=1400');gsap.to(main,{opacity:1,duration:.18})}})}else main.src=img.src.replace(/w=300/g,'w=1400');
+      });
+    });
   });
 
   setTimeout(()=>window.lucide&&lucide.createIcons({attrs:{'stroke-width':1.65}}),80);
@@ -148,27 +167,14 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 document.addEventListener('alpine:init',()=>{
   Alpine.data('kuborShell',()=>({
-    mega:false,
-    drawer:null,
-    scrolled:false,
-    search:'',
-    activeThumb:0,
-    selectedSize:'M',
-    selectedColor:'Obsidiana',
-    filterOpen:false,
+    mega:false,drawer:null,scrolled:false,search:'',activeThumb:0,selectedSize:'M',selectedColor:'Obsidiana',filterOpen:false,
     init(){
       const updateScroll=()=>{this.scrolled=window.scrollY>26};
       updateScroll();
       window.addEventListener('scroll',updateScroll,{passive:true});
-      this.$watch('drawer',value=>{
-        document.documentElement.classList.toggle('overflow-hidden',!!value);
-        if(window.__kuborLenis){value?window.__kuborLenis.stop():window.__kuborLenis.start()}
-      });
+      this.$watch('drawer',value=>{document.documentElement.classList.toggle('overflow-hidden',!!value);if(window.__kuborLenis){value?window.__kuborLenis.stop():window.__kuborLenis.start()}});
       this.$watch('mega',value=>{if(value)this.drawer=null});
     },
-    openDrawer(name){this.mega=false;this.drawer=name},
-    closeDrawer(){this.drawer=null},
-    toggleMega(){this.drawer=null;this.mega=!this.mega},
-    closeAll(){this.mega=false;this.drawer=null}
+    openDrawer(name){this.mega=false;this.drawer=name},closeDrawer(){this.drawer=null},toggleMega(){this.drawer=null;this.mega=!this.mega},closeAll(){this.mega=false;this.drawer=null}
   }))
 });
