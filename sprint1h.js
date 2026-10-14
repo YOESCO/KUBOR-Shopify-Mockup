@@ -24,7 +24,7 @@
       const logo=document.createElement('img');
       logo.src='assets/logos/TERRAFIT_dark.svg';
       logo.alt='Terrafit';
-      logo.className='s1h-brand-logo s1h-brand-logo-terrafit';
+      logo.style.cssText='display:block;width:150px;max-width:72%;height:auto;object-fit:contain;object-position:left center';
       tfTitle.replaceWith(logo);
     }
 
