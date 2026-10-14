@@ -44,11 +44,36 @@ At roughly 1050 px and below, the fixed sidebar is removed from the layout. Filt
 - copy remains visible instead of being hidden aggressively;
 - at <=360 px the grid becomes 1 column rather than forcing unreadable 2-column cards.
 
+### PLP review-state clarity
+- removed the fake live `36 productos / Trail` claim;
+- the mock now identifies the surface as a portfolio review;
+- fake filter counts and preselected Trail state were removed;
+- filters remain UX prototypes until Shopify Search & Discovery supplies live data.
+
+### Account readability
+- increased panel spacing and heading size;
+- raised table/body metadata sizes;
+- enlarged status pills and timeline controls;
+- made bike registration cards less cramped;
+- increased form control height and label size;
+- raised KPI/side-nav readability without turning the dashboard into oversized cards.
+
+### Support / help readability
+- increased card/panel padding and body size;
+- widened FAQ side rail on desktop and improved accordion spacing;
+- increased form control and dealer-card readability;
+- increased intermediate-width spacing for contact/support layouts.
+
+### Discipline / brand landings
+- increased section rhythm and sub-navigation hit areas;
+- added more gap between category/product rails;
+- improved story/technology body copy size;
+- preserved horizontal rails on mobile instead of stacking every module vertically.
+
 ## Still open in this density pass
-- Account flow has several 7–9 px metadata/KPI labels that need a readability pass.
-- Support/help pages contain a few over-dense multi-column panels at intermediate widths.
-- Brand/discipline landings need final desktop/tablet rhythm review.
 - Browser screenshot QA at 390 / 768 / 1024 / 1440 is still required before approval.
+- Final crop and line-length tuning must follow the screenshot pass.
+- A few content/editorial pages still need the same final rhythm review after core commerce pages are approved.
 
 ## Asset note
 The Library contains a visual reference showing the official HYPERGOGO wordmark, but no standalone raw `HyperGogo_Logo.svg` was found in indexed Library search. Do not recreate or trace the logo. Keep the exact SVG asset pending until the original vector file is available.
