@@ -1,6 +1,6 @@
 # KUBOR Mockup Build Status
 
-Current review build: `2026.10.14-sprint1C`
+Current review build: `2026.10.14-sprint1C-account`
 
 ## Source of truth
 
@@ -11,14 +11,29 @@ Current review build: `2026.10.14-sprint1C`
 - Navigation index: `site-map.html`
 - Shopify mapping: `docs/shopify-handoff-map.md`
 
-## Shared core now active on
+## Shared visual core currently active on
 
+### Commerce core
 - `home-v2.html`
 - `collection-v2.html`
 - `product-v2.html`
 - `cart.html`
 - `search.html`
+
+### Account core
 - `account.html`
+- `orders.html`
+- `order-detail.html`
+- `tracking.html`
+- `addresses.html`
+- `wishlist.html`
+- `warranties.html`
+- `registered-bikes.html`
+- `support.html`
+- `account-preferences.html`
+- `login.html`
+- `register.html`
+- `recover.html`
 
 Shared assets:
 
@@ -28,71 +43,63 @@ Shared assets:
 - `sprint1b.js`
 - `sprint1c.css`
 - `sprint1c.js`
+- `account-flow.css`
+- `account-shell.js`
 
-## Current visual/UX state
+## Sprint 1B summary
 
-### Shell
+Home / PLP / PDP were rebuilt closer to the approved mockups with tighter proportions, richer cards and states, mobile rails, PLP filtering/compare UI, PDP tabs/specs/geometry/reviews and support modules.
 
-- tighter header proportions;
-- compact search action;
-- expanded desktop mega-menu;
-- native-JS mobile navigation / search / cart;
-- category and brand shortcuts;
-- shared footer;
-- accessibility state improvements for drawers and navigation.
-
-### Home / PLP / PDP
-
-Sprint 1B is active: visual proportions, richer product-card states, mobile rails, PLP filters/compare, PDP tabs/specs/geometry/reviews and support modules.
+## Sprint 1C summary
 
 ### Cart
-
-- uses same mock cart state as core pages;
-- quantity +/- and remove;
-- subtotal / total;
+- shared cart state;
+- quantity / remove;
+- totals;
 - shipping progress;
-- empty state;
-- coupon feedback concept;
-- cross-sell and trust modules;
-- responsive summary layout.
+- coupon demo;
+- cross-sell;
+- empty state.
 
 ### Search
-
 - instant mock filtering;
-- search chips;
-- result-type tabs;
-- product / collection / content results;
-- no-results recovery state;
-- shared shell and mobile behavior.
+- result tabs;
+- popular chips;
+- products / collections / content;
+- no-results recovery.
 
-### Account
-
-- shared shell;
-- account hero and sticky subnavigation;
-- Orders / Tracking / Wishlist / Warranties / Registered Bikes / Addresses cards;
-- recent order;
-- post-sale bike registration concept;
-- Customer Account / app ownership clearly separated.
+### Customer Account
+- reusable account shell / subnavigation;
+- dashboard;
+- orders and order detail;
+- tracking timeline;
+- addresses;
+- wishlist;
+- registered bikes and serial-number concept;
+- warranties and claim concept;
+- support cases;
+- preferences;
+- login / register / password recovery.
 
 ## Still not final / do not mark approved yet
 
-1. visual QA against supplied desktop/mobile mockups;
-2. final owned KUBOR product imagery and controlled crops;
-3. exact spacing/type refinement;
-4. real PLP filtering/sort if required in HTML prototype;
-5. PDP fullscreen/zoom/media behavior;
-6. validated real specs/geometry data;
+1. visual QA against supplied mockups;
+2. final owned KUBOR product photography / controlled crops;
+3. exact spacing and typography refinement;
+4. real PLP filtering/sort if needed in the prototype;
+5. PDP fullscreen/zoom/video behavior;
+6. validated product specs and geometry;
 7. responsive QA at 320 / 375 / 390 / 430 / 768 / 1024 / 1280 / 1440+;
-8. normalize all customer account subpages;
-9. normalize login/register/recover;
-10. normalize Compare / Wishlist / Help / FAQ / Contact / Dealers;
+8. account form success/error/disabled states;
+9. normalize Compare / Help Center / FAQ / Contact / Dealers / Gift Card / All Collections;
+10. normalize discipline and brand landings;
 11. performance/dependency cleanup;
 12. remove legacy V2/V3 only after no page depends on them.
 
 ## Next block
 
-Normalize the full customer-account flow and decision/support pages onto the same visual core, then do the first full responsive/accessibility QA pass.
+Normalize support/decision pages and then begin first full-site responsive/accessibility QA pass.
 
 ## Shopify handoff
 
-All current files remain HTML mockup contracts. Approved UI will later map to Shopify section groups, sections, blocks, snippets, metafields/metaobjects, Customer Accounts and app-backed features per `docs/shopify-handoff-map.md`.
+All current files remain HTML mockup contracts. Approved UI will map to Shopify section groups, sections, blocks, snippets, metafields/metaobjects, Customer Accounts and app-backed features per `docs/shopify-handoff-map.md`.
