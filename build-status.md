@@ -1,6 +1,6 @@
 # KUBOR Mockup Build Status
 
-Current review build: `2026.10.14-sprint1O-discovery-motion`
+Current review build: `2026.10.14-sprint1P-editorial-wow`
 
 ## Source of truth
 
@@ -19,7 +19,7 @@ Earlier sprint documents remain in `docs/` for history and rationale.
 
 `core-v4.js` owns the global shell and loads Sprint 1G. Later visual/data layers are loaded through `sprint1j.js`:
 
-`Sprint 1G -> 1H -> 1I -> 1J loader -> 1K + 1L + 1M + 1N + 1O`
+`Sprint 1G -> 1H -> 1I -> 1J loader -> 1K + 1L + 1M + 1N + 1O + 1P`
 
 Shared systems currently include:
 - `core-v4.css/js`
@@ -35,6 +35,7 @@ Shared systems currently include:
 - `sprint1m.css`
 - `sprint1n.css/js`
 - `sprint1o.css/js`
+- `sprint1p.css/js`
 - account / support / landing / content shared flows
 
 ## Core commerce state
@@ -68,7 +69,7 @@ Shared systems currently include:
 
 ### PDP
 - Mallory R29 21V remains the verified real-product example;
-- strict containment now applies to first grid, gallery, buybox, quick specs, tabs, story and related rails;
+- strict containment applies to first grid, gallery, buybox, quick specs, tabs, story and related rails;
 - internal rails can scroll without widening the document;
 - thumbnails / trust / quick specs / related products use explicit arrow controls where overflow exists;
 - sticky purchase bar respects safe areas and uses the same cart contract as desktop;
@@ -80,9 +81,12 @@ Shared systems currently include:
 - Account cards use 2 columns on tablet and 1 on phones;
 - secondary commerce no longer exposes X1 Pro or fabricated premium prices.
 
-### Support / guides
-- shared support heroes can now become image-led while retaining dark overlay and readable content;
-- image-led hero treatment is currently applied to Help, FAQ, Contact, Dealers, Compare and Gift Card where the shared hero contract exists.
+### Support / guides / editorial
+- shared support heroes can become image-led while retaining dark overlay and readable content;
+- Help, FAQ, Contact, Dealers, Compare and Gift Card receive image-led hero variants where the shared contract exists;
+- Technology, Size Guide, Geometry Guide, Journal, About, Community, Manuals, Assembly and Maintenance can now receive the same image-led editorial hero treatment;
+- mobile editorial rails hide raw scrollbars and receive explicit arrow controls when overflow exists;
+- restrained cyan / lime / violet / amber accents are used as micro-highlights, not new dominant brand colours.
 
 ## Real / owned assets in repo
 
@@ -110,7 +114,8 @@ HYPERGOGO: only a raster brand-reference board has been located. The original st
 ## Next execution block
 
 1. Review the new Home catalogue/filter behaviour and PDP width on real iPhone screenshots.
-2. Extend the image-led / richer component language to remaining content and brand landings.
+2. Tighten mobile menu, carousel-arrow placement and hero crops from those screenshots.
 3. Continue extracting verified KUBOR product imagery.
-4. Freeze approved mockup contracts only after the visual gap is materially smaller.
-5. Begin Liquid migration only when explicitly authorized.
+4. Extend the richer visual system only where it supports UX, not as decorative clutter.
+5. Freeze approved mockup contracts only after the visual gap is materially smaller.
+6. Begin Liquid migration only when explicitly authorized.
