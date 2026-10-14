@@ -5,12 +5,21 @@ document.addEventListener('DOMContentLoaded',()=>{
   let lenis=null;
 
   if(window.Lenis&&!reduceMotion){
-    lenis=new Lenis({duration:.92,smoothWheel:true,wheelMultiplier:.86,touchMultiplier:1.08});
+    lenis=new Lenis({duration:.88,smoothWheel:true,wheelMultiplier:.82,touchMultiplier:1.05});
     window.__kuborLenis=lenis;
     lenis.on('scroll',()=>window.ScrollTrigger&&ScrollTrigger.update());
     const raf=time=>{lenis.raf(time);requestAnimationFrame(raf)};
     requestAnimationFrame(raf);
   }
+
+  /* Header lives over the hero and becomes solid only after scrolling. */
+  const header=document.querySelector('header');
+  const syncHeader=()=>{
+    if(!header)return;
+    header.classList.toggle('kubor-header-scrolled',window.scrollY>26);
+  };
+  syncHeader();
+  window.addEventListener('scroll',syncHeader,{passive:true});
 
   if(window.gsap&&window.ScrollTrigger){
     gsap.registerPlugin(ScrollTrigger);
@@ -18,20 +27,22 @@ document.addEventListener('DOMContentLoaded',()=>{
       document.querySelectorAll('section').forEach(section=>{
         const items=section.querySelectorAll('[data-reveal]');
         if(!items.length)return;
-        gsap.fromTo(items,{opacity:0,y:18},{opacity:1,y:0,duration:.58,stagger:.045,ease:'power3.out',scrollTrigger:{trigger:section,start:'top 88%',once:true}});
+        gsap.fromTo(items,{opacity:0,y:22},{opacity:1,y:0,duration:.64,stagger:.055,ease:'power3.out',scrollTrigger:{trigger:section,start:'top 86%',once:true}});
       });
 
       gsap.utils.toArray('[data-parallax]').forEach(el=>{
-        gsap.fromTo(el,{yPercent:-1.5},{yPercent:4,ease:'none',scrollTrigger:{trigger:el.parentElement||el,start:'top bottom',end:'bottom top',scrub:.65}});
+        gsap.fromTo(el,{yPercent:-2},{yPercent:5,ease:'none',scrollTrigger:{trigger:el.parentElement||el,start:'top bottom',end:'bottom top',scrub:.7}});
       });
 
       const heroTitle=document.querySelector('[data-hero-title]');
       if(heroTitle){
-        gsap.timeline({defaults:{ease:'power3.out'}})
-          .from('[data-hero-kicker]',{opacity:0,y:10,duration:.34})
-          .from(heroTitle,{opacity:0,y:32,duration:.66},'-=.08')
-          .from('[data-hero-copy]',{opacity:0,y:14,duration:.42},'-=.34')
-          .from('[data-hero-actions]',{opacity:0,y:10,duration:.38},'-=.24');
+        const heroImage=document.querySelector('main > section:first-child img');
+        const tl=gsap.timeline({defaults:{ease:'power3.out'}});
+        if(heroImage)tl.fromTo(heroImage,{scale:1.055},{scale:1,duration:1.35,ease:'power2.out'});
+        tl.from('[data-hero-kicker]',{opacity:0,y:12,duration:.36},'-=.92')
+          .from(heroTitle,{opacity:0,y:42,duration:.76},'-=.18')
+          .from('[data-hero-copy]',{opacity:0,y:18,duration:.48},'-=.38')
+          .from('[data-hero-actions]',{opacity:0,y:12,duration:.42},'-=.28');
       }
     }
   }
@@ -48,7 +59,41 @@ document.addEventListener('DOMContentLoaded',()=>{
     toastTimer=setTimeout(()=>toast.classList.add('translate-y-6','opacity-0'),1700);
   };
 
-  /* PDP thumbnail gallery without extra markup */
+  /* Shared prototype store: intentionally mirrors the responsibilities a Shopify cart API layer will own later. */
+  const STORE_KEY='kubor-mock-cart-v1';
+  const readCart=()=>{
+    try{return JSON.parse(localStorage.getItem(STORE_KEY))||{items:[]}}catch(e){return{items:[]}}
+  };
+  const writeCart=cart=>{
+    localStorage.setItem(STORE_KEY,JSON.stringify(cart));
+    window.dispatchEvent(new CustomEvent('kubor:cart-change',{detail:cart}));
+  };
+  const cartCount=cart=>cart.items.reduce((sum,item)=>sum+(item.qty||1),0);
+  const updateCartBadges=cart=>{
+    const count=cartCount(cart);
+    document.querySelectorAll('[data-cart-count], header span[class*="rounded-full"]').forEach(el=>{
+      if(/^\d+$/.test(el.textContent.trim())||el.hasAttribute('data-cart-count'))el.textContent=String(count);
+    });
+  };
+  updateCartBadges(readCart());
+  window.addEventListener('kubor:cart-change',e=>updateCartBadges(e.detail));
+
+  const addMockItem=(sourceButton)=>{
+    const card=sourceButton.closest('[data-product-card], .product-card, .ref-card')||document;
+    const title=card.querySelector('h1,h2,h3')?.textContent.trim()||document.querySelector('h1')?.textContent.trim()||'KUBOR Bike';
+    const price=card.querySelector('[data-price], .price')?.textContent.trim()||[...card.querySelectorAll('*')].find(el=>/^\$[\d,.]+/.test(el.textContent.trim()))?.textContent.trim()||'';
+    const image=card.querySelector('img')?.src||document.querySelector('main img')?.src||'';
+    const size=document.querySelector('.size-active')?.textContent.trim()||'M';
+    const cart=readCart();
+    const key=`${title}::${size}`;
+    const existing=cart.items.find(item=>item.key===key);
+    if(existing)existing.qty+=1;
+    else cart.items.push({key,title,price,image,size,qty:1});
+    writeCart(cart);
+    showToast(`${title} agregado al carrito`);
+  };
+
+  /* PDP thumbnail gallery. */
   document.querySelectorAll('.grid.grid-cols-6').forEach(row=>{
     const thumbs=[...row.querySelectorAll('button img')];
     if(thumbs.length<3)return;
@@ -68,7 +113,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     });
   });
 
-  /* Tabs, chips, sizes, wishlists and add-to-cart affordances */
   document.addEventListener('click',event=>{
     const button=event.target.closest('button');
     if(!button)return;
@@ -88,11 +132,7 @@ document.addEventListener('DOMContentLoaded',()=>{
       button.classList.toggle('bg-rose-50');
     }
 
-    if(/agregar al carrito/i.test(label)){
-      showToast();
-      const badge=document.querySelector('header span[class*="rounded-full"]');
-      if(badge&&/^\d+$/.test(badge.textContent.trim())) badge.textContent=String(Number(badge.textContent.trim())+1);
-    }
+    if(/agregar al carrito|añadir al carrito|add to cart/i.test(label)) addMockItem(button);
 
     if(button.parentElement?.classList.contains('no-scrollbar') || button.parentElement?.classList.contains('overflow-x-auto')){
       const siblings=[...button.parentElement.querySelectorAll('button')];
@@ -103,7 +143,6 @@ document.addEventListener('DOMContentLoaded',()=>{
     }
   });
 
-  /* Keep icon weight identical after Alpine renders */
   setTimeout(()=>window.lucide&&lucide.createIcons({attrs:{'stroke-width':1.65}}),80);
 });
 
@@ -118,7 +157,7 @@ document.addEventListener('alpine:init',()=>{
     selectedColor:'Obsidiana',
     filterOpen:false,
     init(){
-      const updateScroll=()=>{this.scrolled=window.scrollY>14};
+      const updateScroll=()=>{this.scrolled=window.scrollY>26};
       updateScroll();
       window.addEventListener('scroll',updateScroll,{passive:true});
       this.$watch('drawer',value=>{
