@@ -16,6 +16,12 @@
   });
   $$('.pdp-buy-actions .k-btn-primary').forEach(b=>b.setAttribute('data-add-cart',''));
 
+  // Sprint 1B attached stopPropagation directly to card buttons. Replace only delegated
+  // commerce controls after all DOMContentLoaded listeners finish so core document handlers work again.
+  setTimeout(()=>{
+    $$('[data-product-card] [data-add-cart],[data-product-card] [data-toggle-wishlist],[data-product-card] [data-compare],[data-product-card] [data-quick-view]').forEach(old=>{const fresh=old.cloneNode(true);old.replaceWith(fresh)});
+  },0);
+
   // Product-card controls.
   $$('[data-toggle-wishlist]').forEach(b=>{if(!b.getAttribute('aria-label'))b.setAttribute('aria-label','Agregar a favoritos');b.setAttribute('aria-pressed',String(b.classList.contains('is-active')))});
   $$('[data-compare]').forEach(b=>{if(!b.getAttribute('aria-label'))b.setAttribute('aria-label','Agregar a comparación');b.setAttribute('aria-pressed',String(b.classList.contains('is-active')))});
