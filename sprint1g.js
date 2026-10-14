@@ -1,4 +1,4 @@
-(()=>{if(!document.querySelector('link[href^="sprint1h.css"]')){const l=document.createElement('link');l.rel='stylesheet';l.href='sprint1h.css?v=20261014-s1h';document.head.appendChild(l)}if(!document.querySelector('script[src^="sprint1h.js"]')){const s=document.createElement('script');s.src='sprint1h.js?v=20261014-s1h';s.async=false;document.head.appendChild(s)}})();
+(()=>{if(!document.querySelector('link[href^="sprint1h.css"]')){const l=document.createElement('link');l.rel='stylesheet';l.href='sprint1h.css?v=20261014-s1h';document.head.appendChild(l)}if(!document.querySelector('script[src^="sprint1h.js"]')){const s=document.createElement('script');s.src='sprint1h.js?v=20261014-s1h';s.async=false;document.head.appendChild(s)}if(!document.querySelector('script[src^="sprint1i.js"]')){const s=document.createElement('script');s.src='sprint1i.js?v=20261014-s1i';s.async=false;document.head.appendChild(s)}})();
 
 (()=>{
   const init=()=>{
