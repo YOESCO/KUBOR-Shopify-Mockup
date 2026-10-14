@@ -34,9 +34,9 @@ Portfolio decks contain useful studio lineups and concept bikes. These may be us
 ### D. Temporary third-party imagery
 Unsplash remains allowed only as a clearly temporary placeholder for discipline/editorial modules where no owned image exists yet. It is the first class of imagery to remove during final visual convergence.
 
-## Current asset replacements
+## Current asset preparation
 
-- `assets/media/kubor-hero.jpg` — optimized KUBOR lifestyle image prepared for Home hero / MTB storytelling. It is a brand lifestyle asset, not an X1 Pro packshot.
+- Optimized KUBOR lifestyle hero prepared for local publication. Until binary media publication is verified on `main`, Home intentionally keeps its stable external placeholder rather than a broken local URL.
 
 ## Required image families before visual approval
 
