@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded',()=>{
+(()=>{
+  const init=()=>{
   const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 
   // Skip link + main target.
@@ -66,4 +67,6 @@ document.addEventListener('DOMContentLoaded',()=>{
 
   // Improve details state and summary keyboard discoverability.
   $$('details').forEach(d=>{d.setAttribute('aria-expanded',String(d.open));d.addEventListener('toggle',()=>d.setAttribute('aria-expanded',String(d.open)))});
-});
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+})();
