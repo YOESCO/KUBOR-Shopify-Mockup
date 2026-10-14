@@ -1,3 +1,5 @@
+(()=>{if(!document.querySelector('link[href^="sprint1g.css"]')){const l=document.createElement('link');l.rel='stylesheet';l.href='sprint1g.css?v=20261014-s1g';document.head.appendChild(l)}if(!document.querySelector('script[src^="sprint1g.js"]')){const s=document.createElement('script');s.src='sprint1g.js?v=20261014-s1g';s.async=false;document.head.appendChild(s)}})();
+
 document.addEventListener('DOMContentLoaded',()=>{
   const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
   const CART_KEY='kubor-core-v4-cart';
