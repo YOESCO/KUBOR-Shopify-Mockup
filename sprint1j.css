@@ -1,3 +1,4 @@
+@import url('sprint1k.css?v=20261014-s1k');
 /* Sprint 1J — breathing pass for shell + PLP. Goal: compact premium, not compressed. */
 
 :root{--topbar:30px;--header:64px;--k-max:1460px}
@@ -77,7 +78,6 @@
 }
 
 @media (max-width:1050px){
-  /* At this width the sidebar costs more readability than it adds. */
   .plp-layout{grid-template-columns:1fr;gap:16px;padding-top:22px}
   .plp-filters{display:none}
   .plp-mobile-toolbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:sticky;top:64px;z-index:40;background:#fff;padding:10px 0 12px;margin-bottom:4px;border-bottom:1px solid #e5eaed}
