@@ -5,6 +5,24 @@ document.addEventListener('DOMContentLoaded',()=>{
   const megaToggle=$('[data-mega-toggle]'); const mega=$('[data-mega]');
   if(megaToggle&&mega){megaToggle.setAttribute('aria-haspopup','true');megaToggle.setAttribute('aria-expanded',String(!mega.hidden));megaToggle.addEventListener('click',()=>requestAnimationFrame(()=>megaToggle.setAttribute('aria-expanded',String(!mega.hidden))))}
 
+  // Enrich the desktop mega-menu without duplicating the shell source.
+  const megaGrid=mega?.querySelector('.k-mega-grid');
+  if(megaGrid&&!megaGrid.querySelector('.k-mega-extra')){
+    const extra=document.createElement('div');extra.className='k-mega-extra';extra.innerHTML='<h4>Más categorías</h4><a href="all-collections.html#kids">Kids</a><a href="all-collections.html#bmx">BMX / Stunt</a><a href="all-collections.html#cargo">Cargo / Utility</a><a href="discipline-urban.html">Fitness / Commuter</a><a href="accessories.html">Accesorios</a><a href="components.html">Componentes</a>';
+    megaGrid.insertBefore(extra,megaGrid.children[2]||null);
+    const brands=document.createElement('div');brands.style.cssText='grid-column:1/-1;border-top:1px solid #e8edef;padding-top:14px;display:flex;justify-content:space-between;gap:16px;align-items:center';brands.innerHTML='<div><span class="k-eyebrow" style="color:#008da1">Marcas</span><span style="margin-left:14px;font-size:11px;font-weight:900"><a href="brand-kubor.html" style="display:inline;padding:0 12px 0 0">KUBOR</a><a href="brand-terrafit.html" style="display:inline;padding:0 12px">TERRAFIT</a><a href="brand-hypergogo.html" style="display:inline;padding:0 12px">HYPERGOGO</a></span></div><a href="all-collections.html" style="font-size:9px;font-weight:900;text-transform:uppercase;color:#008da1">Todas las colecciones →</a>';
+    megaGrid.appendChild(brands);
+  }
+
+  // Current section indication in the header.
+  const current=(location.pathname.split('/').pop()||'home-v2.html').toLowerCase();
+  $$('.k-nav a').forEach(a=>{const href=(a.getAttribute('href')||'').toLowerCase();if(href&&href===current){a.setAttribute('aria-current','page');a.style.color='#39c1dc'}});
+
+  // Dialog semantics for global drawers.
+  $$('.k-drawer').forEach(d=>{d.setAttribute('role','dialog');d.setAttribute('aria-modal','true');d.setAttribute('aria-hidden',String(!d.classList.contains('is-open')))});
+  const drawerObserver=new MutationObserver(()=>$$('.k-drawer').forEach(d=>d.setAttribute('aria-hidden',String(!d.classList.contains('is-open')))));
+  const layer=$('.k-layer');if(layer)drawerObserver.observe(layer,{attributes:true,subtree:true,attributeFilter:['class']});
+
   // Wishlist mock persistence.
   const W='kubor-core-v4-wishlist';
   const getW=()=>{try{return JSON.parse(localStorage.getItem(W))||[]}catch{return[]}};
@@ -19,7 +37,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   if($('.pdp-tabs'))$('.pdp-tabs').setAttribute('role','tablist');
 
   // PDP color labels + image swap if swatch provides image.
-  $$('.pdp-swatch').forEach(b=>{b.setAttribute('aria-label',`Color ${b.dataset.color||''}`);b.addEventListener('click',()=>{const img=b.dataset.image;if(img&&$('[data-pdp-main-image]'))$('[data-pdp-main-image]').src=img})});
+  $$('.pdp-swatch').forEach(b=>{b.setAttribute('aria-label',`Color ${b.dataset.color||''}`);b.setAttribute('aria-pressed',String(b.classList.contains('is-active')));b.addEventListener('click',()=>{const img=b.dataset.image;if(img&&$('[data-pdp-main-image]'))$('[data-pdp-main-image]').src=img;requestAnimationFrame(()=>$$('.pdp-swatch').forEach(x=>x.setAttribute('aria-pressed',String(x.classList.contains('is-active')))))})});
   $$('.pdp-size').forEach(b=>{b.setAttribute('aria-pressed',String(b.classList.contains('is-active')));b.addEventListener('click',()=>requestAnimationFrame(()=>$$('.pdp-size').forEach(x=>x.setAttribute('aria-pressed',String(x.classList.contains('is-active'))))))});
 
   // PLP filter chips are interactive mock controls.
@@ -30,9 +48,9 @@ document.addEventListener('DOMContentLoaded',()=>{
   $$('[data-sort]').forEach(sel=>sel.addEventListener('change',()=>{const label=$('[data-sort-label]');if(label)label.textContent=sel.options[sel.selectedIndex].textContent}));
 
   // Quick-view fallback for cards if core drawer exists.
-  document.addEventListener('click',e=>{const b=e.target.closest('[data-quick-view]');if(!b)return;e.preventDefault();const card=b.closest('[data-product-card]');const title=card?.querySelector('[data-product-title]')?.textContent.trim()||'KUBOR';const meta=card?.querySelector('.k-product-meta')?.textContent.trim()||'';const price=card?.querySelector('[data-price]')?.textContent.trim()||'';const img=card?.querySelector('img')?.src||'';const drawer=$('[data-drawer="quick"]');const target=$('[data-quick-content]');if(drawer&&target){target.innerHTML=`<img src="${img}" alt="${title}" style="width:100%;aspect-ratio:1.2/1;object-fit:cover;background:#f5f7f8"><div style="padding-top:18px"><div class="k-eyebrow" style="color:#008da1">Vista rápida</div><h2 class="k-display" style="font-size:38px;line-height:.95;margin:6px 0;text-transform:uppercase">${title}</h2><p style="font-size:11px;color:#687681">${meta}</p><b style="font-size:18px;display:block;margin-top:14px">${price}</b><a href="product-v2.html" class="k-btn k-btn-dark" style="width:100%;margin-top:16px">Ver producto completo</a></div>`;drawer.closest('.k-layer')?.classList.add('is-open');drawer.classList.add('is-open');document.documentElement.style.overflow='hidden'}});
+  document.addEventListener('click',e=>{const b=e.target.closest('[data-quick-view]');if(!b)return;e.preventDefault();const card=b.closest('[data-product-card]');const title=card?.querySelector('[data-product-title]')?.textContent.trim()||'KUBOR';const meta=card?.querySelector('.k-product-meta')?.textContent.trim()||'';const price=card?.querySelector('[data-price]')?.textContent.trim()||'';const img=card?.querySelector('img')?.src||'';const drawer=$('[data-drawer="quick"]');const target=$('[data-quick-content]');if(drawer&&target){target.innerHTML=`<img src="${img}" alt="${title}" style="width:100%;aspect-ratio:1.2/1;object-fit:cover;background:#f5f7f8"><div style="padding-top:18px"><div class="k-eyebrow" style="color:#008da1">Vista rápida</div><h2 class="k-display" style="font-size:38px;line-height:.95;margin:6px 0;text-transform:uppercase">${title}</h2><p style="font-size:11px;color:#687681">${meta}</p><b style="font-size:18px;display:block;margin-top:14px">${price}</b><div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:14px"><button class="pdp-size">S</button><button class="pdp-size is-active">M</button><button class="pdp-size">L</button><button class="pdp-size">XL</button></div><a href="product-v2.html" class="k-btn k-btn-dark" style="width:100%;margin-top:16px">Ver producto completo</a></div>`;drawer.closest('.k-layer')?.classList.add('is-open');drawer.classList.add('is-open');document.documentElement.style.overflow='hidden'}});
 
-  // Make product image buttons keyboard-visible and prevent nested links from swallowing actions.
+  // Make product card actions independent from linked media.
   $$('[data-product-card] button').forEach(b=>b.addEventListener('click',e=>e.stopPropagation()));
 
   // Mobile toolbar: sort button focuses select; filter button handled by core.
@@ -42,7 +60,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   $$('[data-review-star]').forEach((b,i,arr)=>b.addEventListener('click',()=>{arr.forEach((x,j)=>x.classList.toggle('is-active',j<=i));const out=$('[data-review-score]');if(out)out.textContent=String(i+1)}));
 
   // Accordions: semantic open state.
-  $$('details').forEach(d=>d.addEventListener('toggle',()=>d.setAttribute('aria-expanded',String(d.open))));
+  $$('details').forEach(d=>{d.setAttribute('aria-expanded',String(d.open));d.addEventListener('toggle',()=>d.setAttribute('aria-expanded',String(d.open)))});
 
   // Mark build visually for review.
   const badge=document.createElement('div');badge.textContent='Sprint 1B · 2026.10.14';badge.style.cssText='position:fixed;right:10px;bottom:10px;z-index:175;background:rgba(6,16,25,.88);color:#fff;padding:6px 8px;font:800 8px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;pointer-events:none';document.body.appendChild(badge);
