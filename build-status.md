@@ -1,73 +1,89 @@
 # KUBOR Mockup Build Status
 
-Current shell build: `2026.10.13-shell2`
-Current modular integration revision: `modules-v3-r2`
+Current core review build: `2026.10.14-sprint1-core-v4`
 
-The shell build ID is rendered in the lower-right corner by `app-v2.js`. The modular revision lives in `modules-v3.js`; if the shell ID is correct but a new section is missing, refresh the page so the updated module asset is requested.
+## Source of truth
 
-## Flow currently under review
+- Execution checklist: `docs/ui-ux-master-checklist.md`
+- Sprint 1 status: `docs/sprint-1-core-convergence.md`
+- Navigation index: `site-map.html`
+- Shopify mapping: `docs/shopify-handoff-map.md`
 
-- Shared native-JS shell on all mockup pages
-- Home → collection → product
-- Shared cart state via localStorage
-- Cart quantity and subtotal calculations
-- Search drawer with predictive mock results
-- Responsive mobile drawer and desktop mega menu
-- Transparent Home header → solid sticky state on scroll
-- Global announcement bar with rotating messages and brand shortcuts
-- Global footer generated from one shared module
-- Social rail desktop
-- GSAP hero/reveal motion as progressive enhancement
-- Lenis smooth scroll as progressive enhancement
+## Core V4 now active on
 
-## Modular V3 integration
+- `home-v2.html`
+- `collection-v2.html`
+- `product-v2.html`
 
-### Home
-- Brand universe: KUBOR / Terrafit / HYPERGOGO
-- Expanded discipline/category rail
-- Text scroller / marquee
-- Technology module
-- Campaign / launch feature
-- Community + Journal blocks
-- Dealer / size guide / support CTAs
+These three pages now share:
 
-### PDP
-- Icon-led key specifications
-- Frame, fork, rear shock, drivetrain, crankset, cassette, brakes and wheels
-- Horizontal mobile spec rail
-- Geometry and compare CTAs
-- Shipping, warranty, fit and comparison decision-support block
-- Financing concept block
-- Review carousel / grid
-- Mobile sticky purchase bar
+- `core-v4.css`
+- `core-v4.js`
+- native-JS header / mega menu / mobile menu
+- predictive search drawer
+- cart drawer with localStorage mock persistence
+- shared footer
+- official KUBOR SVG logo
+- direct link to `site-map.html`
 
-### PLP
-- Subcategory shortcut rail
-- Mobile-first horizontal navigation
-- Compare, size guide and technology shortcuts
-- Per-product compare selector
-- Floating compare tray
+## Home
 
-### Global footer
-- Single shared footer
-- Newsletter capture UI
-- Product navigation
-- Explore/support/brand groups
-- Legal links
-- Social links
+- Rebuilt around approved mockup proportions and composition.
+- Hero + mini specs + dual CTA.
+- Overlapping 5-category rail.
+- Featured product cards.
+- Dark trust strip.
+- `Ingeniería que nace en la montaña` storytelling module.
+- Decision-support modules: size / geometry / technology.
+- Journal / community / launch modules.
+- KUBOR / Terrafit / HYPERGOGO brand universe.
+- Dealer / warranty / help CTAs.
+- Horizontal mobile rails for categories, products, editorial and brands.
 
-## Review order
+## PLP
 
-1. Confirm visible shell build ID is `2026.10.13-shell2`
-2. Test global menu, search, account, wishlist and cart links
-3. Home: review new modules and mobile horizontal rails
-4. PDP: review specs, purchase-support block, reviews and sticky mobile purchase bar
-5. PLP: test compare selector/tray and browsing flow
-6. Test cart persistence between pages
-7. Regression pass against component catalog and remaining-page checklist
+- Short MTB hero + rating + subdiscipline chips.
+- ~235px desktop faceted sidebar.
+- Sort toolbar + active-filter chips.
+- 4-column desktop product grid / 2-column mobile grid.
+- Wishlist, quick-view, quick-add and compare mock actions.
+- Floating compare tray.
+- Mobile filter drawer.
+- Integrated MTB buying guide.
+- Trust strip.
+
+## PDP
+
+- Dark two-column first fold.
+- Gallery + thumbnails.
+- Product identity, rating, price, MSI, stock.
+- Functional mock color swatches and size selector.
+- Add-to-cart mock + wishlist + buy-now presentation.
+- Icon-led spec strip using `assets/icons/kubor-icons.svg`.
+- Functional native-JS tabs: description / specs / geometry / shipping / warranty.
+- Full spec table.
+- Geometry table.
+- Technology cards including crankset / cassette / brakes / wheels.
+- Related products.
+- Context FAQ + support / dealer CTAs.
+- Warranty registration CTA.
+- Mobile sticky add-to-cart.
+
+## Still not considered final
+
+Do **not** treat the core pages as approved yet. Remaining Sprint 1B work includes:
+
+1. visual comparison against the supplied mockup images at desktop and mobile widths;
+2. precise spacing / crop / type / density tuning;
+3. replace temporary photography with owned/final product assets;
+4. full multi-discipline mega menu;
+5. card states: sale / bestseller / sold-out / low-stock;
+6. richer reviews block and media storytelling on PDP;
+7. ARIA / keyboard / accessibility pass;
+8. responsive QA at 320 / 375 / 390 / 430 / 768 / 1024 / 1280 / 1440+;
+9. migrate Cart / Search / Account and secondary pages onto `core-v4`;
+10. remove old V2/V3 assets only after no page depends on them.
 
 ## Shopify handoff
 
-The mockup treats the global shell and modular V3 modules as reusable UI contracts. During migration these map to Shopify section groups, sections, blocks and snippets rather than being copied page by page.
-
-The current localStorage cart remains an adapter only. It maps to Shopify cart endpoints later without changing the UI contract. Predictive search follows the same principle: mock catalog now, Shopify Predictive Search API later.
+`core-v4` is still mockup code. Approved UI contracts will later map into Shopify section groups, sections, blocks, snippets, metafields/metaobjects, Customer Accounts and app-backed features according to `docs/shopify-handoff-map.md`.
