@@ -125,6 +125,7 @@ Mobile navigation exposes the same architecture through grouped accordion sectio
 - `sprint1h.js`
 - `sprint1i.js`
 - `sprint1j.css`
+- `sprint1j-readability.css`
 - `sprint1j.js`
 - `account-flow.css`
 - `account-shell.js`
@@ -200,6 +201,12 @@ Cards without verified model imagery/current commercial data are explicitly mark
 - PLP remains 2-column on normal mobile but becomes 1-column at <=360 px;
 - horizontal chips are retained on mobile.
 
+### Cross-page readability
+- Account panels, KPI labels, bike cards, forms, tables and side navigation receive a larger readable scale;
+- Support / FAQ / Contact / Dealer surfaces receive more panel padding, larger body type and better intermediate-width gaps;
+- Discipline / brand landings receive more section rhythm, larger subnav hit areas and improved story/technology body copy;
+- horizontal rails are preserved on mobile instead of stacking every module vertically.
+
 ### PLP semantic cleanup
 - the PLP no longer claims a live `36 productos / Trail` result set;
 - review state now says `6 modelos de muestra` / portfolio in review;
@@ -217,16 +224,15 @@ Cards without verified model imagery/current commercial data are explicitly mark
 4. exact spacing and typography refinement after screenshot comparison;
 5. current commercial price/spec/SKU validation per Shopify variant;
 6. screenshot comparison at 390 / 768 / 1024 / 1440 first, then full 320 / 375 / 430 / 1280+ sweep;
-7. account readability pass: several metadata/KPI labels remain 7–9 px;
-8. support/help intermediate-width density pass;
-9. full screen-reader/browser accessibility validation;
-10. form loading / disabled / upload / failure states;
-11. real Shopify integrations for cart/search/customer data;
-12. real dealer/map integration;
-13. complete dependency/reference scan before deleting legacy V2/V3 assets;
-14. remove redundant transitional loaders / `nav-v5.js` only after regression;
-15. obtain/publish the exact official HYPERGOGO SVG and replace text-only brand marks;
-16. performance/dependency cleanup.
+7. final content/editorial rhythm review outside the core commerce/account/support surfaces;
+8. full screen-reader/browser accessibility validation;
+9. form loading / disabled / upload / failure states;
+10. real Shopify integrations for cart/search/customer data;
+11. real dealer/map integration;
+12. complete dependency/reference scan before deleting legacy V2/V3 assets;
+13. remove redundant transitional loaders / `nav-v5.js` only after regression;
+14. obtain/publish the exact official HYPERGOGO SVG and replace text-only brand marks;
+15. performance/dependency cleanup.
 
 ## Largest remaining visual gap
 
@@ -234,10 +240,10 @@ The primary layout now follows the supplied mockups more closely and the core ca
 
 ## Next block
 
-1. account + support readability/breathing pass;
-2. screenshot-based crop/spacing/type comparison at 390 / 768 / 1024 / 1440 where tooling permits;
-3. continue extracting/verifying real model imagery from owned KUBOR sources;
-4. remove remaining fictional product references in Search / Cart / Compare secondary states;
+1. screenshot-based crop/spacing/type comparison at 390 / 768 / 1024 / 1440 where tooling permits;
+2. continue extracting/verifying real model imagery from owned KUBOR sources;
+3. remove remaining fictional product references in Search / Cart / Compare secondary states;
+4. final content/editorial rhythm review;
 5. obtain and publish exact HYPERGOGO SVG when the original vector becomes available;
 6. remove transitional dependencies after regression;
 7. freeze approved mockup contracts;
