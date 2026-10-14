@@ -3,6 +3,31 @@
     const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
     document.body.classList.add('sprint1h-visual');
 
+    // Owned KUBOR lifestyle asset: use only for brand/discipline imagery, never as a model packshot.
+    const page=(location.pathname.split('/').pop()||'home-v2.html').toLowerCase();
+    const useLocalImage=(img,src)=>{
+      if(!img)return;
+      const fallback=img.currentSrc||img.src;
+      img.addEventListener('error',()=>{if(img.src.includes(src)){img.src=fallback}}, {once:true});
+      img.src=src;
+    };
+    if(page==='home-v2.html'||page==='index.html'||page===''){
+      useLocalImage($('.home-hero>img'),'assets/media/kubor-hero.jpg');
+      useLocalImage($('.home-story>img'),'assets/media/kubor-hero.jpg');
+    }
+    if(page==='discipline-mtb.html') useLocalImage($('.landing-hero>img'),'assets/media/kubor-hero.jpg');
+
+    // Replace text-only Terrafit mark in Home with the official SVG when that card exists.
+    const tfCard=$('.home-brand-row a[href="brand-terrafit.html"]');
+    const tfTitle=tfCard?.querySelector('strong');
+    if(tfTitle){
+      const logo=document.createElement('img');
+      logo.src='assets/logos/TERRAFIT_dark.svg';
+      logo.alt='Terrafit';
+      logo.className='s1h-brand-logo s1h-brand-logo-terrafit';
+      tfTitle.replaceWith(logo);
+    }
+
     // Ensure commerce CTAs are wired wherever the visual prototype already shows them.
     $$('[data-product-card]').forEach(card=>{
       $$('button',card).forEach(b=>{
@@ -13,7 +38,7 @@
     $$('.pdp-buy-actions .k-btn-primary').forEach(b=>b.setAttribute('data-add-cart',''));
 
     // Performance: keep hero eager, lazy-load secondary imagery.
-    const hero=$('.home-hero>img,.plp-hero>img,.pdp-main-media img,[data-pdp-main-image]');
+    const hero=$('.home-hero>img,.plp-hero>img,.pdp-main-media img,[data-pdp-main-image],.landing-hero>img');
     $$('img').forEach(img=>{if(img!==hero&&!img.hasAttribute('loading'))img.loading='lazy'});
     if(hero){hero.loading='eager';hero.setAttribute('fetchpriority','high')}
 
