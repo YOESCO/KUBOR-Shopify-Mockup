@@ -70,6 +70,22 @@ At roughly 1050 px and below, the fixed sidebar is removed from the layout. Filt
 - improved story/technology body copy size;
 - preserved horizontal rails on mobile instead of stacking every module vertically.
 
+### Search / predictive search
+- removed `X1 Pro` and fabricated premium prices from visible search results;
+- Mallory R29 21V is the verified real-product result;
+- Tornado / Calypso 4 / Storm are labelled as review/concept results where commercial data remains unverified;
+- predictive search uses the same real-vs-concept distinction instead of an independent fictional catalogue.
+
+### Compare
+- replaced the fictional Carbon / 1×12 / four-piston comparison with Mallory / Calypso 4 / Storm;
+- Mallory uses verified TDS-derived data;
+- Calypso 4 and Storm use only available consolidated data, with uncertain values explicitly marked `por validar`;
+- only Mallory links to the real PDP; concept columns return to the catalogue instead of pretending to have a finished PDP.
+
+### Cart
+- removed the fabricated `Casco KUBOR Pro $2,499` upsell;
+- cart now points to the Accessories surface until real accessory catalogue data is connected.
+
 ## Still open in this density pass
 - Browser screenshot QA at 390 / 768 / 1024 / 1440 is still required before approval.
 - Final crop and line-length tuning must follow the screenshot pass.
