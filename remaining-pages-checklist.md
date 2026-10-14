@@ -1,112 +1,84 @@
-# KUBOR Mockup — Remaining Pages & States
+# KUBOR Mockup — Existing Page Inventory
 
-This checklist is the source of truth for unfinished visual/mockup coverage before Shopify migration.
+> **Este archivo ya no es la fuente de verdad de avance.**
+>
+> La lista original marcaba `[x]` cuando el archivo/página existía, pero eso no significaba que la experiencia estuviera visualmente aprobada, funcional, responsive o lista para Shopify.
+>
+> Usa ahora: **[`docs/ui-ux-master-checklist.md`](docs/ui-ux-master-checklist.md)**.
 
-## Decision support
-- [x] Compare bikes
-- [x] Size guide
-- [x] Geometry guide
-- [x] Dealers / store locator
+## Qué significa este archivo
 
-## Content & brand
-- [x] Blog index
-- [x] Article detail
-- [x] About / brand story
-- [x] Technology / innovation
-- [x] Community / social landing
-- [x] Launch / campaign landing
+Sirve únicamente para confirmar que ya hay una base HTML que no necesitamos volver a descubrir.
 
-## Customer access & account
-- [x] Login
-- [x] Register
-- [x] Password recovery
-- [x] Account hub
-- [x] Orders list
-- [x] Order detail
-- [x] Tracking
-- [x] Addresses
-- [x] Wishlist / favorites
-- [x] Warranties
-- [x] Registered bikes
-- [x] Technical support
-- [x] Account preferences
+### Decision support — archivo existente
+- Compare bikes → `compare.html`
+- Size guide → `size-guide.html`
+- Geometry guide → `geometry-guide.html`
+- Dealers / store locator → `dealers.html`
 
-## Help & service
-- [x] Help center
-- [x] FAQ
-- [x] Contact
-- [x] Shipping policy
-- [x] Returns policy
-- [x] Warranty policy
-- [x] Privacy policy
-- [x] Terms & conditions
+### Content & brand — archivo existente
+- Blog index → `blog.html`
+- Article detail → `article.html`
+- About / brand story → `about.html`
+- Technology / innovation → `technology.html`
+- Community / social landing → `community.html`
+- Launch / campaign landing → `campaign.html`
 
-## Commerce & discovery
-- [x] Home
-- [x] PLP / collection
-- [x] PDP concept
-- [x] Cart page
-- [x] Search results
-- [x] Predictive search concept
-- [x] Outlet / offers
-- [x] Accessories category
-- [x] Components category
-- [x] Gift card
-- [x] All collections
-- [x] Empty search state
-- [x] Empty cart state
-- [x] Empty wishlist state
+### Customer access & account — archivo existente
+- Login → `login.html`
+- Register → `register.html`
+- Password recovery → `recover.html`
+- Account hub → `account.html`
+- Orders list → `orders.html`
+- Order detail → `order-detail.html`
+- Tracking → `tracking.html`
+- Addresses → `addresses.html`
+- Wishlist / favorites → `wishlist.html`
+- Warranties → `warranties.html`
+- Registered bikes → `registered-bikes.html`
+- Technical support → `support.html`
+- Account preferences → `account-preferences.html`
 
-## Discipline & brand landings
-- [x] MTB
-- [x] Road
-- [x] Gravel
-- [x] Urban / Fitness
-- [x] Electric
-- [x] KUBOR brand
-- [x] Terrafit brand
-- [x] HyperGogo brand
+### Help & service — archivo existente
+- Help center → `help-center.html`
+- FAQ → `faq.html`
+- Contact → `contact.html`
+- Shipping policy → `shipping-policy.html`
+- Returns policy → `returns-policy.html`
+- Warranty policy → `warranty-policy.html`
+- Privacy policy → `privacy-policy.html`
+- Terms & conditions → `terms.html`
 
-## System / edge cases
-- [x] 404
-- [ ] Password / coming soon storefront page
-- [x] Global mega-menu baseline UX
-- [x] Global footer baseline UX
-- [x] Loading/error/success state gallery
-- [x] Mobile sticky PDP action baseline
-- [ ] Accessibility pass
-- [ ] Final responsive QA
-- [ ] Cross-page link integrity pass
-- [ ] Performance pass
-- [ ] Replace temporary photography / finalize owned assets
+### Commerce & discovery — archivo existente
+- Home → `home-v2.html`
+- PLP / collection → `collection-v2.html`
+- PDP → `product-v2.html`
+- Cart → `cart.html`
+- Search → `search.html`
+- Outlet → `outlet.html`
+- Accessories → `accessories.html`
+- Components → `components.html`
+- Gift card → `gift-card.html`
+- All collections → `all-collections.html`
 
-## Modular system
-- [x] Component catalog
-- [x] Technical/category SVG icon library
-- [x] Shared native-JS shell baseline
-- [x] Rotating announcement bar
-- [x] Brand shortcuts
-- [x] Shared footer
-- [x] Home modular V3 blocks
-- [x] PDP technical decision modules
-- [x] PLP compare/decision tooling baseline
-- [x] Shared mock form behavior
-- [x] Exact Shopify handoff map
-- [ ] Normalize all legacy pages to shared shell with no duplicate legacy behavior
-- [ ] Final brand-specific presets for KUBOR / Terrafit / HYPERGOGO
-- [ ] Theme Editor control matrix per section
+### Discipline / brand landings — archivo existente
+- MTB → `discipline-mtb.html`
+- Road → `discipline-road.html`
+- Gravel → `discipline-gravel.html`
+- Urban → `discipline-urban.html`
+- Electric → `discipline-electric.html`
+- KUBOR → `brand-kubor.html`
+- Terrafit → `brand-terrafit.html`
+- HYPERGOGO → `brand-hypergogo.html`
 
-## Next gate
+### System / reference
+- 404 → `404.html`
+- State gallery → `states.html`
+- Component library → `component-library.html`
+- Site map → `site-map.html`
+- Shopify handoff → `docs/shopify-handoff-map.md`
+- UI/UX execution source of truth → `docs/ui-ux-master-checklist.md`
 
-The remaining work is now mainly **normalization, QA and migration-readiness**, not page-count expansion:
+## Regla
 
-1. unify legacy/older page markup around the shared shell and modules;
-2. verify every link/action on desktop and mobile;
-3. accessibility + focus + keyboard + reduced-motion pass;
-4. responsive layout QA at common widths;
-5. performance/dependency cleanup;
-6. finalize brand presets and asset requirements;
-7. freeze approved mockup contracts before Liquid migration.
-
-## Shopify mapping gate
-Every mockup page/module must document the intended Shopify target: JSON template, section, block, snippet, native object, metafield/metaobject, customer account area, app/persistence layer, or policy page. See `docs/shopify-handoff-map.md`.
+**No volver a marcar una página como “terminada” aquí.** El avance real se controla únicamente en el master checklist.
