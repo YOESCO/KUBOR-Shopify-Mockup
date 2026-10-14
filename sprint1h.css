@@ -1,0 +1,218 @@
+/* Sprint 1H — visual convergence against approved KUBOR mockups */
+:root{--k-max:1420px;--topbar:28px;--header:58px;--k-cyan:#31c2dc;--k-navy:#061019}
+
+/* GLOBAL SHELL — tighter, more premium, closer to reference */
+.k-wrap{width:min(calc(100% - 36px),var(--k-max))}
+.k-topbar{height:28px;font-size:9px;letter-spacing:.015em}
+.k-topbar-track svg{width:13px!important;height:13px!important}
+.k-header{height:58px;background:#061019}
+.k-header.is-overlay{top:28px;background:linear-gradient(180deg,rgba(3,10,15,.88),rgba(3,10,15,.16))}
+.k-header-inner{grid-template-columns:132px 1fr auto;gap:16px}
+.k-logo{width:112px}
+.k-nav{gap:19px;font-size:9px;letter-spacing:.035em}
+.k-nav a,.k-nav button{padding:20px 0}
+.k-header-actions{gap:0}
+.k-icon-btn{width:36px;height:36px}
+.k-icon-btn svg{width:17px;height:17px}
+.k-badge-count{right:-2px;top:-1px;min-width:15px;height:15px;font-size:7px}
+.k-search-pill{width:36px;height:36px}
+.k-mega{border-top:1px solid #1d2931;box-shadow:0 28px 70px rgba(0,0,0,.34)}
+.k-mega>.k-wrap{padding-top:22px!important;padding-bottom:22px!important;gap:18px!important}
+.k-mega h4{font-size:9px;margin-bottom:9px}
+.k-mega a{font-size:11px;padding:4px 0}
+.k-mega-card{min-height:132px!important;border-radius:4px;background-image:linear-gradient(180deg,rgba(5,14,20,.12),rgba(5,14,20,.9)),url('https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?auto=format&fit=crop&w=900&q=82');background-size:cover;background-position:center}
+.k-mega-card:after{display:none}
+.k-drawer-head{height:58px}
+.k-drawer-body{padding:18px}
+.k-mobile-nav a,.k-mobile-nav button{min-height:50px;font-size:13px}
+.k-site-map{height:30px;font-size:8px;border-radius:3px}
+
+/* PRODUCT CARD — cleaner and more product-led */
+.k-product-card{border-color:#e4e9eb;border-radius:5px;box-shadow:none}
+.k-product-card:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(6,16,25,.07)}
+.k-product-media{aspect-ratio:1.24/1;background:#f4f6f6}
+.k-product-media img{transition:transform .35s ease}
+.k-product-body{padding:12px 12px 13px}
+.k-product-title{font-size:10.5px;letter-spacing:.01em}
+.k-product-meta{font-size:8.5px;margin-top:3px}
+.k-product-rating{font-size:8.5px;margin-top:7px}
+.k-product-bottom{margin-top:8px}
+.k-product-price{font-size:12px}
+.k-card-icon{width:32px;height:32px;border-radius:3px}
+.k-card-icon:last-child{background:var(--k-cyan);border-color:var(--k-cyan);color:#07131b}
+.k-card-badge{top:8px;left:8px;padding:4px 7px;font-size:7px;border-radius:2px}
+.k-swatches{margin-top:7px}
+.k-swatch{width:10px;height:10px}
+
+/* HOME — align to compact approved composition */
+.home-v4 .home-hero{min-height:468px;height:468px}
+.home-v4 .home-hero>img{object-position:70% 52%}
+.home-v4 .home-hero:after{background:linear-gradient(90deg,rgba(3,11,17,.98) 0%,rgba(3,11,17,.91) 31%,rgba(3,11,17,.55) 52%,rgba(3,11,17,.12) 76%,rgba(3,11,17,.16) 100%)}
+.home-v4 .home-hero-inner{padding-top:102px;padding-bottom:58px;max-width:650px}
+.home-v4 .home-hero h1{font-size:clamp(54px,5.3vw,78px);line-height:.89;max-width:620px}
+.home-v4 .home-hero p{font-size:12.5px;line-height:1.55;max-width:470px;margin-top:12px}
+.home-v4 .home-hero-specs{grid-template-columns:repeat(4,1fr);gap:12px;max-width:585px;margin-top:18px}
+.home-v4 .home-hero-spec{font-size:8px;line-height:1.3}
+.home-v4 .home-hero-spec svg{width:16px;height:16px}
+.home-v4 .home-hero-actions,.home-v4 .home-hero-inner>.flex:last-child{margin-top:18px!important}
+.home-v4 .home-cat-wrap{margin-top:-35px}
+.home-v4 .home-cat-grid{gap:7px;padding:7px;border-radius:7px;box-shadow:0 14px 38px rgba(6,16,25,.12)}
+.home-v4 .home-cat-card{border-radius:3px}
+.home-v4 .home-cat-card img{height:100px}
+.home-v4 .home-cat-copy{padding:9px 10px}
+.home-v4 .home-cat-copy b{font-size:9px}
+.home-v4 .home-cat-copy span{font-size:7.5px}
+.home-v4 .home-section{padding:38px 0}
+.home-v4 .home-section-head{margin-bottom:17px}
+.home-v4 .home-section-head h2{font-size:35px}
+.home-v4 .home-product-grid{gap:10px}
+.home-v4 .k-trust-item{padding:16px 20px}
+.home-v4 .k-trust-item svg{width:20px;height:20px}
+.home-v4 .k-trust-item b{font-size:9px}
+.home-v4 .k-trust-item span{font-size:8px}
+.home-v4 .home-story{min-height:255px;border-radius:5px}
+.home-v4 .home-story-content{padding:32px 36px}
+.home-v4 .home-story h2{font-size:39px;line-height:.92}
+.home-v4 .home-story-stats{right:30px;gap:15px}
+.home-v4 .home-story-stats b{font-size:30px}
+.home-v4 .home-decision-main,.home-v4 .home-decision-card{min-height:270px;border-radius:5px}
+.home-v4 .home-editorial{min-height:240px;border-radius:5px}
+.home-v4 .home-brand-card{min-height:190px;border-radius:5px}
+
+/* PLP — denser, editorial but commerce-first */
+.plp-v4 .plp-hero{height:258px;min-height:258px}
+.plp-v4 .plp-hero-inner{padding:40px 0 22px}
+.plp-v4 .plp-hero h1{font-size:clamp(48px,4.4vw,64px)}
+.plp-v4 .plp-hero p{max-width:610px;font-size:12px!important}
+.plp-layout{grid-template-columns:220px minmax(0,1fr);gap:18px;padding-top:20px}
+.plp-filters{top:74px;padding:14px;border-radius:5px}
+.plp-filter-group{padding:12px 0}
+.plp-filter-list{gap:7px;margin-top:9px}
+.plp-toolbar{min-height:44px;margin-bottom:8px}
+.plp-active-chips{padding:6px 0 8px}
+.plp-active-chip{padding:6px 9px;font-size:7.5px}
+.plp-grid{gap:9px}
+.plp-grid .k-product-media{aspect-ratio:1.16/1}
+.plp-grid .k-product-body{padding:10px}
+.plp-grid .k-btn{min-height:36px;font-size:8px;margin-top:9px!important}
+.plp-editorial-card{min-height:260px;border-radius:5px}
+.plp-buying-guide{grid-template-columns:160px 1fr 280px;min-height:148px;border-radius:5px}
+.plp-buying-copy{padding:20px}
+.plp-buying-copy h3{font-size:28px}
+.plp-buying-points{padding:18px}
+
+/* PDP — stronger first fold, compact buy box, overlapping specs */
+.pdp-v4 .pdp-first{padding-top:18px;padding-bottom:0}
+.pdp-v4 .pdp-first-grid{grid-template-columns:minmax(0,1.08fr) minmax(390px,.82fr);gap:24px}
+.pdp-v4 .pdp-main-media{height:396px;border-radius:5px}
+.pdp-v4 .pdp-thumb-row{gap:6px;margin-top:7px}
+.pdp-v4 .pdp-thumb{height:54px;border-radius:3px}
+.pdp-buybox{padding:0 0 14px}
+.pdp-buybox h1{font-size:clamp(42px,4.2vw,54px)}
+.pdp-rating{font-size:10px}
+.pdp-price{font-size:21px;margin-top:12px}
+.pdp-buy-divider{margin-top:14px;padding-top:14px}
+.pdp-swatches,.pdp-sizes{margin-top:8px}
+.pdp-size{height:36px;min-width:50px}
+.pdp-buy-actions{margin-top:12px}
+.pdp-trust-mini{margin-top:11px;padding-top:10px}
+.pdp-v4 .pdp-spec-strip{transform:translateY(20px);margin-top:-2px;border-radius:5px;box-shadow:0 14px 32px rgba(0,0,0,.14)}
+.pdp-spec{padding:13px 12px}
+.pdp-tabs-wrap{top:58px;padding-top:18px}
+.pdp-tab{min-height:46px;font-size:8.5px}
+.pdp-panel{padding:24px 0}
+.pdp-story-grid{gap:22px}
+.pdp-story-copy h2{font-size:38px}
+.pdp-story-media{min-height:320px;border-radius:5px}
+.pdp-tech-grid{gap:9px}
+.pdp-tech-card{min-height:122px;padding:15px}
+.pdp-related-rail{gap:10px}
+.pdp-support-card{padding:16px;border-radius:5px}
+
+/* FOOTER — flatter reference-like structure */
+.k-newsletter{padding:18px 0}
+.k-footer-grid{gap:24px;padding:32px 0 22px}
+.k-footer h4{font-size:8px;margin-bottom:10px}
+.k-footer a{font-size:8.5px;padding:3px 0}
+.k-footer-bottom{padding:13px 0}
+
+@media(max-width:1180px){
+  .home-v4 .home-hero{height:510px;min-height:510px}
+  .plp-layout{grid-template-columns:210px minmax(0,1fr)}
+  .pdp-v4 .pdp-first-grid{grid-template-columns:1fr}
+  .pdp-v4 .pdp-main-media{height:500px}
+}
+
+@media(max-width:960px){
+  .k-header{height:60px}.k-header.is-overlay{top:28px}.k-logo{width:112px}
+  .home-v4 .home-hero{height:610px;min-height:610px}
+  .home-v4 .home-hero-inner{padding-top:300px;padding-bottom:70px}
+  .home-v4 .home-hero h1{font-size:56px}
+  .plp-v4 .plp-hero{height:300px;min-height:300px}
+  .pdp-v4 .pdp-main-media{height:470px}
+}
+
+@media(max-width:760px){
+  :root{--topbar:28px;--header:58px}
+  .k-wrap{width:min(calc(100% - 20px),var(--k-max))}
+  .k-topbar{font-size:8px}
+  .k-header{height:58px}
+  .k-logo{width:108px}
+  .k-icon-btn{width:42px;height:42px}
+  .home-v4 .home-hero{height:650px;min-height:650px}
+  .home-v4 .home-hero>img{object-position:64% center}
+  .home-v4 .home-hero-inner{padding-top:330px;padding-bottom:72px}
+  .home-v4 .home-hero h1{font-size:52px;max-width:360px}
+  .home-v4 .home-hero p{font-size:12px;max-width:340px}
+  .home-v4 .home-hero-specs{gap:8px;grid-template-columns:1fr 1fr}
+  .home-v4 .home-cat-wrap{margin-top:-24px}
+  .home-v4 .home-cat-card{min-width:70%}
+  .home-v4 .home-cat-card img{height:118px}
+  .home-v4 .home-product-grid .k-product-card{min-width:76%}
+  .home-v4 .home-story{min-height:400px}
+  .home-v4 .home-story-content{padding:26px 20px}
+  .home-v4 .home-story h2{font-size:36px}
+  .home-v4 .home-story-stats{padding:0 20px 22px}
+  .plp-v4 .plp-hero{height:292px;min-height:292px}
+  .plp-v4 .plp-hero-inner{padding:42px 0 22px}
+  .plp-v4 .plp-hero h1{font-size:48px}
+  .plp-grid{gap:7px}
+  .plp-grid .k-product-body{padding:8px}
+  .plp-grid .k-product-title{font-size:9px}
+  .plp-grid .k-product-price{font-size:10px}
+  .plp-grid .k-btn{min-height:34px;font-size:7.5px;padding:0 8px}
+  .pdp-v4 .pdp-first{padding-top:10px}
+  .pdp-v4 .pdp-main-media{height:390px;margin-inline:-10px;border-radius:0}
+  .pdp-buybox h1{font-size:40px}
+  .pdp-v4 .pdp-spec-strip{transform:translateY(14px);margin-inline:-10px;border-radius:0}
+  .pdp-tabs-wrap{top:58px;padding-top:12px}
+  .pdp-story-media{min-height:300px}
+  .pdp-related-rail>.k-product-card{min-width:76%}
+}
+
+@media(max-width:430px){
+  .home-v4 .home-hero{height:620px;min-height:620px}
+  .home-v4 .home-hero-inner{padding-top:315px}
+  .home-v4 .home-hero h1{font-size:47px}
+  .home-v4 .home-cat-card{min-width:77%}
+  .home-v4 .home-product-grid .k-product-card{min-width:80%}
+  .plp-grid .k-product-media{aspect-ratio:1/1}
+  .plp-grid .k-product-meta{display:none}
+  .pdp-v4 .pdp-main-media{height:350px}
+  .pdp-buybox h1{font-size:36px}
+}
+
+@media(max-width:360px){
+  .home-v4 .home-hero h1{font-size:43px}
+  .home-v4 .home-hero{height:600px;min-height:600px}
+  .home-v4 .home-hero-inner{padding-top:300px}
+  .plp-grid .k-btn{font-size:7px}
+  .pdp-v4 .pdp-main-media{height:320px}
+}
+
+@media(min-width:1440px){
+  .home-v4 .home-hero{height:485px;min-height:485px}
+  .home-v4 .home-hero h1{font-size:80px}
+  .plp-grid{gap:11px}
+  .pdp-v4 .pdp-main-media{height:420px}
+}
