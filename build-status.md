@@ -1,6 +1,6 @@
 # KUBOR Mockup Build Status
 
-Current review build: `2026.10.14-sprint1C-account`
+Current review build: `2026.10.14-sprint1D-support-landings`
 
 ## Source of truth
 
@@ -8,6 +8,7 @@ Current review build: `2026.10.14-sprint1C-account`
 - Sprint 1 core: `docs/sprint-1-core-convergence.md`
 - Sprint 1B visual convergence: `docs/sprint-1b-visual-convergence.md`
 - Sprint 1C commerce/account: `docs/sprint-1c-commerce-account.md`
+- Sprint 1D support/landings: `docs/sprint-1d-support-landings.md`
 - Navigation index: `site-map.html`
 - Shopify mapping: `docs/shopify-handoff-map.md`
 
@@ -35,7 +36,35 @@ Current review build: `2026.10.14-sprint1C-account`
 - `register.html`
 - `recover.html`
 
-Shared assets:
+### Support / discovery normalized
+- `compare.html`
+- `help-center.html`
+- `faq.html`
+- `contact.html`
+- `dealers.html`
+- `gift-card.html`
+- `all-collections.html`
+- `site-map.html`
+
+### Discipline landings
+- `discipline-mtb.html`
+- `discipline-road.html`
+- `discipline-gravel.html`
+- `discipline-urban.html`
+- `discipline-electric.html`
+- `discipline-fitness.html`
+- `discipline-commuter.html`
+- `discipline-trekking.html`
+- `discipline-cargo.html`
+- `discipline-kids.html`
+- `discipline-bmx.html`
+
+### Brand landings
+- `brand-kubor.html`
+- `brand-terrafit.html`
+- `brand-hypergogo.html`
+
+## Shared assets
 
 - `core-v4.css`
 - `core-v4.js`
@@ -45,60 +74,57 @@ Shared assets:
 - `sprint1c.js`
 - `account-flow.css`
 - `account-shell.js`
+- `support-flow.css`
+- `support-flow.js`
+- `landing-flow.css`
+- `nav-v5.js`
 
-## Sprint 1B summary
+## Sprint 1D summary
 
-Home / PLP / PDP were rebuilt closer to the approved mockups with tighter proportions, richer cards and states, mobile rails, PLP filtering/compare UI, PDP tabs/specs/geometry/reviews and support modules.
+### Support / decision
+- richer compare table;
+- Help Center search/filter;
+- categorized FAQ;
+- contact form validation/success state;
+- dealer search/service filters + map concept;
+- configurable Gift Card mock;
+- expanded All Collections index.
 
-## Sprint 1C summary
+### New category coverage
+Dedicated pages now exist for:
+- Fitness;
+- Commuter;
+- Trekking;
+- Cargo / Utility;
+- Kids;
+- BMX / Stunt.
 
-### Cart
-- shared cart state;
-- quantity / remove;
-- totals;
-- shipping progress;
-- coupon demo;
-- cross-sell;
-- empty state.
+### Brand differentiation
+- KUBOR: performance / premium / technical;
+- Terrafit: everyday / accessible / value-led;
+- HYPERGOGO: expressive gradients / electric storytelling.
 
-### Search
-- instant mock filtering;
-- result tabs;
-- popular chips;
-- products / collections / content;
-- no-results recovery.
-
-### Customer Account
-- reusable account shell / subnavigation;
-- dashboard;
-- orders and order detail;
-- tracking timeline;
-- addresses;
-- wishlist;
-- registered bikes and serial-number concept;
-- warranties and claim concept;
-- support cases;
-- preferences;
-- login / register / password recovery.
+### Navigation
+`nav-v5.js` defines the expanded navigation contract for disciplines, urban/use categories, youth, gear, brands and decision/support tools. It is not yet injected into every page context, so global V5 nav is still an open item.
 
 ## Still not final / do not mark approved yet
 
 1. visual QA against supplied mockups;
 2. final owned KUBOR product photography / controlled crops;
 3. exact spacing and typography refinement;
-4. real PLP filtering/sort if needed in the prototype;
-5. PDP fullscreen/zoom/video behavior;
-6. validated product specs and geometry;
-7. responsive QA at 320 / 375 / 390 / 430 / 768 / 1024 / 1280 / 1440+;
-8. account form success/error/disabled states;
-9. normalize Compare / Help Center / FAQ / Contact / Dealers / Gift Card / All Collections;
-10. normalize discipline and brand landings;
+4. validated product specs and geometry;
+5. responsive QA at 320 / 375 / 390 / 430 / 768 / 1024 / 1280 / 1440+;
+6. finish V5 mega/mobile navigation injection everywhere;
+7. normalize Size Guide / Geometry / Technology / About / Blog / Article / Community / Campaign;
+8. add Bike Finder / Quiz;
+9. add Manuals / Assembly / Maintenance surfaces;
+10. account/support form error/disabled/upload states;
 11. performance/dependency cleanup;
 12. remove legacy V2/V3 only after no page depends on them.
 
 ## Next block
 
-Normalize support/decision pages and then begin first full-site responsive/accessibility QA pass.
+Finish global V5 navigation, normalize decision/content pages, create Bike Finder and support knowledge surfaces, then start the first full responsive/accessibility QA pass.
 
 ## Shopify handoff
 
