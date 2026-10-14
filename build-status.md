@@ -1,6 +1,6 @@
 # KUBOR Mockup Build Status
 
-Current review build: `2026.10.14-sprint1I-real-data-assets`
+Current review build: `2026.10.14-sprint1J-breathing-plp`
 
 ## Source of truth
 
@@ -14,12 +14,13 @@ Current review build: `2026.10.14-sprint1I-real-data-assets`
 - Sprint 1G responsive/a11y: `docs/sprint-1g-responsive-a11y.md`
 - Sprint 1H mockup convergence: `docs/sprint-1h-mockup-convergence.md`
 - Sprint 1I real data/assets: `docs/sprint-1i-real-data-assets.md`
+- Sprint 1J breathing pass: `docs/sprint-1j-breathing-pass.md`
 - Navigation index: `site-map.html`
 - Shopify mapping: `docs/shopify-handoff-map.md`
 
 ## Global shell
 
-`core-v4.js` owns the V5 navigation contract. It loads Sprint 1G globally, and the shared visual layer now applies the Sprint 1H/1I catalogue normalization.
+`core-v4.js` owns the V5 navigation contract. It loads Sprint 1G globally, and Sprint 1G loads the Sprint 1H / 1I / 1J visual and catalogue layers.
 
 Desktop mega menu includes:
 - Performance: MTB / Road / Gravel / Electric;
@@ -122,6 +123,9 @@ Mobile navigation exposes the same architecture through grouped accordion sectio
 - `sprint1g.js`
 - `sprint1h.css`
 - `sprint1h.js`
+- `sprint1i.js`
+- `sprint1j.css`
+- `sprint1j.js`
 - `account-flow.css`
 - `account-shell.js`
 - `support-flow.css`
@@ -139,7 +143,7 @@ Mobile navigation exposes the same architecture through grouped accordion sectio
 - `assets/logos/KUBOR_only_dark.svg`
 - `assets/logos/TERRAFIT_dark.svg` — official supplied Terrafit mark.
 
-HYPERGOGO official SVG has been located in the user's Library but is not yet published into the repo; do not redraw it.
+HYPERGOGO: the Library contains a raster brand-reference board showing the wordmark, but indexed search did **not** find the standalone original `HyperGogo_Logo.svg`. Do not redraw or trace it. Keep the exact vector asset pending.
 
 Transitional:
 - `nav-v5.js` — global V5 navigation now lives in `core-v4.js`; compatibility file can be removed after regression QA.
@@ -183,12 +187,27 @@ Visible fictional names were replaced in the core PLP/Home with real portfolio n
 
 Cards without verified model imagery/current commercial data are explicitly marked **Concepto visual** and use **Precio por validar** rather than pretending the temporary content is final.
 
-### Interaction/performance reinforcement
-- visible Add to cart controls normalized where missing;
-- PDP primary Add to cart normalized;
-- secondary images use lazy loading;
-- primary hero/product image receives eager/high-priority loading;
-- add-to-cart confirmation state added.
+## Sprint 1J summary
+
+### Density correction
+- corrected the over-compressed header introduced by the previous convergence pass;
+- topbar/header now use 30 / 64 px desktop rhythm;
+- navigation type, logo slot, action spacing and mega-menu links have more room;
+- product cards regained readable title/meta/price scale and internal padding;
+- PLP hero, toolbar, filters, chips, grid gaps and buying guide were reopened;
+- desktop sidebar grows to 240–250 px when space supports it;
+- at <=1050 px the sidebar is removed and filters move to the sticky toolbar instead of squeezing product cards;
+- PLP remains 2-column on normal mobile but becomes 1-column at <=360 px;
+- horizontal chips are retained on mobile.
+
+### PLP semantic cleanup
+- the PLP no longer claims a live `36 productos / Trail` result set;
+- review state now says `6 modelos de muestra` / portfolio in review;
+- fake filter counts and pre-checked Trail state are removed until Shopify Search & Discovery supplies real values;
+- PLP chips remain as UX controls for the mock, not implied live inventory.
+
+### Rule
+**Compact premium is not the same as compressed.** A surface is not approved if hierarchy depends on 7–8 px body copy, insufficient whitespace or forcing too many columns into the available width.
 
 ## Still not final / do not mark approved yet
 
@@ -197,27 +216,29 @@ Cards without verified model imagery/current commercial data are explicitly mark
 3. final colour-level product photography;
 4. exact spacing and typography refinement after screenshot comparison;
 5. current commercial price/spec/SKU validation per Shopify variant;
-6. screenshot comparison at 390 / 768 / 1440 first, then full 320 / 375 / 430 / 1024 / 1280+ sweep;
-7. full screen-reader/browser accessibility validation;
-8. form loading / disabled / upload / failure states;
-9. real Shopify integrations for cart/search/customer data;
-10. real dealer/map integration;
-11. complete dependency/reference scan before deleting legacy V2/V3 assets;
-12. remove redundant transitional loaders / `nav-v5.js` only after regression;
-13. publish official HYPERGOGO SVG and replace text-only brand marks;
-14. performance/dependency cleanup.
+6. screenshot comparison at 390 / 768 / 1024 / 1440 first, then full 320 / 375 / 430 / 1280+ sweep;
+7. account readability pass: several metadata/KPI labels remain 7–9 px;
+8. support/help intermediate-width density pass;
+9. full screen-reader/browser accessibility validation;
+10. form loading / disabled / upload / failure states;
+11. real Shopify integrations for cart/search/customer data;
+12. real dealer/map integration;
+13. complete dependency/reference scan before deleting legacy V2/V3 assets;
+14. remove redundant transitional loaders / `nav-v5.js` only after regression;
+15. obtain/publish the exact official HYPERGOGO SVG and replace text-only brand marks;
+16. performance/dependency cleanup.
 
 ## Largest remaining visual gap
 
-The primary layout now follows the supplied mockups more closely and the core catalogue no longer relies entirely on invented products. The main remaining visual gap is **verified owned product photography**: isolated model packshots, real colour variants, component closeups and controlled discipline imagery.
+The primary layout now follows the supplied mockups more closely and the core catalogue no longer relies entirely on invented products. The main remaining visual gap is **verified owned product photography** plus screenshot-based spacing/crop refinement.
 
 ## Next block
 
-1. remove remaining fictional product references in secondary surfaces/search/related-product modules;
-2. publish official HYPERGOGO logo from the supplied SVG;
+1. account + support readability/breathing pass;
+2. screenshot-based crop/spacing/type comparison at 390 / 768 / 1024 / 1440 where tooling permits;
 3. continue extracting/verifying real model imagery from owned KUBOR sources;
-4. screenshot-based crop/spacing/type comparison at 390 / 768 / 1440 where tooling permits;
-5. tighten Cart / Search / Account after core visual approval;
+4. remove remaining fictional product references in Search / Cart / Compare secondary states;
+5. obtain and publish exact HYPERGOGO SVG when the original vector becomes available;
 6. remove transitional dependencies after regression;
 7. freeze approved mockup contracts;
 8. begin Liquid migration only when explicitly authorized.
