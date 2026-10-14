@@ -19,7 +19,7 @@
 
 /* Cards: slightly larger image-to-copy balance, cleaner active state. */
 .home-v4 .home-cat-grid{border-radius:10px!important;padding:8px!important;gap:9px!important;box-shadow:0 14px 36px rgba(6,16,25,.10)!important}
-.home-v4 .home-cat-card{flex-basis:224px!important;min-width:224px!important;border-radius:2px!important}
+.home-v4 .home-cat-card{flex:0 0 224px!important;min-width:224px!important;border-radius:2px!important}
 .home-v4 .home-cat-card img{height:132px!important;transition:transform .35s ease,filter .25s ease}
 .home-v4 .home-cat-card:hover img{transform:scale(1.025)}
 .home-v4 .home-cat-card.is-active img{filter:saturate(1.06) contrast(1.02)}
@@ -29,13 +29,15 @@
 
 /* Soft edge cue instead of visible scrollbar / giant arrows. */
 .home-cat-viewport{position:relative;overflow:hidden}
-.home-cat-viewport:after{content:"";position:absolute;right:0;top:8px;bottom:8px;width:38px;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.92))}
+.home-cat-viewport:after{content:"";position:absolute;right:0;top:8px;bottom:8px;width:38px;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.92));transition:opacity .2s ease}
 .home-cat-viewport.is-end:after{opacity:0}
 
 /* Generic product/editorial controls stay secondary. */
 .k-carousel-controls:not([hidden]),.content-rail-controls:not([hidden]){opacity:.86}
 .k-carousel-arrow,.content-rail-controls button{box-shadow:none!important;border-color:#dce3e7!important}
 .k-carousel-shell.is-product-carousel>.k-carousel-controls,.pdp-v4 .k-carousel-controls{justify-content:flex-end!important;margin-bottom:7px!important}
+.k-carousel-shell.is-spec-carousel>.k-carousel-controls .k-carousel-arrow{width:28px!important;height:28px!important;min-width:28px!important;min-height:28px!important}
+.k-carousel-shell.is-product-carousel>.k-carousel-controls .k-carousel-arrow{width:30px!important;height:30px!important;min-width:30px!important;min-height:30px!important}
 
 /* PDP containment: every direct grid/rail child is allowed to shrink; long inline content cannot widen viewport. */
 .pdp-v4,.pdp-v4 body,.pdp-v4 main{max-width:100vw;overflow-x:clip}
@@ -46,12 +48,17 @@
 .pdp-v4 img,.pdp-v4 svg{max-width:100%}
 .pdp-v4 [class*="min-w-["]{min-width:0!important}
 
-/* Mobile menu: stronger visual rhythm, fewer list-like vibes. */
+/* Mobile menu: stronger information hierarchy instead of one long list. */
+.k-mobile-section-label{display:flex;align-items:center;gap:8px;margin:2px 0 10px;color:rgba(255,255,255,.52);font-size:8px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.k-mobile-section-label:after{content:"";height:1px;flex:1;background:rgba(255,255,255,.1)}
 .k-mobile-visual-grid{gap:10px!important;margin-bottom:18px!important}
 .k-mobile-visual-card{min-height:112px!important;border:1px solid rgba(255,255,255,.08)}
 .k-mobile-visual-card span{font-size:10.5px!important;line-height:1.1}
 .k-mobile-menu-actions{gap:10px!important;margin:16px 0 20px!important}
 .k-mobile-menu-action{min-height:50px!important;border-color:rgba(255,255,255,.18)!important}
+.k-mobile-quick-row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin:0 0 20px}
+.k-mobile-quick-row a{min-height:46px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.03);display:grid;place-items:center;text-align:center;padding:7px 5px;color:#fff;font-size:7.5px;font-weight:900;text-transform:uppercase;line-height:1.2}
+.k-mobile-quick-row svg{width:15px;height:15px;color:#35c4df;margin-bottom:4px}
 .k-mobile-nav>button,.k-mobile-nav>a{padding-inline:2px!important;min-height:56px!important}
 .k-mobile-sub{padding-left:0!important}
 .k-mobile-sub a{padding-left:14px!important;border-left:2px solid rgba(53,196,223,.2)}
@@ -65,6 +72,13 @@
   .home-v4 .home-cat-card img{height:138px!important}
   .home-cat-viewport:after{width:26px}
   .pdp-v4 .k-wrap{max-width:calc(100vw - var(--mobile-gutter-left) - var(--mobile-gutter-right))!important}
+
+  /* Not every horizontal rail needs arrows. Gallery, tabs and trust are direct-manipulation surfaces. */
+  .pdp-v4 .k-carousel-shell.is-gallery-carousel>.k-carousel-controls,
+  .pdp-v4 .k-carousel-shell.is-tabs-carousel>.k-carousel-controls,
+  .pdp-v4 .k-carousel-shell.is-compact-carousel>.k-carousel-controls{display:none!important}
+  .pdp-v4 .k-carousel-shell.is-spec-carousel>.k-carousel-controls,
+  .pdp-v4 .k-carousel-shell.is-product-carousel>.k-carousel-controls{display:flex!important;min-height:28px!important;margin-bottom:6px!important}
 }
 @media(max-width:430px){
   .home-cat-head-copy{gap:7px}
@@ -75,6 +89,7 @@
   .home-v4 .home-cat-card img{height:132px!important}
   .home-v4 .home-cat-copy{min-height:64px!important}
   .pdp-v4 .k-wrap{max-width:calc(100vw - 36px)!important}
+  .k-mobile-quick-row{gap:6px}.k-mobile-quick-row a{font-size:7px}
 }
 @media(max-width:360px){
   .home-cat-head .k-eyebrow{font-size:8px!important}
