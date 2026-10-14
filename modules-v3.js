@@ -1,0 +1,85 @@
+(()=>{
+  const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+  const path=location.pathname.split('/').pop()||'home-v2.html';
+  const isHome=path==='home-v2.html'||path==='index.html'||path==='';
+  const isPdp=path==='product-v2.html'||path==='product.html';
+  const isPlp=path==='collection-v2.html'||path==='collection.html';
+
+  const style=document.createElement('style');
+  style.textContent=`
+  .v3-marquee{overflow:hidden;background:#07131b;color:white;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+  .v3-marquee-track{display:flex;width:max-content;gap:42px;padding:14px 0;animation:v3marquee 24s linear infinite;font:800 11px/1 Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+  @keyframes v3marquee{to{transform:translateX(-50%)}}
+  .v3-card{border:1px solid #e5e7eb;background:#fff;transition:transform .28s ease,box-shadow .28s ease}.v3-card:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(7,19,27,.10)}
+  .v3-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:999px;background:#e8fbfe;color:#07131b}
+  .v3-brand-k{background:#07131b;color:white}.v3-brand-t{background:#f3f4f6;color:#111827}.v3-brand-h{background:linear-gradient(135deg,#111827,#5b21b6 46%,#ec4899);color:white}
+  .v3-gradient-text{background:linear-gradient(90deg,#00e4fe,#a3ff12 32%,#ff8a00 62%,#ff2bd6);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .v3-scroll-row{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.v3-scroll-row::-webkit-scrollbar{display:none}.v3-scroll-row>*{scroll-snap-align:start}
+  .v3-footer a:hover{color:#00e4fe}.v3-footer-grid{display:grid;grid-template-columns:1.3fr repeat(4,1fr);gap:34px}
+  .v3-spec{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);border-radius:10px;padding:16px}.v3-spec svg{width:25px;height:25px;color:#00e4fe}
+  .v3-mobile-buy{display:none}
+  @media(max-width:768px){.v3-footer-grid{grid-template-columns:1fr 1fr;gap:24px}.v3-footer-brand{grid-column:1/-1}.v3-mobile-buy{display:grid;position:fixed;left:0;right:0;bottom:0;z-index:155;grid-template-columns:1fr auto;gap:8px;padding:10px;background:rgba(7,19,27,.96);backdrop-filter:blur(16px);border-top:1px solid rgba(255,255,255,.12)}.v3-mobile-buy a,.v3-mobile-buy button{min-height:48px}.v3-marquee-track{animation-duration:18s}}
+  @media(prefers-reduced-motion:reduce){.v3-marquee-track{animation:none}}
+  `;
+  document.head.appendChild(style);
+
+  // Rotating announcement bar: works without Alpine/GSAP.
+  const ann=$('.kubor-announcement');
+  if(ann){
+    ann.innerHTML=`<div class="ref-section h-full flex items-center justify-between gap-4"><button data-ann-prev aria-label="Anterior" class="hidden md:grid w-7 h-7 place-items-center">‹</button><div class="flex-1 text-center"><a data-ann-link href="#" class="inline-flex items-center gap-2"><span data-ann-text>Envío gratis a todo México en compras mayores a $1,499 MXN</span><span>→</span></a></div><div class="hidden md:flex items-center gap-3"><a href="brand-kubor.html" class="font-black">KUBOR</a><span class="opacity-30">/</span><a href="brand-terrafit.html">TERRAFIT</a><span class="opacity-30">/</span><a href="brand-hypergogo.html">HYPERGOGO</a></div><button data-ann-next aria-label="Siguiente" class="hidden md:grid w-7 h-7 place-items-center">›</button></div>`;
+    const msgs=[
+      {text:'Envío gratis a todo México en compras mayores a $1,499 MXN',href:'shipping.html',bg:'#00E4FE',fg:'#07131b'},
+      {text:'Hasta 6 MSI con tarjetas participantes',href:'faq.html',bg:'#D7FF38',fg:'#07131b'},
+      {text:'Registra tu bicicleta y centraliza garantía y soporte',href:'registered-bikes.html',bg:'#07131b',fg:'#fff'}
+    ]; let i=0, timer;
+    const paint=()=>{const m=msgs[i];ann.style.background=m.bg;ann.style.color=m.fg;$('[data-ann-text]',ann).textContent=m.text;$('[data-ann-link]',ann).href=m.href};
+    const next=()=>{i=(i+1)%msgs.length;paint()}; const prev=()=>{i=(i-1+msgs.length)%msgs.length;paint()};
+    $('[data-ann-next]',ann)?.addEventListener('click',()=>{next();restart()}); $('[data-ann-prev]',ann)?.addEventListener('click',()=>{prev();restart()});
+    const restart=()=>{clearInterval(timer);timer=setInterval(next,5500)}; ann.addEventListener('mouseenter',()=>clearInterval(timer));ann.addEventListener('mouseleave',restart);paint();restart();
+  }
+
+  const icon=(id,cls='')=>`<svg class="${cls}" aria-hidden="true"><use href="assets/icons/kubor-icons.svg#icon-${id}"></use></svg>`;
+
+  if(isHome){
+    const main=$('main');
+    if(main&&!$('#v3-home-extras')){
+      const extras=document.createElement('div');extras.id='v3-home-extras';
+      extras.innerHTML=`
+        <section class="v3-marquee"><div class="v3-marquee-track"><span>RIDE FURTHER</span><span>MTB</span><span>ROAD</span><span>GRAVEL</span><span>URBAN</span><span>ELECTRIC</span><span>RIDE FURTHER</span><span>MTB</span><span>ROAD</span><span>GRAVEL</span><span>URBAN</span><span>ELECTRIC</span></div></section>
+
+        <section class="py-14 md:py-20 bg-[#f5f7f8]"><div class="ref-section"><div class="flex items-end justify-between gap-4 mb-7"><div><p class="section-kicker">Universo KUBOR</p><h2 class="font-display text-5xl md:text-6xl uppercase text-[#07131b] mt-1">Tres marcas. Una plataforma.</h2></div><a href="all-collections.html" class="text-[10px] uppercase font-black">Ver todo →</a></div><div class="grid md:grid-cols-3 gap-4"><a href="brand-kubor.html" class="v3-brand-k rounded-xl min-h-[320px] p-6 flex flex-col justify-end"><span class="text-[#00E4FE] text-[10px] uppercase font-black">Performance</span><h3 class="font-display text-5xl uppercase mt-2">KUBOR</h3><p class="text-sm text-white/60 mt-3">Diseño, tecnología y producto enfocado en avanzar de nivel.</p><span class="mt-5 text-[10px] uppercase font-black">Explorar marca →</span></a><a href="brand-terrafit.html" class="v3-brand-t rounded-xl min-h-[320px] p-6 flex flex-col justify-end"><span class="text-slate-500 text-[10px] uppercase font-black">Everyday ride</span><h3 class="font-display text-5xl uppercase mt-2">TERRAFIT</h3><p class="text-sm text-slate-500 mt-3">Valor, practicidad y bicicletas fáciles de entender.</p><span class="mt-5 text-[10px] uppercase font-black">Explorar marca →</span></a><a href="brand-hypergogo.html" class="v3-brand-h rounded-xl min-h-[320px] p-6 flex flex-col justify-end"><span class="text-white/70 text-[10px] uppercase font-black">Electric fun</span><h3 class="font-display text-5xl uppercase mt-2 v3-gradient-text">HYPERGOGO</h3><p class="text-sm text-white/70 mt-3">Color, energía y storytelling para una experiencia diferente.</p><span class="mt-5 text-[10px] uppercase font-black">Explorar marca →</span></a></div></div></section>
+
+        <section class="py-14 md:py-20 bg-white"><div class="ref-section"><p class="section-kicker">Encuentra tu ride</p><h2 class="font-display text-5xl md:text-6xl uppercase text-[#07131b] mt-1">Más formas de rodar</h2><div class="v3-scroll-row md:grid md:grid-cols-4 xl:grid-cols-8 mt-7">
+          ${[['mtb','MTB','discipline-mtb.html'],['xc','XC','collection-v2.html'],['trail','Trail','collection-v2.html'],['road','Ruta','discipline-road.html'],['gravel','Gravel','discipline-gravel.html'],['urban','Urban','discipline-urban.html'],['electric','Electric','discipline-electric.html'],['kids','Kids','all-collections.html']].map(([ic,n,h])=>`<a href="${h}" class="v3-card rounded-xl p-5 min-w-[160px]"><div class="v3-icon">${icon(ic,'w-6 h-6')}</div><b class="block mt-5 uppercase text-sm">${n}</b><span class="text-[10px] text-slate-400 mt-1 block">Explorar →</span></a>`).join('')}
+        </div></div></section>
+
+        <section class="bg-[#07131b] text-white py-16 md:py-24"><div class="ref-section grid lg:grid-cols-[.8fr_1.2fr] gap-10 items-center"><div><p class="text-[#00E4FE] text-[10px] uppercase tracking-[.16em] font-black">Tecnología KUBOR</p><h2 class="font-display text-5xl md:text-6xl uppercase mt-2">Los detalles cambian cómo se siente.</h2><p class="text-white/55 text-sm leading-relaxed mt-5">Geometría, suspensión, transmisión y frenado deben tener una razón clara. Conoce qué cambia realmente entre niveles y disciplinas.</p><a href="technology.html" class="inline-flex mt-6 text-[10px] uppercase font-black text-[#00E4FE]">Explorar tecnología →</a></div><div class="grid grid-cols-2 gap-3"><div class="v3-spec">${icon('frame')}<b class="block mt-4 uppercase">Geometría</b><span class="text-[10px] text-white/45">Fit + handling</span></div><div class="v3-spec">${icon('fork')}<b class="block mt-4 uppercase">Suspensión</b><span class="text-[10px] text-white/45">Control + recorrido</span></div><div class="v3-spec">${icon('drivetrain')}<b class="block mt-4 uppercase">Transmisión</b><span class="text-[10px] text-white/45">Rango + precisión</span></div><div class="v3-spec">${icon('brakes')}<b class="block mt-4 uppercase">Frenado</b><span class="text-[10px] text-white/45">Potencia + modulación</span></div></div></div></section>
+
+        <section class="py-14 md:py-20 bg-white"><div class="ref-section"><div class="grid lg:grid-cols-[1.12fr_.88fr] gap-4"><a href="campaign.html" class="relative rounded-xl overflow-hidden min-h-[430px]"><img src="https://images.unsplash.com/photo-1502744688674-c619d1586c9e?auto=format&fit=crop&w=1500&q=88" class="absolute inset-0 w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20"></div><div class="absolute left-6 right-6 bottom-6 text-white"><span class="text-[#D7FF38] text-[10px] uppercase font-black">Lanzamiento</span><h2 class="font-display text-5xl uppercase mt-2">Lo nuevo empieza aquí</h2><p class="text-white/60 text-sm mt-2 max-w-lg">Campañas, ediciones y nuevos productos con narrativa propia.</p><span class="inline-flex mt-5 text-[10px] uppercase font-black">Descubrir →</span></div></a><div class="grid gap-4"><a href="community.html" class="rounded-xl bg-[#f5f7f8] border p-6 min-h-[205px] flex flex-col justify-end"><span class="text-cyan-700 text-[10px] uppercase font-black">Comunidad</span><h3 class="font-display text-4xl uppercase mt-2">Rodamos juntos</h3><p class="text-xs text-slate-500 mt-2">Rutas, riders y contenido social.</p></a><a href="blog.html" class="rounded-xl bg-[#07131b] text-white p-6 min-h-[205px] flex flex-col justify-end"><span class="text-[#00E4FE] text-[10px] uppercase font-black">Journal</span><h3 class="font-display text-4xl uppercase mt-2">Aprende. Ajusta. Explora.</h3><p class="text-xs text-white/50 mt-2">Guías, técnica y cultura ciclista.</p></a></div></div></div></section>
+
+        <section class="py-14 bg-[#f5f7f8]"><div class="ref-section grid md:grid-cols-3 gap-4"><a href="dealers.html" class="v3-card rounded-xl p-6"><span class="v3-icon">${icon('shipping','w-6 h-6')}</span><h3 class="font-display text-3xl uppercase mt-5">Distribuidores</h3><p class="text-xs text-slate-500 mt-2">Encuentra venta, servicio y soporte cerca de ti.</p></a><a href="size-guide.html" class="v3-card rounded-xl p-6"><span class="v3-icon">${icon('frame','w-6 h-6')}</span><h3 class="font-display text-3xl uppercase mt-5">Guía de tallas</h3><p class="text-xs text-slate-500 mt-2">Encuentra tu fit antes de comprar.</p></a><a href="support.html" class="v3-card rounded-xl p-6"><span class="v3-icon">${icon('warranty','w-6 h-6')}</span><h3 class="font-display text-3xl uppercase mt-5">Soporte</h3><p class="text-xs text-slate-500 mt-2">Garantías, manuales y asistencia técnica.</p></a></div></section>`;
+      main.appendChild(extras);
+    }
+  }
+
+  if(isPdp){
+    const tabs=$('.pdp-tabs')||$('main');
+    if(tabs&&!$('#v3-pdp-specs')){
+      const specs=document.createElement('section'); specs.id='v3-pdp-specs'; specs.className='bg-[#07131b] text-white py-12 md:py-16';
+      specs.innerHTML=`<div class="ref-section"><p class="text-[#00E4FE] text-[10px] uppercase tracking-[.16em] font-black">Especificaciones clave</p><h2 class="font-display text-5xl uppercase mt-2">Lo que mueve la X1 Pro</h2><div class="v3-scroll-row md:grid md:grid-cols-4 mt-7">${[['frame','Cuadro','Carbono Toray T800'],['fork','Horquilla','140 mm'],['rear-shock','Amortiguador','130 mm'],['drivetrain','Transmisión','Shimano XT 12v'],['crankset','Crankset','1x12'],['cassette','Cassette','Wide range'],['brakes','Frenos','Hidráulicos'],['wheels','Ruedas','29” Tubeless Ready']].map(([ic,t,v])=>`<div class="v3-spec min-w-[220px]">${icon(ic)}<b class="block mt-4 uppercase text-sm">${t}</b><span class="text-[11px] text-white/50 mt-1 block">${v}</span></div>`).join('')}</div><div class="mt-7 flex flex-wrap gap-3"><a href="geometry-guide.html" class="h-11 px-5 border border-white/20 grid place-items-center text-[10px] uppercase font-black">Entender geometría</a><a href="compare.html" class="h-11 px-5 bg-[#00E4FE] text-[#07131b] grid place-items-center text-[10px] uppercase font-black">Comparar bicicleta</a></div></div>`;
+      tabs.closest('section')?.insertAdjacentElement('afterend',specs);
+    }
+    if(!$('.v3-mobile-buy')){const b=document.createElement('div');b.className='v3-mobile-buy';b.innerHTML=`<div class="text-white"><span class="text-[9px] uppercase text-white/45">KUBOR X1 Pro</span><b class="block text-sm">$49,999 MXN</b></div><button class="px-5 bg-[#00E4FE] text-[#07131b] text-[10px] uppercase font-black">Agregar al carrito</button>`;document.body.appendChild(b)}
+  }
+
+  if(isPlp){
+    const main=$('main');
+    if(main&&!$('#v3-plp-tools')){const sec=document.createElement('section');sec.id='v3-plp-tools';sec.className='bg-white border-b py-5';sec.innerHTML=`<div class="ref-section"><div class="v3-scroll-row">${[['mtb','Sport'],['xc','XC'],['trail','Trail'],['electric','E-MTB'],['kids','Kids'],['components','Componentes']].map(([ic,t])=>`<a href="#" class="min-w-[132px] border rounded-lg p-4 bg-white"><span class="v3-icon">${icon(ic,'w-5 h-5')}</span><b class="block text-[11px] uppercase mt-3">${t}</b></a>`).join('')}</div><div class="mt-4 flex flex-wrap gap-2 text-[10px] uppercase font-black"><a href="compare.html" class="px-4 h-10 border grid place-items-center">Comparador</a><a href="size-guide.html" class="px-4 h-10 border grid place-items-center">Guía de tallas</a><a href="technology.html" class="px-4 h-10 border grid place-items-center">Tecnología</a></div></div>`;main.prepend(sec)}
+  }
+
+  // One footer on every page.
+  const oldFooter=$('footer'); if(oldFooter) oldFooter.remove();
+  if(!$('#v3-global-footer')){
+    const footer=document.createElement('footer');footer.id='v3-global-footer';footer.className='v3-footer bg-[#061019] text-white';footer.innerHTML=`<div class="ref-section py-12"><div class="v3-footer-grid"><div class="v3-footer-brand"><img src="assets/logos/KUBOR_only_clear.svg" alt="KUBOR" class="w-[135px]"><p class="text-xs text-white/45 mt-4 max-w-xs">Bicicletas, tecnología, comunidad y soporte para seguir rodando.</p><div class="flex gap-3 mt-5 text-[10px] uppercase font-black"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">TikTok</a><a href="#">YouTube</a></div></div><div><b class="text-[10px] uppercase">Bicicletas</b><div class="mt-4 space-y-2 text-xs text-white/50"><a class="block" href="discipline-mtb.html">MTB</a><a class="block" href="discipline-road.html">Ruta</a><a class="block" href="discipline-gravel.html">Gravel</a><a class="block" href="discipline-electric.html">Eléctricas</a></div></div><div><b class="text-[10px] uppercase">Explora</b><div class="mt-4 space-y-2 text-xs text-white/50"><a class="block" href="all-collections.html">Colecciones</a><a class="block" href="compare.html">Comparador</a><a class="block" href="size-guide.html">Tallas</a><a class="block" href="blog.html">Journal</a></div></div><div><b class="text-[10px] uppercase">Soporte</b><div class="mt-4 space-y-2 text-xs text-white/50"><a class="block" href="support.html">Centro de ayuda</a><a class="block" href="warranties.html">Garantías</a><a class="block" href="tracking.html">Tracking</a><a class="block" href="dealers.html">Distribuidores</a></div></div><div><b class="text-[10px] uppercase">Marcas</b><div class="mt-4 space-y-2 text-xs text-white/50"><a class="block" href="brand-kubor.html">KUBOR</a><a class="block" href="brand-terrafit.html">Terrafit</a><a class="block" href="brand-hypergogo.html">HYPERGOGO</a><a class="block" href="gift-card.html">Gift Card</a></div></div></div><div class="mt-10 pt-5 border-t border-white/10 flex flex-wrap justify-between gap-3 text-[9px] text-white/35"><span>© 2026 KUBOR México</span><div class="flex gap-4"><a href="privacy.html">Privacidad</a><a href="terms.html">Términos</a><a href="policies.html">Políticas</a></div></div></div>`;document.body.appendChild(footer)
+  }
+})();
