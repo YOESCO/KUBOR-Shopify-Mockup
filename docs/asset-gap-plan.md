@@ -36,7 +36,7 @@ Unsplash remains allowed only as a clearly temporary placeholder for discipline/
 
 ## Current asset replacements
 
-- `assets/media/kubor-hero.jpg` — optimized KUBOR-owned/generated lifestyle image prepared for Home hero / MTB storytelling. It is a brand lifestyle asset, not an X1 Pro packshot.
+- `assets/media/kubor-hero.jpg` — optimized KUBOR lifestyle image prepared for Home hero / MTB storytelling. It is a brand lifestyle asset, not an X1 Pro packshot.
 
 ## Required image families before visual approval
 
