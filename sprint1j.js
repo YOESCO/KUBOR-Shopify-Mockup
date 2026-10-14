@@ -7,8 +7,10 @@
   loadStyle('sprint1m.css');
   loadStyle('sprint1n.css');
   loadStyle('sprint1o.css');
+  loadStyle('sprint1p.css');
   loadScript('sprint1j-runtime.js');
   loadScript('sprint1l.js');
   loadScript('sprint1n.js');
   loadScript('sprint1o.js');
+  loadScript('sprint1p.js');
 })();
