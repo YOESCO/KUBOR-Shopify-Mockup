@@ -1,0 +1,124 @@
+/* Sprint 1J — cross-page readability corrections */
+
+/* ACCOUNT */
+.account-content{padding:36px 0 58px}
+.account-panel{padding:24px;border-radius:7px}
+.account-panel+.account-panel{margin-top:18px}
+.account-panel-head{margin-bottom:20px;gap:20px}
+.account-panel-head h2{font-size:32px;line-height:.96}
+.account-table{font-size:11px}
+.account-table th,.account-table td{padding:14px 12px}
+.account-table th{font-size:9px}
+.account-status-pill{min-height:28px;padding:0 10px;font-size:8.5px}
+.account-two{gap:24px}
+.account-three{gap:16px}
+.account-info-card{padding:20px}
+.account-info-card h3{font-size:12px;margin-top:12px}
+.account-info-card p{font-size:10.5px;line-height:1.6}
+.account-timeline-step{grid-template-columns:28px 1fr;gap:12px;padding-bottom:20px}
+.account-timeline-dot{width:28px;height:28px;font-size:8.5px}
+.account-timeline-step:before{left:13px;top:26px}
+.account-timeline-copy b{font-size:10.5px}
+.account-timeline-copy p{font-size:9.5px;line-height:1.45}
+.account-bike-card{grid-template-columns:165px minmax(0,1fr) auto;gap:20px;padding:18px}
+.account-bike-card img{width:165px;height:122px}
+.account-bike-card h3{font-size:17px}
+.account-bike-meta{gap:10px;margin-top:14px}
+.account-bike-meta div{padding:11px}
+.account-bike-meta b{font-size:9.5px}
+.account-bike-meta span{font-size:8px;line-height:1.3}
+.account-form-grid{gap:16px}
+.account-field label{font-size:9px;margin-bottom:7px}
+.account-field input,.account-field select,.account-field textarea{min-height:48px;padding:11px 12px;font-size:11.5px}
+.account-side-nav{padding:14px}
+.account-side-nav a{padding:13px 11px;font-size:9.5px}
+.account-kpi-grid{gap:12px}
+.account-kpi{padding:19px}
+.account-kpi b{font-size:30px}
+.account-kpi span{font-size:8.25px;line-height:1.3}
+
+/* SUPPORT / HELP */
+.support-hero{padding:66px 0 60px}
+.support-hero p{font-size:13.5px;line-height:1.68}
+.support-section{padding:54px 0}
+.support-grid{gap:16px}
+.support-card{padding:25px;min-height:185px}
+.support-card h3{font-size:14px;margin-top:19px}
+.support-card p{font-size:11px;line-height:1.6}
+.support-split{gap:22px}
+.support-panel{padding:30px}
+.support-panel h2,.support-panel-dark h2{font-size:40px}
+.support-list{margin-top:20px}
+.support-list a,.support-list button{padding:17px 0;font-size:12px;line-height:1.4}
+.support-form{gap:17px}
+.support-form label{font-size:9.5px}
+.support-form input,.support-form select,.support-form textarea{min-height:50px;font-size:11.5px}
+.faq-layout{grid-template-columns:270px minmax(0,1fr);gap:24px}
+.faq-side{padding:18px}
+.faq-side button{padding:13px 11px;font-size:10.5px}
+.faq-list details{margin-bottom:10px}
+.faq-list summary{padding:20px 52px 20px 20px;font-size:12.5px;line-height:1.4}
+.faq-list p{padding:0 20px 20px;font-size:11.5px;line-height:1.7}
+.dealer-layout{grid-template-columns:410px minmax(0,1fr);gap:22px}
+.dealer-card{padding:20px}
+.dealer-card h3{font-size:13px}
+.dealer-card p{font-size:10.5px;line-height:1.5}
+.gift-layout{grid-template-columns:minmax(0,1fr) 440px;gap:28px}
+.gift-config{padding:28px}
+.collections-grid{gap:16px}
+.brand-strip{gap:14px}
+.brand-strip a{padding:21px;min-height:112px}
+.support-note,.support-meta{font-size:9.5px}
+
+/* DISCIPLINE / BRAND LANDINGS */
+.landing-section{padding:58px 0}
+.landing-head{gap:26px;margin-bottom:27px}
+.landing-head h2{font-size:49px}
+.landing-head p{font-size:11.5px;line-height:1.65}
+.landing-subnav a{padding:19px 20px;min-width:164px}
+.landing-subnav b{font-size:10.5px}
+.landing-subnav span{font-size:8.5px;line-height:1.4}
+.landing-category-grid{gap:16px}
+.landing-category-copy{left:25px;right:25px;bottom:25px}
+.landing-category p{font-size:10.5px;line-height:1.55}
+.landing-product-rail{gap:16px}
+.landing-story-copy{padding:52px}
+.landing-story-copy p{font-size:11.5px;line-height:1.72}
+.landing-tech-grid{gap:14px}
+.landing-tech{padding:23px}
+.landing-tech h3{font-size:11.5px}
+.landing-tech p{font-size:9.75px;line-height:1.58}
+.landing-guide{gap:16px}
+.landing-guide-card{padding:32px}
+.landing-guide-card p{font-size:10.75px;line-height:1.65}
+
+@media(max-width:1050px){
+  .account-three{grid-template-columns:1fr 1fr}
+  .support-grid{gap:14px}
+  .faq-layout{grid-template-columns:1fr}
+  .dealer-layout,.gift-layout{grid-template-columns:1fr}
+  .landing-section{padding:50px 0}
+}
+
+@media(max-width:700px){
+  .account-content{padding:24px 0 42px}
+  .account-panel{padding:17px}
+  .account-panel-head h2{font-size:29px}
+  .account-three{grid-template-columns:1fr}
+  .account-bike-card{grid-template-columns:1fr;padding:16px}
+  .account-bike-card img{width:100%;height:210px}
+  .account-bike-meta{grid-template-columns:1fr 1fr}
+  .account-kpi{padding:17px}
+  .account-kpi span{font-size:8px}
+  .support-hero{padding:48px 0 42px}
+  .support-section{padding:40px 0}
+  .support-panel{padding:22px}
+  .support-card{padding:22px;min-height:160px}
+  .faq-list summary{padding:18px 46px 18px 16px;font-size:11.5px}
+  .faq-list p{padding:0 16px 18px;font-size:11px}
+  .landing-section{padding:42px 0}
+  .landing-subnav a{min-width:145px;padding:17px 18px}
+  .landing-head h2{font-size:42px}
+  .landing-story-copy{padding:32px 23px}
+  .landing-tech{min-width:78%;padding:21px}
+}
