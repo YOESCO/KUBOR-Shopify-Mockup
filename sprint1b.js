@@ -1,3 +1,5 @@
+(()=>{if(!document.querySelector('link[href^="sprint1g.css"]')){const l=document.createElement('link');l.rel='stylesheet';l.href='sprint1g.css?v=20261014-s1g';document.head.appendChild(l)}if(!document.querySelector('script[src^="sprint1g.js"]')){const s=document.createElement('script');s.src='sprint1g.js?v=20261014-s1g';s.async=false;document.head.appendChild(s)}})();
+
 document.addEventListener('DOMContentLoaded',()=>{
   const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 
@@ -52,5 +54,5 @@ document.addEventListener('DOMContentLoaded',()=>{
   $$('[data-review-star]').forEach((b,i,arr)=>b.addEventListener('click',()=>{arr.forEach((x,j)=>x.classList.toggle('is-active',j<=i));const out=$('[data-review-score]');if(out)out.textContent=String(i+1)}));
   $$('details').forEach(d=>{d.setAttribute('aria-expanded',String(d.open));d.addEventListener('toggle',()=>d.setAttribute('aria-expanded',String(d.open)))});
 
-  const badge=document.createElement('div');badge.textContent='Sprint 1B · 2026.10.14';badge.style.cssText='position:fixed;right:10px;bottom:10px;z-index:175;background:rgba(6,16,25,.88);color:#fff;padding:6px 8px;font:800 8px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;pointer-events:none';document.body.appendChild(badge);
+  const badge=document.createElement('div');badge.textContent='Sprint 1G · 2026.10.14';badge.style.cssText='position:fixed;right:10px;bottom:10px;z-index:175;background:rgba(6,16,25,.88);color:#fff;padding:6px 8px;font:800 8px Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;pointer-events:none';document.body.appendChild(badge);
 });
