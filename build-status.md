@@ -1,8 +1,9 @@
 # KUBOR Mockup Build Status
 
-Current review build: `2026.10.13-shell2`
+Current shell build: `2026.10.13-shell2`
+Current modular integration revision: `modules-v3-r2`
 
-The build ID is rendered in the lower-right corner of the prototype by `app-v2.js`. If the visible ID does not match this file, the browser is showing an older cached asset.
+The shell build ID is rendered in the lower-right corner by `app-v2.js`. The modular revision lives in `modules-v3.js`; if the shell ID is correct but a new section is missing, refresh the page so the updated module asset is requested.
 
 ## Flow currently under review
 
@@ -15,6 +16,7 @@ The build ID is rendered in the lower-right corner of the prototype by `app-v2.j
 - Transparent Home header → solid sticky state on scroll
 - Global announcement bar with rotating messages and brand shortcuts
 - Global footer generated from one shared module
+- Social rail desktop
 - GSAP hero/reveal motion as progressive enhancement
 - Lenis smooth scroll as progressive enhancement
 
@@ -31,28 +33,41 @@ The build ID is rendered in the lower-right corner of the prototype by `app-v2.j
 
 ### PDP
 - Icon-led key specifications
-- Frame, fork, shock, drivetrain, crankset, cassette, brakes and wheels
+- Frame, fork, rear shock, drivetrain, crankset, cassette, brakes and wheels
 - Horizontal mobile spec rail
 - Geometry and compare CTAs
+- Shipping, warranty, fit and comparison decision-support block
+- Financing concept block
+- Review carousel / grid
 - Mobile sticky purchase bar
 
 ### PLP
 - Subcategory shortcut rail
 - Mobile-first horizontal navigation
 - Compare, size guide and technology shortcuts
+- Per-product compare selector
+- Floating compare tray
+
+### Global footer
+- Single shared footer
+- Newsletter capture UI
+- Product navigation
+- Explore/support/brand groups
+- Legal links
+- Social links
 
 ## Review order
 
-1. Confirm visible build ID is `2026.10.13-shell2`
+1. Confirm visible shell build ID is `2026.10.13-shell2`
 2. Test global menu, search, account, wishlist and cart links
 3. Home: review new modules and mobile horizontal rails
-4. PDP: review technical icon rail and sticky mobile purchase bar
-5. PLP: review shortcut rail and product browsing flow
+4. PDP: review specs, purchase-support block, reviews and sticky mobile purchase bar
+5. PLP: test compare selector/tray and browsing flow
 6. Test cart persistence between pages
 7. Regression pass against component catalog and remaining-page checklist
 
 ## Shopify handoff
 
-The mockup now treats the global shell and the V3 modules as reusable UI contracts. During migration these map to Shopify section groups, sections, blocks and snippets rather than being copied page by page.
+The mockup treats the global shell and modular V3 modules as reusable UI contracts. During migration these map to Shopify section groups, sections, blocks and snippets rather than being copied page by page.
 
 The current localStorage cart remains an adapter only. It maps to Shopify cart endpoints later without changing the UI contract. Predictive search follows the same principle: mock catalog now, Shopify Predictive Search API later.
