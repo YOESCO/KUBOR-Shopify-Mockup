@@ -1,0 +1,183 @@
+/* Sprint 1L — Home + PDP mobile/tablet convergence
+   Extends Sprint 1K's safe-area grid to the two remaining core commerce surfaces. */
+
+/* Home: keep rails on the same visual grid and prevent edge-hugging icons/copy. */
+.home-v4 .home-hero-spec,
+.pdp-v4 .pdp-trust-mini>div,
+.pdp-v4 .pdp-spec{
+  min-width:0;
+}
+
+@media(max-width:1120px){
+  /* HOME tablet: editorial composition, not desktop squeezed down. */
+  .home-v4 .home-hero{height:560px!important;min-height:560px!important}
+  .home-v4 .home-hero-inner{max-width:660px!important;padding-top:230px!important;padding-bottom:72px!important}
+  .home-v4 .home-hero h1{font-size:clamp(54px,7vw,72px)!important;line-height:.9!important}
+  .home-v4 .home-hero p{max-width:520px!important;font-size:13px!important;line-height:1.58!important}
+  .home-v4 .home-cat-grid{gap:10px!important}
+  .home-v4 .home-product-grid{gap:14px!important}
+
+  /* PDP tablet becomes a deliberate single-column purchase flow. */
+  .pdp-v4 .pdp-first-grid{grid-template-columns:1fr!important;gap:24px!important}
+  .pdp-v4 .pdp-main-media{height:520px!important}
+  .pdp-v4 .pdp-buybox{max-width:760px;width:100%;margin-inline:auto;padding-bottom:22px!important}
+  .pdp-v4 .pdp-spec-strip{transform:none!important;margin-top:0!important}
+  .pdp-v4 .pdp-tabs-wrap{top:64px!important}
+}
+
+@media(max-width:820px){
+  /* HOME hero uses the same master gutter as header/PLP. */
+  .home-v4 .home-hero{height:650px!important;min-height:650px!important}
+  .home-v4 .home-hero>img{object-position:64% center!important}
+  .home-v4 .home-hero-inner{padding-top:300px!important;padding-bottom:78px!important;max-width:none!important}
+  .home-v4 .home-hero h1{font-size:54px!important;line-height:.9!important;max-width:390px!important}
+  .home-v4 .home-hero p{font-size:12.5px!important;line-height:1.58!important;max-width:390px!important;margin-top:13px!important}
+  .home-v4 .home-hero-specs{grid-template-columns:1fr 1fr!important;gap:10px 14px!important;max-width:430px!important;margin-top:20px!important}
+  .home-v4 .home-hero-spec{display:grid!important;grid-template-columns:20px 1fr!important;align-items:start!important;gap:9px!important;font-size:9px!important;line-height:1.35!important;padding-right:4px}
+  .home-v4 .home-hero-spec svg{width:18px!important;height:18px!important;margin-top:1px!important}
+  .home-v4 .home-hero-inner>.flex:last-child{gap:9px!important;margin-top:20px!important}
+  .home-v4 .home-hero-inner>.flex:last-child .k-btn{min-height:46px!important;padding-inline:17px!important}
+
+  .home-v4 .home-cat-wrap{margin-top:-22px!important}
+  .home-v4 .home-cat-grid{display:flex!important;overflow-x:auto!important;gap:10px!important;padding:8px!important;scroll-snap-type:x mandatory;scroll-padding-inline:8px}
+  .home-v4 .home-cat-card{min-width:70%!important;scroll-snap-align:start}
+  .home-v4 .home-cat-card img{height:124px!important}
+  .home-v4 .home-cat-copy{padding:11px 12px!important}
+
+  .home-v4 .home-section{padding:42px 0!important}
+  .home-v4 .home-section-head{margin-bottom:18px!important;gap:14px!important}
+  .home-v4 .home-section-head h2{font-size:38px!important;line-height:.94!important}
+  .home-v4 .home-product-grid{display:flex!important;overflow-x:auto!important;gap:12px!important;scroll-snap-type:x mandatory;scroll-padding-inline:1px}
+  .home-v4 .home-product-grid>.k-product-card{min-width:72%!important;scroll-snap-align:start}
+
+  /* Trust becomes a horizontal rail rather than four squeezed columns. */
+  .home-v4 .k-trust-grid{display:flex!important;overflow-x:auto!important;scroll-snap-type:x mandatory}
+  .home-v4 .k-trust-item{min-width:72%!important;scroll-snap-align:start;padding:19px 20px!important;border-right:1px solid rgba(255,255,255,.1)!important}
+  .home-v4 .k-trust-item svg{width:22px!important;height:22px!important;flex:0 0 22px}
+  .home-v4 .k-trust-item b{font-size:10px!important}
+  .home-v4 .k-trust-item span{font-size:9px!important;line-height:1.35}
+
+  /* Story stats are part of the content flow on mobile, never floating over copy. */
+  .home-v4 .home-story{min-height:430px!important;display:flex;flex-direction:column;justify-content:flex-end}
+  .home-v4 .home-story-content{padding:28px 22px 16px!important;max-width:none!important}
+  .home-v4 .home-story h2{font-size:40px!important;line-height:.92!important}
+  .home-v4 .home-story-content p{font-size:11px!important;line-height:1.6!important}
+  .home-v4 .home-story-stats{position:relative!important;right:auto!important;top:auto!important;transform:none!important;display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:10px!important;padding:0 22px 24px!important}
+  .home-v4 .home-story-stats>div{border-top:1px solid rgba(255,255,255,.18);padding-top:10px}
+  .home-v4 .home-story-stats b{font-size:27px!important}
+  .home-v4 .home-story-stats span{font-size:8px!important}
+
+  /* PDP gallery stays inside the same safe-area grid instead of bleeding past it. */
+  .pdp-v4 .pdp-first{padding-top:16px!important}
+  .pdp-v4 .pdp-first-grid{gap:18px!important;padding-bottom:18px!important}
+  .pdp-v4 .pdp-main-media{height:410px!important;margin-inline:0!important;border-radius:5px!important;overflow:hidden}
+  .pdp-v4 .pdp-main-media>span{left:14px!important;top:14px!important}
+  .pdp-v4 .pdp-main-media>button{right:14px!important;top:14px!important;width:44px!important;height:44px!important}
+  .pdp-v4 .pdp-thumb-row{gap:8px!important;margin-top:9px!important;scroll-padding-inline:1px}
+  .pdp-v4 .pdp-thumb{min-width:74px!important;height:62px!important;border-radius:4px!important}
+
+  .pdp-v4 .pdp-buybox{margin-top:2px!important;padding:0 0 20px!important}
+  .pdp-v4 .pdp-buybox>div:first-child{font-size:9px!important;line-height:1.45!important;margin-bottom:13px!important;white-space:normal}
+  .pdp-v4 .pdp-buybox h1{font-size:46px!important;line-height:.92!important;margin-top:5px!important}
+  .pdp-v4 .pdp-rating{font-size:10px!important;margin-top:10px!important}
+  .pdp-v4 .pdp-buybox>p{font-size:11px!important;line-height:1.58!important;margin-top:10px!important}
+  .pdp-v4 .pdp-price{font-size:22px!important;margin-top:14px!important}
+  .pdp-v4 .pdp-buy-divider{margin-top:16px!important;padding-top:16px!important}
+  .pdp-v4 .pdp-swatches{gap:12px!important;margin-top:10px!important}
+  .pdp-v4 .pdp-swatch{width:42px!important;height:42px!important}
+  .pdp-v4 .pdp-size{min-width:58px!important;height:46px!important}
+  .pdp-v4 .pdp-buy-actions{grid-template-columns:minmax(0,1fr) 50px!important;gap:9px!important;margin-top:15px!important}
+  .pdp-v4 .pdp-buy-actions>.k-btn{min-height:48px!important}
+  .pdp-v4 .pdp-buy-actions>button:last-child{width:50px!important;min-width:50px!important;height:48px!important}
+  .pdp-v4 .pdp-buybox>.k-btn-outline{min-height:46px!important;margin-top:9px!important}
+
+  /* Trust and spec strips become intentional rails. */
+  .pdp-v4 .pdp-trust-mini{display:flex!important;overflow-x:auto!important;gap:8px!important;margin-top:14px!important;padding-top:12px!important;scroll-snap-type:x mandatory}
+  .pdp-v4 .pdp-trust-mini>div{min-width:150px!important;scroll-snap-align:start;padding:11px 12px!important;border:1px solid rgba(255,255,255,.12)}
+  .pdp-v4 .pdp-trust-mini svg{width:18px!important;height:18px!important;flex:0 0 18px}
+  .pdp-v4 .pdp-trust-mini span{font-size:8.5px!important;line-height:1.35!important}
+
+  .pdp-v4 .pdp-spec-strip{margin-inline:0!important;border-radius:5px!important;transform:none!important;display:flex!important;overflow-x:auto!important;scroll-snap-type:x mandatory;box-shadow:0 10px 28px rgba(0,0,0,.12)!important}
+  .pdp-v4 .pdp-spec{min-width:190px!important;scroll-snap-align:start;padding:15px 14px!important}
+  .pdp-v4 .pdp-spec svg{width:24px!important;height:24px!important}
+  .pdp-v4 .pdp-spec b{font-size:9px!important}
+  .pdp-v4 .pdp-spec span{font-size:8px!important;line-height:1.3!important}
+
+  .pdp-v4 .pdp-tabs-wrap{top:62px!important;padding-top:10px!important}
+  .pdp-v4 .pdp-tabs{overflow-x:auto!important;gap:0!important;scroll-snap-type:x proximity}
+  .pdp-v4 .pdp-tab{flex:0 0 auto!important;min-height:50px!important;padding-inline:17px!important;font-size:8.75px!important;scroll-snap-align:start}
+  .pdp-v4 .pdp-panel{padding:30px 0!important}
+  .pdp-v4 .pdp-story-grid{grid-template-columns:1fr!important;gap:22px!important}
+  .pdp-v4 .pdp-story-copy h2{font-size:40px!important;line-height:.93!important}
+  .pdp-v4 .pdp-story-copy p,.pdp-v4 .pdp-story-copy li{font-size:10.5px!important;line-height:1.6!important}
+  .pdp-v4 .pdp-story-media{min-height:330px!important;border-radius:5px!important}
+  .pdp-v4 .pdp-tech-grid{gap:10px!important}
+  .pdp-v4 .pdp-tech-card{padding:17px!important;min-height:130px!important}
+  .pdp-v4 .pdp-related-rail{display:flex!important;overflow-x:auto!important;gap:12px!important;scroll-snap-type:x mandatory}
+  .pdp-v4 .pdp-related-rail>.k-product-card{min-width:72%!important;scroll-snap-align:start}
+
+  /* Sticky purchase bar respects the same safe areas and does not collide with helper UI. */
+  .pdp-mobile-buy{
+    left:0!important;right:0!important;bottom:0!important;
+    padding-left:max(16px,env(safe-area-inset-left))!important;
+    padding-right:max(16px,env(safe-area-inset-right))!important;
+    padding-bottom:max(10px,env(safe-area-inset-bottom))!important;
+    gap:12px!important;
+  }
+  .pdp-mobile-buy>div{min-width:0;flex:1}
+  .pdp-mobile-buy span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;font-size:8px!important}
+  .pdp-mobile-buy b{font-size:13px!important;line-height:1.2!important;margin-top:2px}
+  .pdp-mobile-buy .k-btn{min-width:118px!important;min-height:46px!important;padding-inline:14px!important}
+}
+
+@media(max-width:430px){
+  /* HOME 390 target */
+  .home-v4 .home-hero{height:630px!important;min-height:630px!important}
+  .home-v4 .home-hero-inner{padding-top:285px!important;padding-bottom:72px!important}
+  .home-v4 .home-hero h1{font-size:47px!important;max-width:340px!important}
+  .home-v4 .home-hero p{font-size:12px!important;max-width:350px!important}
+  .home-v4 .home-hero-specs{max-width:360px!important;gap:9px 11px!important}
+  .home-v4 .home-hero-spec{font-size:8.5px!important}
+  .home-v4 .home-hero-inner>.flex:last-child{display:grid!important;grid-template-columns:1fr!important;width:100%;max-width:340px}
+  .home-v4 .home-hero-inner>.flex:last-child .k-btn{width:100%!important;justify-content:center!important}
+  .home-v4 .home-cat-card{min-width:78%!important}
+  .home-v4 .home-product-grid>.k-product-card{min-width:82%!important}
+  .home-v4 .k-trust-item{min-width:82%!important}
+  .home-v4 .home-section-head{align-items:flex-start!important;flex-direction:column!important}
+  .home-v4 .home-section-head h2{font-size:35px!important}
+
+  /* PDP 390 target */
+  .pdp-v4 .pdp-main-media{height:340px!important}
+  .pdp-v4 .pdp-thumb{min-width:68px!important;height:58px!important}
+  .pdp-v4 .pdp-buybox h1{font-size:40px!important}
+  .pdp-v4 .pdp-price{font-size:21px!important}
+  .pdp-v4 .pdp-swatch{width:40px!important;height:40px!important}
+  .pdp-v4 .pdp-size{min-width:54px!important;height:44px!important}
+  .pdp-v4 .pdp-trust-mini>div{min-width:145px!important}
+  .pdp-v4 .pdp-spec{min-width:178px!important}
+  .pdp-v4 .pdp-tab{padding-inline:15px!important}
+  .pdp-v4 .pdp-story-copy h2{font-size:36px!important}
+  .pdp-v4 .pdp-story-media{min-height:290px!important}
+  .pdp-v4 .pdp-related-rail>.k-product-card{min-width:82%!important}
+}
+
+@media(max-width:360px){
+  .home-v4 .home-hero{height:610px!important;min-height:610px!important}
+  .home-v4 .home-hero-inner{padding-top:272px!important}
+  .home-v4 .home-hero h1{font-size:43px!important}
+  .home-v4 .home-hero-specs{grid-template-columns:1fr 1fr!important}
+  .pdp-v4 .pdp-main-media{height:310px!important}
+  .pdp-v4 .pdp-buybox h1{font-size:37px!important}
+  .pdp-mobile-buy .k-btn{min-width:108px!important;font-size:8px!important}
+}
+
+@media(min-width:1360px){
+  /* Desktop keeps the compact approved composition but restores premium breathing. */
+  .home-v4 .home-hero{height:500px!important;min-height:500px!important}
+  .home-v4 .home-hero-inner{padding-top:108px!important;padding-bottom:64px!important}
+  .home-v4 .home-product-grid{gap:16px!important}
+  .pdp-v4 .pdp-first-grid{grid-template-columns:minmax(0,1.08fr) minmax(410px,.82fr)!important;gap:34px!important}
+  .pdp-v4 .pdp-main-media{height:430px!important}
+  .pdp-v4 .pdp-buybox h1{font-size:56px!important}
+  .pdp-v4 .pdp-spec-strip{transform:translateY(20px)!important}
+}
