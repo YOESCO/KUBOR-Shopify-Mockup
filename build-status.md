@@ -1,103 +1,99 @@
 # KUBOR Mockup Build Status
 
-Current review build: `2026.10.14-sprint1R-polish-proportion`
+Current review build: `2026.10.14-sprint1T-coherence-reset`
 
 ## Source of truth
-
-- Master execution checklist: `docs/ui-ux-master-checklist.md`
+- Master checklist: `docs/ui-ux-master-checklist.md`
 - Navigation index: `site-map.html`
-- Shopify handoff map: `docs/shopify-handoff-map.md`
-- Mobile grid/icon alignment: `docs/sprint-1k-mobile-grid.md`
-- Home/PDP responsive: `docs/sprint-1l-home-pdp-responsive.md`
-- Cart/Search/Account responsive: `docs/sprint-1m-cart-search-account-responsive.md`
-- Discovery/motion: `docs/sprint-1n-1o-discovery-wow.md`
-- Category hierarchy/proportion: `docs/sprint-1q-category-proportion.md`
-- Polish/proportion: `docs/sprint-1r-polish-proportion.md`
+- Shopify handoff: `docs/shopify-handoff-map.md`
+- Coherence reset: `docs/sprint-1s-1t-coherence-reset.md`
 
-Earlier sprint documents remain in `docs/` for history and rationale.
+Older sprint documents remain in `docs/` for history only.
 
-## Current shared architecture
+## Current late-stage chain
+`core-v4 -> Sprint 1G -> ... -> 1R -> 1S + 1T`
 
-`core-v4.js` owns the global shell. Later visual/data layers are loaded through `sprint1j.js`.
+Sprint 1S deliberately rebuilds Home, shell details and PDP instead of adding more overlapping patches. Sprint 1T rebuilds the MTB PLP/discovery flow.
 
-Current late-stage chain:
+## Global shell
+- topbar message centered;
+- topbar brand links removed;
+- social icons restored at the topbar edge;
+- desktop header navigation simplified;
+- hamburger hidden on full desktop;
+- mobile search icon restored;
+- mobile menu opens from the left;
+- mobile menu begins with search and icon-led discipline shortcuts;
+- footer text scale increased and brand universe strip added.
 
-`1K + 1L + 1M + 1N + 1O + 1P + 1Q + 1R`
+## Home contract
+Order:
+1. near-full-viewport hero;
+2. moving trust ticker inside first viewport;
+3. principal category cards below hero;
+4. featured-products carousel only;
+5. KUBOR / Terrafit / HYPERGOGO showcase;
+6. technology/storytelling;
+7. community / Journal;
+8. FAQ;
+9. footer.
 
-## Current visual direction
+Home no longer renders the full product catalogue or duplicate compact category filters.
 
-### Header / mobile menu
-- safe-area-aware mobile gutter;
-- image-led discipline shortcuts;
-- `Comprar por disciplina` and `Explorar y elegir` are separated visually;
-- Comparar / Tallas / Distribuidores are promoted as compact quick actions;
-- desktop navigation collapses before tablet widths become compressed;
-- cart/menu remain hard-right on mobile.
+## PLP contract
+Order:
+1. MTB collection hero;
+2. Sport / XC / Full Suspension / Trail-light discovery cards;
+3. sticky filter/sort toolbar;
+4. desktop filter panel / mobile bottom sheet;
+5. product grid;
+6. editorial buying and geometry guidance.
 
-### Home
-- large photographic category cards remain the primary category control;
-- all review categories live in one horizontal visual rail: Todas, MTB, Ruta, Gravel, Urbanas, Eléctricas, Fitness, Commuter, Trekking, Cargo / Utility, Kids and BMX / Stunt;
-- category-card clicks filter the Home catalogue in place;
-- `Mostrar todas` resets the same catalogue instead of navigating away;
-- small chips are reserved for contextual subcategories only;
-- selected category also updates the catalogue heading;
-- category rail has its own compact header, progress cue and small navigation controls;
-- scroll-driven technology storytelling and controlled motion remain available.
+The mock filters broad usage and real-vs-concept state without pretending live commercial counts exist.
 
-### Carousel system
-- raw horizontal scrollbars are hidden while native touch scrolling remains;
-- controls stay in normal document flow and never cover cards;
-- category arrows sit beside the category heading at ~26–28 px;
-- product/related arrows are secondary at ~30 px;
-- quick-spec arrows are compact at ~28 px;
-- PDP gallery, tabs and trust rails rely on direct swipe on mobile instead of adding another visible arrow row.
+## PDP contract
+Mallory R29 21V remains the verified product example.
 
-### PLP
-- fixed sidebar disappears before it squeezes the grid;
-- Filter/Sort owns mid-width filtering;
-- mobile card/grid proportions have been reopened;
-- false live counts and fabricated filtering state remain removed.
+Order:
+1. gallery + buybox;
+2. quick specs in normal flow;
+3. tab row in normal flow;
+4. description / specs / geometry / reviews / FAQ;
+5. related products;
+6. mobile sticky buy.
 
-### PDP
-- Mallory R29 21V remains the verified example;
-- strict width containment applies to gallery, buybox, specs, tabs and related rails;
-- dynamic width guard rechecks the rendered PDP for accidental wide descendants;
-- internal rails cannot intentionally widen the document;
-- sticky purchase bar respects safe areas;
-- tablet uses a deliberate single-column purchase flow;
-- only specs and related-product rails keep visible carousel arrows on mobile.
+The staging Mallory image is intentionally displayed smaller instead of being stretched. No alternate model photography is invented.
 
-### Support / editorial
-- image-led hero variants are available across shared support/content contracts;
-- Technology, Size, Geometry, Journal, About, Community, Manuals, Assembly and Maintenance use a richer editorial language where appropriate;
-- cyan / lime / violet / amber remain restrained accent colours rather than new brand primaries.
+## Data policy
+- verified Mallory data remains real/reference data;
+- staging price/rating remain explicitly historical references;
+- unverified products remain labelled Concept Visual;
+- no invented review text or rating distribution;
+- no invented size grid for Mallory;
+- final live product, variant, inventory, dealer and review data remain for Shopify integrations.
 
-## Real / owned assets in repo
-
+## Real / owned assets
 - `assets/media/kubor-hero.jpg`
 - `assets/products/mallory-orange.jpg`
 - `assets/logos/KUBOR_only_clear.svg`
 - `assets/logos/KUBOR_only_dark.svg`
 - `assets/logos/TERRAFIT_dark.svg`
 
-HYPERGOGO exact standalone SVG is still pending; do not redraw or trace it.
+Exact standalone HYPERGOGO SVG is still pending and must not be redrawn/traced.
 
-## Do not mark visually approved yet
+## Not approved yet
+1. real iPhone screenshots of new Home / PLP / PDP;
+2. confirm PDP width equals viewport in the user's browser;
+3. final hero crops and typography rhythm;
+4. verified packshots for Tornado / Calypso 4 / Alpine / Storm / Sierra 7 and remaining catalogue;
+5. current Shopify price / SKU / variant validation;
+6. accessibility and reduced-motion regression;
+7. live cart/search/customer/dealer/review integrations;
+8. cleanup of obsolete sprint/V2/V3 layers only after visual acceptance.
 
-1. Real iPhone/browser screenshot QA after Sprint 1R.
-2. Confirm PDP document width equals viewport width in the actual browser.
-3. Final category-card width, crops, vertical rhythm and control placement.
-4. Verified clean product imagery for the rest of the KUBOR portfolio.
-5. Current commercial SKU/price/variant validation from Shopify data.
-6. Full accessibility/reduced-motion validation.
-7. Real Shopify cart/search/customer/dealer integrations.
-8. Transitional dependency cleanup only after regression QA.
-
-## Next execution block
-
-1. Review Home category rail, mobile menu and PDP on the next real-device screenshots.
-2. Tune card widths/crops and remaining visual hierarchy from the real render.
-3. Continue replacing temporary imagery with verified KUBOR assets.
-4. Extend richer UI only where it improves discovery or storytelling.
-5. Freeze mockup contracts only when the visual gap is materially smaller.
-6. Begin Liquid migration only when explicitly authorized.
+## Next block
+1. tune the new Home / PLP / PDP from actual device screenshots;
+2. refine header/mega-menu spacing and footer after screenshot review;
+3. replace remaining temporary lifestyle imagery where owned assets exist;
+4. freeze approved mockup contracts;
+5. begin Liquid migration only when explicitly authorized.
