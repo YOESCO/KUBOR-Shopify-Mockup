@@ -7,6 +7,7 @@ Current review build: `2026.10.15-sprint1V-visual-consolidation`
 - Navigation index: `site-map.html`
 - Shopify handoff: `docs/shopify-handoff-map.md`
 - Coherence reset: `docs/sprint-1s-1t-coherence-reset.md`
+- Visual Section & Block Library: `component-library.html`
 
 Older sprint documents remain in `docs/` for history only.
 
@@ -14,6 +15,17 @@ Older sprint documents remain in `docs/` for history only.
 `core-v4 -> Sprint 1G -> ... -> 1S + 1T -> 1U -> 1V`
 
 Sprint 1V is a visual consolidation pass. It does not add new page architecture; it reduces prototype artefacts, internal copy, dead space and control clutter.
+
+## Theme Section / Block Library
+`component-library.html` is now the visual planning source for Theme Editor architecture.
+
+Current target:
+- ~26 configurable Shopify sections;
+- ~34 reusable block types;
+- 50+ visual patterns produced through variants instead of duplicated section files;
+- presets for KUBOR / Terrafit / HYPERGOGO.
+
+The library covers global shell, hero variants, discovery/category patterns, PLP, PDP, storytelling, conversion/support, brand presets, reusable blocks and the proposed Shopify build map.
 
 ## Global shell
 - slimmer mobile topbar/header proportions;
