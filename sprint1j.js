@@ -1,6 +1,6 @@
 (()=>{
-  const loadStyle=(href)=>{if(document.querySelector(`link[href^="${href}"]`))return;const l=document.createElement('link');l.rel='stylesheet';l.href=`${href}?v=20261014`;document.head.appendChild(l)};
-  const loadScript=(src)=>{if(document.querySelector(`script[src^="${src}"]`))return;const s=document.createElement('script');s.src=`${src}?v=20261014`;s.async=false;document.head.appendChild(s)};
+  const loadStyle=(href)=>{if(document.querySelector(`link[href^="${href}"]`))return;const l=document.createElement('link');l.rel='stylesheet';l.href=`${href}?v=20261015`;document.head.appendChild(l)};
+  const loadScript=(src)=>{if(document.querySelector(`script[src^="${src}"]`))return;const s=document.createElement('script');s.src=`${src}?v=20261015`;s.async=false;document.head.appendChild(s)};
 
   loadStyle('sprint1k.css');
   loadStyle('sprint1l.css');
@@ -12,6 +12,7 @@
   loadStyle('sprint1r.css');
   loadStyle('sprint1s.css');
   loadStyle('sprint1t.css');
+  loadStyle('sprint1u.css');
   loadScript('sprint1j-runtime.js');
   loadScript('sprint1l.js');
   loadScript('sprint1n.js');
@@ -21,4 +22,5 @@
   loadScript('sprint1r.js');
   loadScript('sprint1s.js');
   loadScript('sprint1t.js');
+  loadScript('sprint1u.js');
 })();
