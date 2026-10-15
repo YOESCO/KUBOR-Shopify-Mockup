@@ -1,0 +1,24 @@
+/* Sprint 1V extra — intentional fallbacks and storefront-only polish */
+.home-s2-cat.has-visual-fallback{background:radial-gradient(circle at 75% 20%,rgba(53,196,223,.24),transparent 28%),linear-gradient(145deg,#0d2835,#061019 72%)}
+.home-s2-cat.has-visual-fallback:after{background:linear-gradient(180deg,rgba(6,16,25,.02),rgba(6,16,25,.92))}
+.home-s2-cat-icon{position:absolute;top:18px;right:18px;z-index:2;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08);backdrop-filter:blur(10px);color:#35c4df}
+.home-s2-cat-icon svg{width:21px;height:21px}
+.s2-concept-mark{position:relative;z-index:2;text-align:left;color:#fff;padding:18px;align-self:end;justify-self:stretch;margin-top:auto;width:100%}
+.s2-concept-mark span{display:block;font-size:8px;font-weight:900;letter-spacing:.18em;color:#35c4df;text-transform:uppercase}
+.s2-concept-mark b{display:block;margin-top:5px;font-family:"Barlow Condensed",Impact,sans-serif;font-size:27px;line-height:.9;text-transform:uppercase;max-width:80%}
+.home-s2-products .k-card-badge{border-radius:999px!important;padding-inline:10px!important;min-height:24px!important;display:inline-flex!important;align-items:center!important}
+.home-s2-products .k-product-bottom{align-items:center!important}
+.home-s2-products .k-product-price{max-width:65%}
+
+/* Remove prototype-like labels from commercial view. */
+.pdp-s2-photo-note{background:rgba(6,16,25,.82)!important;border-radius:999px!important;font-size:7.5px!important;letter-spacing:.04em!important}
+
+/* Make external lifestyle failure visually silent. */
+.home-s2-cat img[alt=""],.home-s2-editorial img[alt=""]{color:transparent}
+
+@media(max-width:820px){
+  .s2-concept-mark{padding:14px}
+  .s2-concept-mark b{font-size:24px}
+  .home-s2-cat-icon{top:14px;right:14px;width:38px;height:38px}
+  .home-s2-cat-icon svg{width:19px;height:19px}
+}
