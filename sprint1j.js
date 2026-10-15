@@ -13,6 +13,8 @@
   loadStyle('sprint1s.css');
   loadStyle('sprint1t.css');
   loadStyle('sprint1u.css');
+  loadStyle('sprint1v.css');
+  loadStyle('sprint1v-extra.css');
   loadScript('sprint1j-runtime.js');
   loadScript('sprint1l.js');
   loadScript('sprint1n.js');
@@ -23,4 +25,5 @@
   loadScript('sprint1s.js');
   loadScript('sprint1t.js');
   loadScript('sprint1u.js');
+  loadScript('sprint1v.js');
 })();
