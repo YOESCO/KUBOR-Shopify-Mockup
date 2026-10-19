@@ -1,0 +1,15 @@
+<section class="container section contact-section"><div><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape }}</h2><div class="rte">{{ section.settings.text }}</div></div>
+{% assign contact_id = 'Contact-' | append: section.id %}
+{% form 'contact', id: contact_id, class: 'contact-form' %}
+{% if form.posted_successfully? %}<p class="form-success" role="status">{{ 'contact.success' | t }}</p>{% endif %}
+{{ form.errors | default_errors }}
+<label for="{{ contact_id }}-name">{{ 'contact.name' | t }}</label><input id="{{ contact_id }}-name" name="contact[name]" autocomplete="name" value="{{ form.name | default: customer.name | escape }}" required>
+<label for="{{ contact_id }}-email">{{ 'footer.email' | t }}</label><input id="{{ contact_id }}-email" type="email" name="contact[email]" autocomplete="email" value="{{ form.email | default: customer.email | escape }}" required>
+<label for="{{ contact_id }}-topic">{{ 'contact.topic' | t }}</label><select id="{{ contact_id }}-topic" name="contact[topic]"><option>{{ 'contact.buying' | t }}</option><option>{{ 'contact.order' | t }}</option><option>{{ 'contact.support' | t }}</option></select>
+<label for="{{ contact_id }}-message">{{ 'contact.message' | t }}</label><textarea id="{{ contact_id }}-message" name="contact[body]" rows="6" required>{{ form.body | escape }}</textarea>
+<label class="consent"><input type="checkbox" required>{{ 'contact.consent' | t }}{% if shop.privacy_policy %} <a href="{{ shop.privacy_policy.url }}">{{ 'footer.privacy' | t }}</a>{% endif %}</label>
+<button type="submit" class="button">{{ 'contact.send' | t }} {% render 'icon', name: 'arrow' %}</button>
+{% endform %}</section>
+{% schema %}
+{"name":"Formulario de contacto","settings":[{"type":"text","id":"eyebrow","label":"Antetítulo","default":"ESTAMOS PARA AYUDARTE"},{"type":"text","id":"heading","label":"Título","default":"HABLEMOS DE TU PRÓXIMA RUTA."},{"type":"richtext","id":"text","label":"Contenido","default":"<p>¿Tienes dudas sobre un modelo, tu talla o un pedido? Cuéntanos cómo podemos ayudarte.</p>"}],"presets":[{"name":"Formulario de contacto"}]}
+{% endschema %}

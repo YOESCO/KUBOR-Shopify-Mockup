@@ -1,0 +1,588 @@
+## Validation Summary
+
+**Overall Status:** ✅ VALID
+**Total Files:** 61
+
+## Detailed Results
+
+### File 1
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/barlow-condensed-800.ttf passed all checks.
+
+### File 2
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/barlow-license.txt passed all checks.
+
+### File 3
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/kubor-logo-dark.svg passed all checks.
+
+### File 4
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/kubor-logo-light.svg passed all checks.
+
+### File 5
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/kubor.css passed all checks.
+
+### File 6
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/kubor.js passed all checks.
+
+### File 7
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** assets/ride-editorial.jpg passed all checks.
+
+### File 8
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** config/settings_data.json passed all checks.
+
+### File 9
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** config/settings_schema.json passed all checks.
+
+### File 10
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** layout/password.liquid passed all checks.
+
+### File 11
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** layout/theme.liquid passed all checks.
+
+### File 12
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** locales/en.json passed all checks.
+
+### File 13
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** locales/es.default.json passed all checks.
+
+### File 14
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/announcement-bar.liquid passed all checks.
+
+### File 15
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/bike-finder.liquid passed all checks.
+
+### File 16
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/cart-drawer.liquid passed all checks.
+
+### File 17
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/category-rail.liquid passed all checks.
+
+### File 18
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/contact-form.liquid passed all checks.
+
+### File 19
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/editorial.liquid passed all checks.
+
+### File 20
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/faq.liquid passed all checks.
+
+### File 21
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/featured-products.liquid passed all checks.
+
+### File 22
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/footer-group.json passed all checks.
+
+### File 23
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/footer.liquid passed all checks.
+
+### File 24
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/header-group.json passed all checks.
+
+### File 25
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/header.liquid passed all checks.
+
+### File 26
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/hero.liquid passed all checks.
+
+### File 27
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/main-404.liquid passed all checks.
+
+### File 28
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/main-article.liquid passed all checks.
+
+### File 29
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/main-blog.liquid passed all checks.
+
+### File 30
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/main-cart.liquid passed all checks.
+
+### File 31
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/main-collection.liquid passed all checks.
+
+### File 32
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/main-list-collections.liquid passed all checks.
+
+### File 33
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/main-page.liquid passed all checks.
+
+### File 34
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/main-password.liquid passed all checks.
+
+### File 35
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/main-product.liquid passed all checks.
+
+### File 36
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/main-search.liquid passed all checks.
+
+### File 37
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/predictive-search.liquid passed all checks.
+
+### File 38
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/product-recommendations.liquid passed all checks.
+
+### File 39
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** sections/service-links.liquid passed all checks.
+
+### File 40
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/card-product.liquid passed all checks.
+
+### File 41
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/cart-content.liquid passed all checks.
+
+### File 42
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/facets.liquid passed all checks.
+
+### File 43
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/icon.liquid passed all checks.
+
+### File 44
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** snippets/price.liquid passed all checks.
+
+### File 45
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/404.json passed all checks.
+
+### File 46
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/article.json passed all checks.
+
+### File 47
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/blog.json passed all checks.
+
+### File 48
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/cart.json passed all checks.
+
+### File 49
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/collection.json passed all checks.
+
+### File 50
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/gift_card.liquid passed all checks.
+
+### File 51
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/index.json passed all checks.
+
+### File 52
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/list-collections.json passed all checks.
+
+### File 53
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/page.bike-finder.json passed all checks.
+
+### File 54
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/page.brand.json passed all checks.
+
+### File 55
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/page.contact.json passed all checks.
+
+### File 56
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/page.faq.json passed all checks.
+
+### File 57
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/page.hypergogo.json passed all checks.
+
+### File 58
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/page.json passed all checks.
+
+### File 59
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/password.json passed all checks.
+
+### File 60
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/product.json passed all checks.
+
+### File 61
+**Artifact ID:** kubor-ride-beyond-1
+**Revision:** 3
+*Use same ID & increment revision when retrying on an improvement of this artifact*
+
+**Status:** ✅ SUCCESS
+**Details:** templates/search.json passed all checks.
+
+
+
+Failed to setup with the following error: ENOENT: no such file or directory, mkdir '/home/agent/.cache/theme-liquid-docs-nodejs'
+Failed to load or transform loadResource(manifest_theme) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/manifest_theme.json'
+Loaded fallback resource
+	manifest_theme from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/manifest_theme.json
+Failed to load or transform loadSchema(theme/translations.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/translations.json'
+Failed to load or transform loadSchema(theme/theme_block.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/theme_block.json'
+Failed to load or transform loadSchema(theme/theme_settings.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/theme_settings.json'
+Failed to load or transform loadSchema(theme/section.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/section.json'
+Failed to load or transform loadSchema(theme/settings.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/settings.json'
+Failed to load or transform loadSchema(theme/setting.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/setting.json'
+Failed to load or transform loadSchema(theme/default_setting_values.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/default_setting_values.json'
+Failed to load or transform loadSchema(theme/app_block_entry.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/app_block_entry.json'
+Failed to load or transform loadSchema(theme/theme_block_entry.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/theme_block_entry.json'
+Failed to load or transform loadSchema(theme/targetted_block_entry.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/targetted_block_entry.json'
+Failed to load or transform loadSchema(theme/preset_blocks.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/preset_blocks.json'
+Failed to load or transform loadSchema(theme/preset.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/preset.json'
+Failed to load or transform loadSchema(theme/local_block_entry.json) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/local_block_entry.json'
+Loaded fallback schema
+	theme/translations.json from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/translations.json
+Loaded fallback schema
+	theme/theme_block.json from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/theme_block.json
+Loaded fallback schema
+	theme/theme_settings.json from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/theme_settings.json
+Loaded fallback schema
+	theme/section.json from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/section.json
+Loaded fallback schema
+	theme/settings.json from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/settings.json
+Loaded fallback schema
+	theme/setting.json from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/setting.json
+Loaded fallback schema
+	theme/default_setting_values.json from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/default_setting_values.json
+Loaded fallback schema
+	theme/app_block_entry.json from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/app_block_entry.json
+Loaded fallback schema
+	theme/theme_block_entry.json from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/theme_block_entry.json
+Loaded fallback schema
+	theme/preset_blocks.json from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/preset_blocks.json
+Loaded fallback schema
+	theme/targetted_block_entry.json from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/targetted_block_entry.json
+Loaded fallback schema
+	theme/preset.json from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/preset.json
+Loaded fallback schema
+	theme/local_block_entry.json from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/local_block_entry.json
+Failed to load or transform loadResource(filters) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/filters.json'
+Failed to load or transform loadResource(tags) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/tags.json'
+Failed to load or transform loadResource(objects) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/objects.json'
+Failed to load or transform loadResource(shopify_system_translations) with the following error:
+ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/shopify_system_translations.json'
+Loaded fallback resource
+	filters from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/filters.json
+Loaded fallback resource
+	tags from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/tags.json
+Loaded fallback resource
+	shopify_system_translations from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/shopify_system_translations.json
+Loaded fallback resource
+	objects from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/objects.json

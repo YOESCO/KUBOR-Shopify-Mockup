@@ -1,1 +1,180 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>KUBOR — Bike Finder</title><meta name="theme-color" content="#07131b"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="core-v4.css?v=20261014"><link rel="stylesheet" href="content-flow.css?v=20261014"><script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script><script defer src="core-v4.js?v=20261014"></script><script defer src="nav-v5.js?v=20261014"></script><script defer src="content-flow.js?v=20261014"></script></head><body class="content-page"><header></header><main><section class="content-hero"><div class="k-wrap"><div class="k-eyebrow" style="color:#35c4df">Bike Finder</div><h1>¿Qué bicicleta va contigo?</h1><p>Un flujo corto para empezar por terreno, frecuencia y estilo de manejo antes de comparar modelos.</p></div></section><section class="content-section"><div class="k-wrap" style="max-width:920px"><div data-bike-quiz style="background:#f5f7f8;border:1px solid #dfe5e8;padding:26px"><div style="display:flex;justify-content:space-between;align-items:center;gap:14px"><span class="k-eyebrow" style="color:#008da1">Tu recomendación</span><span data-quiz-count style="font-size:9px;color:#7d8992">1 / 3</span></div><div class="quiz-progress" style="margin-top:10px"><span data-quiz-progress style="width:33%"></span></div><section data-quiz-step="terrain" style="margin-top:28px"><h2 class="k-display" style="font-size:42px;line-height:.95;text-transform:uppercase;margin:0">¿Dónde vas a rodar más?</h2><div class="quiz-options"><button class="quiz-option" data-quiz-option="trail"><b>Montaña / senderos</b><span>Terracería, subidas, bajadas y terreno técnico.</span></button><button class="quiz-option" data-quiz-option="road"><b>Asfalto</b><span>Velocidad, distancia y eficiencia.</span></button><button class="quiz-option" data-quiz-option="mixed"><b>Mixto</b><span>Asfalto + terracería + aventura.</span></button><button class="quiz-option" data-quiz-option="city"><b>Ciudad</b><span>Traslado, entrenamiento o uso cotidiano.</span></button></div><button data-quiz-next disabled class="k-btn k-btn-dark" style="margin-top:18px">Continuar</button></section><section data-quiz-step="use" hidden style="margin-top:28px"><h2 class="k-display" style="font-size:42px;line-height:.95;text-transform:uppercase;margin:0">¿Cómo la vas a usar?</h2><div class="quiz-options"><button class="quiz-option" data-quiz-option="daily"><b>Casi todos los días</b><span>Movilidad, rutina o entrenamiento frecuente.</span></button><button class="quiz-option" data-quiz-option="weekend"><b>Fines de semana</b><span>Recreación, rutas y salidas ocasionales.</span></button><button class="quiz-option" data-quiz-option="performance"><b>Quiero rendimiento</b><span>Me importa mejorar ritmo, técnica o velocidad.</span></button><button class="quiz-option" data-quiz-option="explore"><b>Explorar</b><span>Quiero versatilidad y descubrir nuevos caminos.</span></button></div><div style="display:flex;gap:8px;margin-top:18px"><button data-quiz-back class="k-btn k-btn-light-outline">Atrás</button><button data-quiz-next disabled class="k-btn k-btn-dark">Continuar</button></div></section><section data-quiz-step="style" hidden style="margin-top:28px"><h2 class="k-display" style="font-size:42px;line-height:.95;text-transform:uppercase;margin:0">¿Qué valoras más?</h2><div class="quiz-options"><button class="quiz-option" data-quiz-option="speed"><b>Velocidad</b><span>Respuesta, aceleración y eficiencia.</span></button><button class="quiz-option" data-quiz-option="control"><b>Control</b><span>Estabilidad, confianza y terreno técnico.</span></button><button class="quiz-option" data-quiz-option="comfort"><b>Comodidad</b><span>Postura sostenible y facilidad de uso.</span></button><button class="quiz-option" data-quiz-option="simple"><b>Simplicidad</b><span>Quiero algo claro y fácil de mantener.</span></button></div><div style="display:flex;gap:8px;margin-top:18px"><button data-quiz-back class="k-btn k-btn-light-outline">Atrás</button><button data-quiz-next disabled class="k-btn k-btn-primary">Ver recomendación</button></div></section><div data-quiz-result hidden style="margin-top:28px;background:#fff;border:1px solid #dfe5e8;padding:24px"></div></div><div class="explain-grid" style="margin-top:16px"><div class="explain-card"><i data-lucide="mountain"></i><h3>Terreno</h3><p>La variable que más cambia la plataforma correcta.</p></div><div class="explain-card"><i data-lucide="calendar-days"></i><h3>Frecuencia</h3><p>Ayuda a decidir prioridad entre durabilidad, confort y performance.</p></div><div class="explain-card"><i data-lucide="gauge"></i><h3>Estilo</h3><p>Velocidad, control, comodidad o simplicidad.</p></div><div class="explain-card"><i data-lucide="ruler"></i><h3>Talla</h3><p>Después de elegir categoría, confirma fit y geometría.</p></div></div><p style="font-size:9px;color:#829099;margin-top:16px">Shopify: puede implementarse como sección/app ligera que devuelve colecciones/productos según reglas configurables.</p></div></section></main></body></html>
+<!doctype html>
+<html class="no-js" lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071820">
+<link rel="canonical" href="">
+<title>Encuentra tu bicicleta — KUBOR</title>
+<meta name="description" content="KUBOR · Ride beyond. Bicicletas, movilidad y nuevas formas de explorar.">
+<meta property="og:site_name" content="KUBOR">
+<meta property="og:title" content="Encuentra tu bicicleta">
+<meta property="og:url" content="">
+<meta property="og:type" content="website">
+<meta property="og:description" content="KUBOR · Ride beyond. Bicicletas, movilidad y nuevas formas de explorar.">
+
+
+<link rel="stylesheet" href="theme/assets/kubor.css">
+<script src="preview/adapter.js" defer></script><script src="theme/assets/kubor.js" defer></script>
+
+</head>
+<body><div class="preview-notice">VISTA PREVIA · Catálogo de referencia, inventario simulado. No se realizan compras ni envíos de formularios.</div>
+<a class="skip-link" href="#MainContent">Saltar al contenido</a>
+<div class="announcement"><div class="container">Tu próxima aventura empieza aquí.</div></div>
+
+
+<header class="site-header">
+<div class="container header-inner">
+<a class="logo" href="index.html" aria-label="KUBOR"><img src="theme/assets/kubor-logo-light.svg" width="144" height="38" alt="KUBOR"></a>
+<nav class="desktop-nav" aria-label="Navegación principal">
+
+
+<details class="nav-group"><summary>Bicicletas</summary><div class="mega-menu"><div class="container mega-menu__inner"><div><p class="eyebrow">Bicicletas</p><a class="text-link" href="all-collections.html">Ver todo ↗</a></div><div><a class="mega-title" href="discipline-mtb.html">Montaña</a></div><div><a class="mega-title" href="discipline-road.html">Ruta</a></div><div><a class="mega-title" href="discipline-gravel.html">Gravel</a></div><div><a class="mega-title" href="discipline-urban.html">Urbana</a></div></div></div></details>
+
+
+<a href="bike-finder.html">Encuentra tu bici</a>
+
+<a href="brand-hypergogo.html">HYPERGOGO</a>
+
+<a href="blog.html">Journal</a>
+
+<a href="help-center.html">Soporte</a>
+
+</nav>
+<div class="header-actions">
+<a class="icon-button" href="search.html" data-open-dialog="SearchDrawer" aria-label="¿Qué estás buscando?">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>
+
+</svg>
+</a>
+<a class="icon-button account-link" href="account.html" aria-label="Mi cuenta">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>
+
+</svg>
+</a>
+<a class="icon-button cart-link" href="cart.html" data-open-dialog="CartDrawer" aria-label="Tu carrito">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+
+</svg>
+<span data-cart-count>0</span></a>
+<a class="icon-button mobile-menu-toggle" href="#MobileNavigation" data-open-dialog="MenuDrawer" aria-label="Abrir menú">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<path d="M3 6h18M3 12h18M3 18h18"/>
+
+</svg>
+</a>
+</div>
+</div>
+</header>
+<dialog id="MenuDrawer" class="drawer drawer--left" aria-labelledby="MenuTitle">
+<div class="drawer__head"><h2 id="MenuTitle">Explorar</h2><button type="button" class="icon-button" data-close-dialog aria-label="Cerrar">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<path d="m6 6 12 12M6 18 18 6"/>
+
+</svg>
+</button></div>
+<nav class="mobile-nav drawer__body" aria-label="Navegación móvil">
+
+<details><summary>Bicicletas</summary><a href="all-collections.html">Ver todo Bicicletas</a><a href="discipline-mtb.html">Montaña</a><a href="discipline-road.html">Ruta</a><a href="discipline-gravel.html">Gravel</a><a href="discipline-urban.html">Urbana</a></details>
+
+
+<a href="bike-finder.html">Encuentra tu bici</a>
+
+<a href="brand-hypergogo.html">HYPERGOGO</a>
+
+<a href="blog.html">Journal</a>
+
+<a href="help-center.html">Soporte</a>
+
+<a href="account.html">Mi cuenta</a>
+</nav>
+</dialog>
+<noscript><nav id="MobileNavigation" class="container fallback-nav"><a href="all-collections.html">Bicicletas</a><a href="bike-finder.html">Encuentra tu bici</a><a href="brand-hypergogo.html">HYPERGOGO</a><a href="blog.html">Journal</a><a href="help-center.html">Soporte</a></nav></noscript>
+<dialog id="SearchDrawer" class="drawer" aria-labelledby="SearchTitle">
+<div class="drawer__head"><h2 id="SearchTitle">¿Qué estás buscando?</h2><button type="button" class="icon-button" data-close-dialog aria-label="Cerrar">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<path d="m6 6 12 12M6 18 18 6"/>
+
+</svg>
+</button></div>
+<div class="drawer__body"><form action="search.html" method="get" role="search"><label for="PredictiveSearch">Buscar bicicletas, accesorios y guías</label><div class="search-field"><input type="search" name="q" id="PredictiveSearch" autocomplete="off" data-predictive-input aria-controls="PredictiveResults"><button class="icon-button" type="submit" aria-label="Buscar">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+
+</svg>
+</button></div></form><div id="PredictiveResults" data-predictive-results aria-live="polite"></div></div>
+</dialog>
+
+
+<main id="MainContent" tabindex="-1"><section class="container section bike-finder">
+<p class="eyebrow">ELIGE POR CÓMO QUIERES RODAR</p><h1>EMPIEZA POR TU TERRENO.</h1><p class="muted">El mejor punto de partida es el uso que le darás a tu bicicleta. Después, compara la talla y el equipamiento de cada modelo.</p>
+<div class="service-grid">
+<article class="service-card" ><p class="eyebrow">01 / Senderos y terracería</p><h3>Montaña</h3><p>Senderos, terracería y recorridos con desnivel.</p><details><summary>Qué debes revisar</summary><div class="rte"><p>Compara suspensión, frenos, geometría y uso recomendado. Una bicicleta recreativa no sustituye una diseñada para saltos o descenso.</p></div></details><a class="text-link" href="discipline-mtb.html">Ver modelos ↗</a></article><article class="service-card" ><p class="eyebrow">02 / Kilómetros sobre asfalto</p><h3>Ruta</h3><p>Distancias sobre asfalto y recorridos donde prima la eficiencia.</p><details><summary>Qué debes revisar</summary><div class="rte"><p>Revisa tu posición de manejo, el desarrollo de la transmisión y el ancho de llanta compatible. Confirma la talla con la guía del modelo.</p></div></details><a class="text-link" href="discipline-road.html">Ver modelos ↗</a></article><article class="service-card" ><p class="eyebrow">03 / Rutas mixtas</p><h3>Gravel</h3><p>Una combinación de asfalto, caminos de tierra y exploración.</p><details><summary>Qué debes revisar</summary><div class="rte"><p>Compara el paso de rueda, la geometría y los puntos de montaje que necesitas. Elige llantas y equipamiento acordes con tu ruta.</p></div></details><a class="text-link" href="discipline-gravel.html">Ver modelos ↗</a></article><article class="service-card" ><p class="eyebrow">04 / Trayectos cotidianos</p><h3>Urbana</h3><p>Traslados cotidianos y paseos a tu propio ritmo.</p><details><summary>Qué debes revisar</summary><div class="rte"><p>Prioriza una postura cómoda y el equipamiento de tu trayecto: luces, guardabarros y capacidad de carga cuando corresponda.</p></div></details><a class="text-link" href="discipline-urban.html">Ver modelos ↗</a></article>
+</div></section>
+
+</main>
+<footer class="site-footer">
+<div class="container">
+
+<div class="newsletter"><div><p class="eyebrow">KUBOR / COMUNIDAD</p><h2>La próxima ruta, en tu inbox.</h2></div>
+
+<form method="post" action="preview-submit.html" id="Newsletter-footer" class="" data-preview-form="customer">
+<input type="hidden" name="contact[tags]" value="newsletter">
+<label for="Newsletter-footer-email">Correo electrónico</label>
+<div class="search-field"><input id="Newsletter-footer-email" type="email" name="contact[email]" autocomplete="email" required><button type="submit" class="icon-button" aria-label="Suscribirme">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<path d="M4 12h16m-6-6 6 6-6 6"/>
+
+</svg>
+</button></div>
+<label class="consent"><input type="checkbox" required>Quiero recibir novedades de KUBOR. <a href="privacy-policy.html">política de privacidad</a></label>
+
+
+</form>
+</div>
+
+<div class="footer-grid"><div><a href="index.html" class="logo"><img src="theme/assets/kubor-logo-light.svg" width="160" height="42" alt="KUBOR"></a><p class="muted">Distintos caminos. La misma pasión por rodar.</p></div>
+<div ><h3>Explora</h3><a href="collection-v2.html">Todas las bicicletas</a><a href="discipline-mtb.html">Montaña</a><a href="brand-hypergogo.html">HYPERGOGO</a></div><div ><h3>Te ayudamos</h3><a href="size-guide.html">Guía de tallas</a><a href="faq.html">Preguntas frecuentes</a><a href="contact.html">Contacto</a></div><div ><h3>Universo KUBOR</h3><a href="about.html">Nuestra historia</a><a href="blog.html">Journal</a><a href="brand-terrafit.html">Terrafit</a></div>
+</div>
+<div class="footer-bottom"><span>© 2026 KUBOR</span><div><a href="shipping-policy.html">Envíos</a><a href="returns-policy.html">Devoluciones</a><a href="privacy-policy.html">Privacidad</a><a href="terms.html">Términos</a></div>
+<div class="payments"></div></div>
+
+</div>
+</footer>
+
+
+<dialog id="CartDrawer" class="drawer" aria-labelledby="CartDrawerTitle">
+<div class="drawer__head"><h2 id="CartDrawerTitle">Tu carrito <span class="muted" data-cart-count>0</span></h2><button type="button" class="icon-button" data-close-dialog aria-label="Cerrar">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<path d="m6 6 12 12M6 18 18 6"/>
+
+</svg>
+</button></div>
+<div class="drawer__body" data-cart-content>
+
+<div class="empty-state">
+
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+<path d="M5 7h14l1 14H4L5 7Z"/><path d="M8 8V6a4 4 0 0 1 8 0v2"/>
+
+</svg>
+
+<h2>Aún hay camino por elegir.</h2><p>Explora nuestras bicicletas y encuentra la próxima compañera de ruta.</p>
+<a class="button" href="collection-v2.html">Seguir explorando</a>
+</div>
+
+<p class="form-error" role="alert" data-cart-error></p>
+</div>
+<a class="drawer__footer text-link" href="cart.html">Ver carrito completo →</a>
+</dialog>
+
+
+<div id="SiteStatus" class="sr-only" role="status" aria-live="polite"></div>
+<script id="KuborConfig" type="application/json">
+{"root":"index.html","cart":"cart.html","cartAdd":"cart/add","cartChange":"cart/change","searchSuggest":"search-suggest","error":"No pudimos completar la acción. Intenta de nuevo o recarga la página.","added":"Producto agregado al carrito.","updated":"Carrito actualizado.","loading":"Cargando…"}
+</script>
+</body>
+</html>

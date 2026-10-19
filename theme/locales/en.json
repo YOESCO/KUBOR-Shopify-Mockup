@@ -1,0 +1,121 @@
+{
+  "general": {
+    "skip": "Skip to content",
+    "close": "Close",
+    "navigation": "Main navigation",
+    "mobile_navigation": "Mobile navigation",
+    "account": "My account",
+    "menu": "Open menu",
+    "explore": "Explore",
+    "see_all": "View all",
+    "bikes": "Bikes",
+    "collections": "Collections",
+    "home": "Home",
+    "breadcrumbs": "Breadcrumbs",
+    "apply": "Apply",
+    "pagination": "Pagination",
+    "read": "Read story",
+    "select_collection": "Select a collection in the editor.",
+    "error": "We couldn't complete this action. Please try again or reload the page.",
+    "loading": "Loading…",
+    "not_found": "This trail doesn't exist.",
+    "not_found_hint": "Explore another route and find your next bike."
+  },
+  "product": {
+    "from": "From",
+    "regular_price": "Regular price",
+    "view": "Explore model",
+    "sale": "Sale",
+    "sold_out": "Sold out",
+    "quantity": "Quantity",
+    "add": "Add to cart",
+    "available": "Available",
+    "unavailable": "Combination unavailable",
+    "variant": "Color and size",
+    "size_guide": "Find your size",
+    "zoom": "Enlarge image",
+    "tax_shipping": "Taxes and shipping calculated at checkout.",
+    "description": "About this model",
+    "shipping": "Shipping",
+    "returns": "Returns and exchanges"
+  },
+  "cart": {
+    "title": "Your cart",
+    "selection": "YOUR NEXT ADVENTURE",
+    "empty": "Your next ride awaits.",
+    "empty_hint": "Explore our bikes and find your next riding companion.",
+    "continue": "Keep exploring",
+    "view": "View full cart",
+    "remove": "Remove",
+    "increase": "Increase quantity",
+    "decrease": "Decrease quantity",
+    "subtotal": "Subtotal",
+    "shipping_note": "Shipping, taxes and discounts are confirmed at checkout.",
+    "note": "Order note (optional)",
+    "update": "Update cart",
+    "checkout": "Checkout",
+    "added": "Product added to cart.",
+    "updated": "Cart updated."
+  },
+  "search": {
+    "title": "What are you looking for?",
+    "eyebrow": "FIND YOUR WAY",
+    "label": "Search bikes, accessories and guides",
+    "submit": "Search",
+    "products": "Products",
+    "see_all": "View all results",
+    "count": "{{ count }} results for \"{{ terms }}\"",
+    "empty": "No matches found.",
+    "empty_hint": "Try a model name or riding discipline."
+  },
+  "collection": {
+    "sort": "Sort by",
+    "min": "From",
+    "max": "To",
+    "clear": "Clear filters",
+    "filter_sort": "Filter and sort",
+    "eyebrow": "YOUR TERRAIN. YOUR PACE.",
+    "count": "{{ count }} products",
+    "empty": "No models match these filters.",
+    "empty_hint": "Try another selection to find your next bike."
+  },
+  "footer": {
+    "community": "COMMUNITY",
+    "email": "Email address",
+    "subscribe": "Subscribe",
+    "consent": "I want to receive KUBOR news.",
+    "privacy": "privacy policy",
+    "success": "Thank you. Your subscription has been received.",
+    "country": "Country / currency",
+    "language": "Language"
+  },
+  "contact": {
+    "name": "Name",
+    "topic": "How can we help?",
+    "buying": "Choosing a bike",
+    "order": "My order",
+    "support": "Support and warranty",
+    "message": "Your message",
+    "consent": "I authorize the use of my data to respond to this inquiry.",
+    "send": "Send message",
+    "success": "We received your message. Our team will contact you by email.",
+    "more_help": "Talk to KUBOR"
+  },
+  "blog": {
+    "eyebrow": "STORIES TO KEEP YOU RIDING",
+    "categories": "Journal categories",
+    "empty": "More stories are on their way."
+  },
+  "password": {
+    "eyebrow": "SEE YOU ON THE TRAIL",
+    "label": "Store password",
+    "enter": "Enter"
+  },
+  "gift": {
+    "title": "Give a new adventure.",
+    "code": "Use this code at checkout:",
+    "unavailable": "This gift card is unavailable.",
+    "expires": "Expires on",
+    "wallet": "Add to Apple Wallet"
+  }
+}

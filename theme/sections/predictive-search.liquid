@@ -1,0 +1,11 @@
+{% if predictive_search.performed %}
+<div class="predictive-results">
+{% assign result_count = predictive_search.resources.products.size | plus: predictive_search.resources.collections.size | plus: predictive_search.resources.articles.size | plus: predictive_search.resources.pages.size %}
+{% if result_count == 0 %}<p>{{ 'search.empty' | t }}</p><p class="muted">{{ 'search.empty_hint' | t }}</p>{% endif %}
+{% if predictive_search.resources.products.size > 0 %}<h3>{{ 'search.products' | t }}</h3>{% for product in predictive_search.resources.products %}<a class="predictive-product" href="{{ product.url }}">{% if product.featured_image %}{{ product.featured_image | image_url: width: 160 | image_tag: loading: 'lazy', widths: '80,160', sizes: '70px' }}{% endif %}<span>{{ product.title | escape }}<small>{{ product.price | money_with_currency }}</small></span>{% render 'icon', name: 'arrow' %}</a>{% endfor %}{% endif %}
+{% for collection in predictive_search.resources.collections %}<a class="predictive-link" href="{{ collection.url }}">{{ collection.title | escape }} ↗</a>{% endfor %}
+{% for article in predictive_search.resources.articles %}<a class="predictive-link" href="{{ article.url }}">{{ article.title | escape }} ↗</a>{% endfor %}
+{% for page in predictive_search.resources.pages %}<a class="predictive-link" href="{{ page.url }}">{{ page.title | escape }} ↗</a>{% endfor %}
+<a class="button button--secondary" href="{{ routes.search_url }}?q={{ predictive_search.terms | url_encode }}">{{ 'search.see_all' | t }} →</a>
+</div>
+{% endif %}

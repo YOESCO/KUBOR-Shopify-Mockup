@@ -1,0 +1,36 @@
+<header class="site-header">
+<div class="container header-inner">
+<a class="logo" href="{{ routes.root_url }}" aria-label="{{ shop.name | escape }}"><img src="{{ 'kubor-logo-light.svg' | asset_url }}" width="144" height="38" alt="{{ shop.name | escape }}"></a>
+<nav class="desktop-nav" aria-label="{{ 'general.navigation' | t }}">
+{% for link in section.settings.menu.links %}
+{% if link.links != blank %}
+<details class="nav-group"><summary>{{ link.title | escape }}</summary><div class="mega-menu"><div class="container mega-menu__inner"><div><p class="eyebrow">{{ link.title | escape }}</p><a class="text-link" href="{{ link.url }}">{{ 'general.see_all' | t }} ↗</a></div>{% for child in link.links %}<div><a class="mega-title" href="{{ child.url }}">{{ child.title | escape }}</a>{% for grandchild in child.links %}<a href="{{ grandchild.url }}">{{ grandchild.title | escape }}</a>{% endfor %}</div>{% endfor %}</div></div></details>
+{% else %}<a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>{% endif %}
+{% else %}<a href="{{ routes.all_products_collection_url }}">{{ 'general.bikes' | t }}</a><a href="{{ routes.collections_url }}">{{ 'general.collections' | t }}</a>{% endfor %}
+</nav>
+<div class="header-actions">
+<a class="icon-button" href="{{ routes.search_url }}" data-open-dialog="SearchDrawer" aria-label="{{ 'search.title' | t }}">{% render 'icon', name: 'search' %}</a>
+{% if shop.customer_accounts_enabled %}<a class="icon-button account-link" href="{{ routes.account_url }}" aria-label="{{ 'general.account' | t }}">{% render 'icon', name: 'user' %}</a>{% endif %}
+<a class="icon-button cart-link" href="{{ routes.cart_url }}" data-open-dialog="CartDrawer" aria-label="{{ 'cart.title' | t }}">{% render 'icon', name: 'bag' %}<span data-cart-count>{{ cart.item_count }}</span></a>
+<a class="icon-button mobile-menu-toggle" href="#MobileNavigation" data-open-dialog="MenuDrawer" aria-label="{{ 'general.menu' | t }}">{% render 'icon', name: 'menu' %}</a>
+</div>
+</div>
+</header>
+<dialog id="MenuDrawer" class="drawer drawer--left" aria-labelledby="MenuTitle">
+<div class="drawer__head"><h2 id="MenuTitle">{{ 'general.explore' | t }}</h2><button type="button" class="icon-button" data-close-dialog aria-label="{{ 'general.close' | t }}">{% render 'icon', name: 'close' %}</button></div>
+<nav class="mobile-nav drawer__body" aria-label="{{ 'general.mobile_navigation' | t }}">
+{% for link in section.settings.menu.links %}
+{% if link.links != blank %}<details><summary>{{ link.title | escape }}</summary><a href="{{ link.url }}">{{ 'general.see_all' | t }} {{ link.title | escape }}</a>{% for child in link.links %}<a href="{{ child.url }}">{{ child.title | escape }}</a>{% for grandchild in child.links %}<a class="mobile-nav__sub" href="{{ grandchild.url }}">{{ grandchild.title | escape }}</a>{% endfor %}{% endfor %}</details>
+{% else %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% endif %}
+{% else %}<a href="{{ routes.all_products_collection_url }}">{{ 'general.bikes' | t }}</a>{% endfor %}
+{% if shop.customer_accounts_enabled %}<a href="{{ routes.account_url }}">{{ 'general.account' | t }}</a>{% endif %}
+</nav>
+</dialog>
+<noscript><nav id="MobileNavigation" class="container fallback-nav">{% for link in section.settings.menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% endfor %}</nav></noscript>
+<dialog id="SearchDrawer" class="drawer" aria-labelledby="SearchTitle">
+<div class="drawer__head"><h2 id="SearchTitle">{{ 'search.title' | t }}</h2><button type="button" class="icon-button" data-close-dialog aria-label="{{ 'general.close' | t }}">{% render 'icon', name: 'close' %}</button></div>
+<div class="drawer__body"><form action="{{ routes.search_url }}" method="get" role="search"><label for="PredictiveSearch">{{ 'search.label' | t }}</label><div class="search-field"><input type="search" name="q" id="PredictiveSearch" autocomplete="off" data-predictive-input aria-controls="PredictiveResults"><button class="icon-button" type="submit" aria-label="{{ 'search.submit' | t }}">{% render 'icon', name: 'arrow' %}</button></div></form><div id="PredictiveResults" data-predictive-results aria-live="polite"></div></div>
+</dialog>
+{% schema %}
+{"name":"Encabezado","settings":[{"type":"link_list","id":"menu","label":"Menú principal","default":"main-menu"}]}
+{% endschema %}

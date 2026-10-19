@@ -1,0 +1,4 @@
+{% if section.settings.text != blank %}<div class="announcement"><div class="container">{% if section.settings.link != blank %}<a href="{{ section.settings.link }}">{{ section.settings.text | escape }} <span aria-hidden="true">↗</span></a>{% else %}{{ section.settings.text | escape }}{% endif %}</div></div>{% endif %}
+{% schema %}
+{"name":"Anuncio","settings":[{"type":"text","id":"text","label":"Mensaje","default":"Tu próxima aventura empieza aquí."},{"type":"url","id":"link","label":"Enlace"}]}
+{% endschema %}

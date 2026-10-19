@@ -1,0 +1,32 @@
+<footer class="site-footer">
+<div class="container">
+{% if section.settings.newsletter %}
+<div class="newsletter"><div><p class="eyebrow">KUBOR / {{ 'footer.community' | t }}</p><h2>{{ section.settings.heading | escape }}</h2></div>
+{% assign newsletter_id = 'Newsletter-' | append: section.id %}
+{% form 'customer', id: newsletter_id %}
+<input type="hidden" name="contact[tags]" value="newsletter">
+<label for="{{ newsletter_id }}-email">{{ 'footer.email' | t }}</label>
+<div class="search-field"><input id="{{ newsletter_id }}-email" type="email" name="contact[email]" autocomplete="email" required><button type="submit" class="icon-button" aria-label="{{ 'footer.subscribe' | t }}">{% render 'icon', name: 'arrow' %}</button></div>
+<label class="consent"><input type="checkbox" required>{{ 'footer.consent' | t }}{% if shop.privacy_policy %} <a href="{{ shop.privacy_policy.url }}">{{ 'footer.privacy' | t }}</a>{% endif %}</label>
+{% if form.posted_successfully? %}<p role="status">{{ 'footer.success' | t }}</p>{% endif %}
+{{ form.errors | default_errors }}
+{% endform %}
+</div>
+{% endif %}
+<div class="footer-grid"><div><a href="{{ routes.root_url }}" class="logo"><img src="{{ 'kubor-logo-light.svg' | asset_url }}" width="160" height="42" alt="{{ shop.name | escape }}"></a><p class="muted">{{ section.settings.description | escape }}</p></div>
+{% for block in section.blocks %}<div {{ block.shopify_attributes }}><h3>{{ block.settings.title | escape }}</h3>{% for link in block.settings.menu.links %}<a href="{{ link.url }}">{{ link.title | escape }}</a>{% endfor %}</div>{% endfor %}
+</div>
+<div class="footer-bottom"><span>© {{ 'now' | date: '%Y' }} {{ shop.name | escape }}</span><div>{% for policy in shop.policies %}{% if policy != blank %}<a href="{{ policy.url }}">{{ policy.title | escape }}</a>{% endif %}{% endfor %}</div>
+<div class="payments">{% for type in shop.enabled_payment_types %}{{ type | payment_type_svg_tag: class: 'payment-icon' }}{% endfor %}</div></div>
+{% if localization.available_countries.size > 1 or localization.available_languages.size > 1 %}
+{% form 'localization', class: 'localization-form' %}
+{% if localization.available_countries.size > 1 %}<label for="Country">{{ 'footer.country' | t }}</label><select id="Country" name="country_code">{% for country in localization.available_countries %}<option value="{{ country.iso_code }}"{% if country.iso_code == localization.country.iso_code %} selected{% endif %}>{{ country.name }} ({{ country.currency.iso_code }})</option>{% endfor %}</select>{% endif %}
+{% if localization.available_languages.size > 1 %}<label for="Language">{{ 'footer.language' | t }}</label><select id="Language" name="language_code">{% for language in localization.available_languages %}<option value="{{ language.iso_code }}"{% if language.iso_code == localization.language.iso_code %} selected{% endif %}>{{ language.endonym_name }}</option>{% endfor %}</select>{% endif %}
+<button type="submit" class="button button--outline">{{ 'general.apply' | t }}</button>
+{% endform %}
+{% endif %}
+</div>
+</footer>
+{% schema %}
+{"name":"Pie de página","settings":[{"type":"checkbox","id":"newsletter","label":"Mostrar newsletter","default":true},{"type":"text","id":"heading","label":"Título","default":"La próxima ruta, en tu inbox."},{"type":"textarea","id":"description","label":"Descripción","default":"Distintos caminos. La misma pasión por rodar."}],"blocks":[{"type":"menu","name":"Menú","limit":3,"settings":[{"type":"text","id":"title","label":"Título","default":"Explora"},{"type":"link_list","id":"menu","label":"Menú"}]}]}
+{% endschema %}

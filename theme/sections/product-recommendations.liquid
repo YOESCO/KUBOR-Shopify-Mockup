@@ -1,0 +1,6 @@
+<div data-recommendations data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit=4&intent=related">
+{% if recommendations.performed and recommendations.products_count > 0 %}<section class="section section--soft"><div class="container"><div class="section-heading"><h2>{{ section.settings.heading | escape }}</h2></div><div class="product-grid product-grid--rail">{% for product in recommendations.products %}{% render 'card-product', product: product %}{% endfor %}</div></div></section>{% endif %}
+</div>
+{% schema %}
+{"name":"Productos relacionados","settings":[{"type":"text","id":"heading","label":"Título","default":"SIGUE EXPLORANDO."}],"presets":[{"name":"Productos relacionados"}]}
+{% endschema %}

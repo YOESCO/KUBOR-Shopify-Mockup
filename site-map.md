@@ -1,3 +1,5 @@
+> Documento histórico del mockup anterior. El estado vigente se describe en [README](README.md), [auditoría](docs/auditoria.md) y [QA](qa-checklist.md).
+
 # KUBOR Shopify Mockup — Site Map / Build Order
 
 The goal is to validate the complete ecommerce experience before converting the approved system to Liquid.

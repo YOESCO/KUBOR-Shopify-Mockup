@@ -1,3 +1,5 @@
+> Documento histórico del mockup anterior. El estado vigente se describe en [README](README.md), [auditoría](docs/auditoria.md) y [QA](qa-checklist.md).
+
 # KUBOR Mockup — Existing Page Inventory
 
 > **Este archivo ya no es la fuente de verdad de avance.**

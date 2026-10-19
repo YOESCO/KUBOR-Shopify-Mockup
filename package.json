@@ -1,0 +1,34 @@
+{
+  "name": "kubor-shopify-theme",
+  "version": "1.0.0",
+  "description": "Theme Shopify Online Store 2.0 para KUBOR con vista previa reproducible",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "node scripts/render-preview.mjs",
+    "dev": "python3 scripts/serve.py",
+    "check": "node scripts/check.mjs",
+    "test": "playwright test",
+    "package": "python3 scripts/package-theme.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOESCO/KUBOR-Shopify-Mockup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/YOESCO/KUBOR-Shopify-Mockup/issues"
+  },
+  "homepage": "https://github.com/YOESCO/KUBOR-Shopify-Mockup#readme",
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.64.1",
+    "@shopify/cli": "^4.9.4",
+    "@shopify/theme-check-node": "^3.30.1",
+    "liquidjs": "^10.30.0"
+  },
+  "private": true
+}

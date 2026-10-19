@@ -1,29 +1,11 @@
-# KUBOR Shopify Mockup — visual implementation rules
+# Sistema visual KUBOR
 
-This public mockup repo is the visual playground for the KUBOR Shopify theme. It is intentionally separate from the production theme repository.
+Navy profundo, superficies claras, cyan y titulares en Barlow Condensed 800. Se conservan los logotipos originales. Las variables y reglas de `theme/assets/kubor.css` son la referencia.
 
-## Stack
-- Tailwind CSS via CDN for rapid prototyping
-- Alpine.js for UI state
-- GSAP + ScrollTrigger for motion
-- Lenis for smooth scroll
-- Lucide for utility icons
-- Original KUBOR SVGs only; never regenerate logos
+Portada con fotografía editorial y titular dominante, seguida por categorías, catálogo y ayuda. Las fichas priorizan imagen, precio y compra. Catálogo de dos columnas en móvil y productos horizontales contenidos sin ampliar el viewport.
 
-## Visual rules
-- Near-black navy shell
-- KUBOR cyan as primary accent
-- White / cool-gray commerce surfaces
-- Lime only as a small promo/status accent
-- Condensed display typography
-- Large editorial spacing
-- Full-bleed cycling photography
-- Premium ecommerce interactions, not generic demo UI
-- Mobile is designed as its own experience
+HYPERGOGO conserva el degradado cyan/violeta/rosa sobre fondo oscuro, en título y superficies editoriales. Hero y Editorial tienen ajuste Degradado; el texto sigue siendo texto accesible.
 
-## Current priority
-1. Home
-2. PLP / collection
-3. PDP
-4. Mega menu / predictive search / cart / mobile nav
-5. Remaining content/account pages after the first three feel correct
+Controles con foco visible; diálogos con Escape/retorno de foco; etiquetas, avisos de error/estado y reducción de movimiento. Imágenes decorativas sin texto alternativo redundante; producto usa el alt del catálogo.
+
+Hero admite imagen móvil. Menús/bloques se editan en Shopify. Colores y tipografía base se definen en CSS, sin generador de paletas en el editor. No se afirma certificación WCAG ni validación con usuarios.

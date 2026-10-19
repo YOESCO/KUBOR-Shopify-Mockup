@@ -1,0 +1,8 @@
+<dialog id="CartDrawer" class="drawer" aria-labelledby="CartDrawerTitle">
+<div class="drawer__head"><h2 id="CartDrawerTitle">{{ 'cart.title' | t }} <span class="muted" data-cart-count>{{ cart.item_count }}</span></h2><button type="button" class="icon-button" data-close-dialog aria-label="{{ 'general.close' | t }}">{% render 'icon', name: 'close' %}</button></div>
+<div class="drawer__body" data-cart-content>{% render 'cart-content', context: 'drawer' %}</div>
+<a class="drawer__footer text-link" href="{{ routes.cart_url }}">{{ 'cart.view' | t }} →</a>
+</dialog>
+{% schema %}
+{"name":"Carrito lateral","settings":[]}
+{% endschema %}

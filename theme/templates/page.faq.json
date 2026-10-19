@@ -1,0 +1,46 @@
+{
+  "sections": {
+    "main_page_0": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "faq_1": {
+      "type": "faq",
+      "settings": {
+        "contact": "/pages/contacto"
+      },
+      "blocks": {
+        "block_0": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cómo sé qué bicicleta es para mí?",
+            "answer": "<p>Empieza por el terreno y el uso que le darás. Compara las características de cada modelo y pide asesoría si tienes dudas.</p>"
+          }
+        },
+        "block_1": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cómo elijo la talla correcta?",
+            "answer": "<p>Consulta la guía del modelo. Tu estatura es una referencia inicial; la entrepierna, la geometría y tu posición de manejo también importan.</p>"
+          }
+        },
+        "block_2": {
+          "type": "question",
+          "settings": {
+            "question": "¿Dónde consulto envío y devoluciones?",
+            "answer": "<p>Las políticas vigentes están enlazadas al pie de la tienda. El costo y las opciones de envío se muestran al finalizar tu compra.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_0",
+        "block_1",
+        "block_2"
+      ]
+    }
+  },
+  "order": [
+    "main_page_0",
+    "faq_1"
+  ]
+}

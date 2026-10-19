@@ -1,3 +1,5 @@
+> Documento histórico del mockup anterior. El estado vigente se describe en [README](README.md), [auditoría](docs/auditoria.md) y [QA](qa-checklist.md).
+
 # KUBOR Theme Editor settings plan
 
 This document defines which parts of the HTML mockup must become editable Shopify Theme Editor settings instead of hardcoded values.

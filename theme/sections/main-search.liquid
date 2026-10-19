@@ -1,0 +1,12 @@
+<section class="container section">
+<p class="eyebrow">{{ 'search.eyebrow' | t }}</p><h1>{{ 'search.title' | t }}</h1>
+<form action="{{ routes.search_url }}" method="get" role="search" class="page-search"><label for="SearchPage">{{ 'search.label' | t }}</label><div class="search-field"><input type="search" id="SearchPage" name="q" value="{{ search.terms | escape }}"><input type="hidden" name="options[prefix]" value="last"><button class="icon-button" type="submit" aria-label="{{ 'search.submit' | t }}">{% render 'icon', name: 'arrow' %}</button></div></form>
+{% if search.performed %}
+<p class="result-count">{{ 'search.count' | t: count: search.results_count, terms: search.terms }}</p>
+<div class="collection-layout"><details class="filter-panel" open><summary>{{ 'collection.filter_sort' | t }}</summary>{% render 'facets', results: search, form_id: 'SearchFilters' %}</details><div>
+{% paginate search.results by 16 %}<div class="product-grid">{% for item in search.results %}{% if item.object_type == 'product' %}{% render 'card-product', product: item %}{% else %}<article class="service-card"><p class="eyebrow">{{ item.object_type | escape }}</p><h2><a href="{{ item.url }}">{{ item.title | escape }}</a></h2><p>{{ item.content | strip_html | truncate: 140 }}</p><a class="text-link" href="{{ item.url }}">{{ 'general.read' | t }} ↗</a></article>{% endif %}{% else %}<div class="empty-state"><h2>{{ 'search.empty' | t }}</h2><p>{{ 'search.empty_hint' | t }}</p></div>{% endfor %}</div>
+{% if paginate.pages > 1 %}<nav class="pagination" aria-label="{{ 'general.pagination' | t }}">{{ paginate | default_pagination }}</nav>{% endif %}{% endpaginate %}
+</div></div>
+{% endif %}
+</section>
+{% schema %}{"name":"Búsqueda","settings":[]}{% endschema %}

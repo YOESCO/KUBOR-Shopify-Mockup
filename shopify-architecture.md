@@ -1,126 +1,13 @@
-# KUBOR mockup → Shopify architecture
+# Arquitectura Shopify
 
-The mockup is being authored as a functional prototype first, but each visible module maps to a future Shopify responsibility so the implementation can be converted without redesigning the page.
+`theme/` es la fuente Online Store 2.0. El layout incorpora metadatos, contenido de Shopify, grupos de encabezado/footer y carrito. Las plantillas JSON componen secciones; snippets comparten precios, tarjetas, filtros e iconos.
 
-## Global shell
+`kubor.css` concentra el diseño. `kubor.js` mejora formularios nativos con diálogos, búsqueda predictiva, variantes mediante `option_values` y Section Rendering, y carrito por clave de línea. No requiere framework. Las rutas AJAX parten de `routes` de Shopify para respetar idioma.
 
-- `layout/theme.liquid`
-  - document shell
-  - CSS/JS includes
-  - global Alpine state hooks
-- `sections/announcement-bar.liquid`
-- `sections/header.liquid`
-- `snippets/mega-menu.liquid`
-- `snippets/mobile-menu-drawer.liquid`
-- `snippets/predictive-search.liquid`
-- `snippets/account-drawer.liquid`
-- `snippets/cart-drawer.liquid`
-- `sections/footer.liquid`
+La selección cancela solicitudes previas y bloquea compra mientras se resuelve. Las mutaciones de carrito se serializan. Si una operación tuvo éxito pero falla recuperar HTML, se navega al carrito nativo para evitar repetir adición. Formularios conservan acciones nativas. El selector sin JavaScript usa `product.variants`, sujeto al límite Liquid; catálogos con muchas variantes requieren comprobación específica.
 
-## Shared UI snippets
+`preview/adapter.js` y `preview/catalog.json` son exclusivamente de demo. `scripts/render-preview.mjs` usa LiquidJS, filtros compatibles y fixtures. No es un emulador completo de Shopify: formularios, paginación, recomendaciones y checkout tienen límites explícitos.
 
-- `snippets/product-card.liquid`
-- `snippets/product-price.liquid`
-- `snippets/product-badges.liquid`
-- `snippets/icon.liquid`
-- `snippets/button.liquid`
-- `snippets/media.liquid`
-- `snippets/spec-item.liquid`
-- `snippets/trust-item.liquid`
-- `snippets/breadcrumbs.liquid`
+`scripts/check.mjs` ejecuta Theme Check, sintaxis JS y referencias locales. Playwright/axe prueban diez páginas y flujos en dos tamaños. El empaquetador incluye solo directorios permitidos de `theme/`, comprueba integridad y escribe SHA-256.
 
-## Home template
-
-`templates/index.json`
-
-Recommended section order:
-
-1. `hero-product`
-2. `category-navigation`
-3. `featured-products`
-4. `split-story`
-5. `technology-banner`
-6. `buying-guide`
-7. `feature-icons`
-8. `community-blog`
-9. `newsletter`
-
-Each repeated card in the mockup should become a Shopify block or product-driven setting rather than hardcoded markup.
-
-## Collection template
-
-`templates/collection.json`
-
-- `collection-hero`
-- `collection-toolbar`
-- `facets`
-- `product-grid`
-- `collection-editorial-card`
-- `recently-viewed`
-
-Facets and sorting should use Shopify's native collection/filter URLs. Product cards reuse the global `product-card` snippet.
-
-## Product templates
-
-Use separate JSON templates while keeping the same section/snippet system:
-
-- `templates/product.kubor.json`
-- `templates/product.terrafit.json`
-- `templates/product.hypergogo.json`
-- optional `templates/product.electric.json`
-
-Shared product sections:
-
-- `main-product`
-- `product-spec-strip`
-- `product-story`
-- `product-specifications`
-- `product-geometry`
-- `product-media-story`
-- `product-recommendations`
-- `product-trust`
-
-Brand-specific differences should be configuration and content, not duplicated JavaScript.
-
-## Cart state handoff
-
-Current prototype behavior:
-
-- cart state persists in `localStorage`
-- add-to-cart updates quantity
-- drawer renders items
-- plus/minus/remove update state
-- subtotal is recalculated
-
-Shopify replacement:
-
-- `POST /cart/add.js`
-- `POST /cart/change.js`
-- `GET /cart.js`
-- section rendering API for cart drawer refresh
-
-The UI contract stays the same; only the data adapter changes.
-
-## Motion responsibility
-
-- Alpine.js: UI state, drawers, menus, tabs, selectors
-- GSAP/ScrollTrigger: entrance, reveal, storytelling, restrained parallax
-- Lenis: scroll only
-- CSS: hover/focus/micro-transitions
-
-Avoid using GSAP for stateful ecommerce interactions.
-
-## Mobile rules
-
-Mobile is not a compressed desktop layout. The Shopify sections should expose settings/blocks that support:
-
-- mobile crop / focal point
-- mobile hero height
-- mobile copy alignment
-- hide/show secondary CTAs
-- horizontal card rails where appropriate
-- mobile-specific media
-
-## Migration principle
-
-The prototype should never depend on page-specific duplicated UI logic. If a visual pattern appears twice, it should become a shared snippet, section, block, token, or JS module before the Shopify migration.
+No se incluyen credenciales, rastreadores externos ni backend. Apps y políticas se configuran en Shopify. [Instalación](docs/instalacion-shopify.md) · [QA](qa-checklist.md).

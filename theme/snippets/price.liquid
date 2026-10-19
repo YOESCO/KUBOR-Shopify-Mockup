@@ -1,0 +1,11 @@
+{% doc %}
+Renders actual Shopify prices.
+@param {product} product - Product
+@param {variant} [variant] - Selected variant
+{% enddoc %}
+{% assign priced = variant | default: product %}
+<div class="price">
+{% if priced.compare_at_price > priced.price %}<s><span class="sr-only">{{ 'product.regular_price' | t }}</span>{{ priced.compare_at_price | money_with_currency }}</s>{% endif %}
+<span>{% if variant == blank and product.price_varies %}{{ 'product.from' | t }} {% endif %}{{ priced.price | money_with_currency }}</span>
+{% if priced.unit_price_measurement %}<small>{{ priced.unit_price | money }}/{{ priced.unit_price_measurement.reference_value }}{{ priced.unit_price_measurement.reference_unit }}</small>{% endif %}
+</div>

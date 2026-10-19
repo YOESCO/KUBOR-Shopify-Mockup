@@ -1,0 +1,47 @@
+{% doc %}
+Renders the canonical server-side cart for a drawer or full page.
+@param {string} context - Unique form prefix
+{% enddoc %}
+{% if cart.empty? %}
+<div class="empty-state">
+{% render 'icon', name: 'bag' %}
+<h2>{{ 'cart.empty' | t }}</h2><p>{{ 'cart.empty_hint' | t }}</p>
+<a class="button" href="{{ routes.all_products_collection_url }}">{{ 'cart.continue' | t }}</a>
+</div>
+{% else %}
+<form action="{{ routes.cart_url }}" method="post" id="{{ context }}-form" class="cart-form">
+<div class="cart-lines">
+{% for item in cart.items %}
+<div class="cart-line">
+<a href="{{ item.url }}">{% if item.image %}{{ item.image | image_url: width: 240 | image_tag: loading: 'lazy', widths: '120,240', sizes: '100px' }}{% endif %}</a>
+<div>
+<h3><a href="{{ item.url }}">{{ item.product.title | escape }}</a></h3>
+{% unless item.product.has_only_default_variant %}<p class="muted">{{ item.variant.title | escape }}</p>{% endunless %}
+{% if item.selling_plan_allocation %}<p>{{ item.selling_plan_allocation.selling_plan.name | escape }}</p>{% endif %}
+{% for property in item.properties %}{% assign first_character = property.first | slice: 0 %}{% unless property.last == blank or first_character == '_' %}<p class="muted">{{ property.first | escape }}: {{ property.last | escape }}</p>{% endunless %}{% endfor %}
+<label for="{{ context }}-quantity-{{ forloop.index }}">{{ 'product.quantity' | t }}</label>
+<div class="quantity">
+<button type="button" data-quantity-step="-1" data-input="{{ context }}-quantity-{{ forloop.index }}" aria-label="{{ 'cart.decrease' | t }}">−</button>
+<input id="{{ context }}-quantity-{{ forloop.index }}" type="number" name="updates[]" value="{{ item.quantity }}" min="0" step="1" inputmode="numeric" data-line-key="{{ item.key | escape }}">
+<button type="button" data-quantity-step="1" data-input="{{ context }}-quantity-{{ forloop.index }}" aria-label="{{ 'cart.increase' | t }}">+</button>
+</div>
+<a class="text-link" href="{{ item.url_to_remove }}" data-remove-key="{{ item.key | escape }}">{{ 'cart.remove' | t }}</a>
+{% for discount in item.line_level_discount_allocations %}<p class="discount">{{ discount.discount_application.title | escape }} (−{{ discount.amount | money }})</p>{% endfor %}
+</div>
+<div class="cart-line__price">{% if item.original_line_price != item.final_line_price %}<s>{{ item.original_line_price | money }}</s>{% endif %}<strong>{{ item.final_line_price | money_with_currency }}</strong>
+{% if item.unit_price_measurement %}<small>{{ item.unit_price | money }}/{{ item.unit_price_measurement.reference_value }}{{ item.unit_price_measurement.reference_unit }}</small>{% endif %}</div>
+</div>
+{% endfor %}
+</div>
+<div class="cart-summary">
+{% for discount in cart.cart_level_discount_applications %}<p>{{ discount.title | escape }} <span>−{{ discount.total_allocated_amount | money }}</span></p>{% endfor %}
+<p class="subtotal"><strong>{{ 'cart.subtotal' | t }}</strong><strong>{{ cart.total_price | money_with_currency }}</strong></p>
+<p class="muted">{{ 'cart.shipping_note' | t }}</p>
+<label for="{{ context }}-note">{{ 'cart.note' | t }}</label>
+<textarea id="{{ context }}-note" name="note" rows="2">{{ cart.note | escape }}</textarea>
+<button type="submit" name="update" class="button button--secondary">{{ 'cart.update' | t }}</button>
+<button type="submit" name="checkout" class="button">{{ 'cart.checkout' | t }} {% render 'icon', name: 'arrow' %}</button>
+</div>
+</form>
+{% endif %}
+<p class="form-error" role="alert" data-cart-error></p>

@@ -1,0 +1,59 @@
+{
+  "sections": {
+    "main": {
+      "type": "bike-finder",
+      "settings": {},
+      "blocks": {
+        "mtb": {
+          "type": "terrain",
+          "settings": {
+            "title": "Montaña",
+            "terrain": "Senderos y terracería",
+            "collection": "mtb",
+            "description": "Senderos, terracería y recorridos con desnivel.",
+            "detail": "<p>Compara suspensión, frenos, geometría y uso recomendado. Una bicicleta recreativa no sustituye una diseñada para saltos o descenso.</p>"
+          }
+        },
+        "ruta": {
+          "type": "terrain",
+          "settings": {
+            "title": "Ruta",
+            "terrain": "Kilómetros sobre asfalto",
+            "collection": "ruta",
+            "description": "Distancias sobre asfalto y recorridos donde prima la eficiencia.",
+            "detail": "<p>Revisa tu posición de manejo, el desarrollo de la transmisión y el ancho de llanta compatible. Confirma la talla con la guía del modelo.</p>"
+          }
+        },
+        "gravel": {
+          "type": "terrain",
+          "settings": {
+            "title": "Gravel",
+            "terrain": "Rutas mixtas",
+            "collection": "gravel",
+            "description": "Una combinación de asfalto, caminos de tierra y exploración.",
+            "detail": "<p>Compara el paso de rueda, la geometría y los puntos de montaje que necesitas. Elige llantas y equipamiento acordes con tu ruta.</p>"
+          }
+        },
+        "urbanas": {
+          "type": "terrain",
+          "settings": {
+            "title": "Urbana",
+            "terrain": "Trayectos cotidianos",
+            "collection": "urbanas",
+            "description": "Traslados cotidianos y paseos a tu propio ritmo.",
+            "detail": "<p>Prioriza una postura cómoda y el equipamiento de tu trayecto: luces, guardabarros y capacidad de carga cuando corresponda.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "mtb",
+        "ruta",
+        "gravel",
+        "urbanas"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
