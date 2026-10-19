@@ -36,6 +36,7 @@ Las capturas antiguas corresponden al mockup servido localmente. Algunos recurso
 ## Comprobación y límites
 
 - 40/40 pruebas aprobadas el 16 de octubre: 20 en escritorio y 20 en móvil emulado. Sin fallos, omitidas ni resultados inestables.
+- El 19 de octubre se repitieron las seis comprobaciones de portada, orientación por uso y contacto tras ajustar textos; todas pasaron. [Resumen de ambas ejecuciones](test-summary.json).
 - Diez páginas en ambas resoluciones: axe WCAG 2 A/AA y 2.1 AA sin infracciones detectadas, sin errores JavaScript ni desbordamiento. No constituye certificación de accesibilidad.
 - Compra: variantes agotadas/disponibles, precio, carrito, cantidades, eliminación, nota y persistencia; búsqueda, filtros, teclado y formularios.
 - Fallos simulados: 422, sección vacía, selección fallida, respuestas fuera de orden y recuperación del carrito. Fallback sin JavaScript comprobado en la demo.

@@ -9,4 +9,3 @@ Renders actual Shopify prices.
 <span>{% if variant == blank and product.price_varies %}{{ 'product.from' | t }} {% endif %}{{ priced.price | money_with_currency }}</span>
 {% if priced.unit_price_measurement %}<small>{{ priced.unit_price | money }}/{{ priced.unit_price_measurement.reference_value }}{{ priced.unit_price_measurement.reference_unit }}</small>{% endif %}
 </div>
-

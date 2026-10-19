@@ -36,6 +36,8 @@ npm run package
 
 Las pruebas guardan capturas en `docs/evidence/` y resultados en `test-results/`. El navegador móvil es emulación Chromium, no un iPhone físico. Las pruebas locales no sustituyen verificar Liquid, apps, checkout y datos reales en Shopify.
 
+El workflow `Validate KUBOR theme` repite build, validación y pruebas en GitHub Actions. Cuando pasa, adjunta el ZIP como artefacto descargable de esa ejecución. No publica en Shopify.
+
 ## Funcionalidad
 
 Portada modular; navegación de tres niveles; colecciones con filtros y ordenación nativos; producto con medios, variantes, stock, guía de tallas y bloques de apps; búsqueda con sugerencias; carrito lateral y completo; contacto y newsletter nativos; blog, artículos, FAQ, páginas de marca, orientación por uso, contraseña y gift card. Las cuentas usan las rutas de Shopify. Interfaz en español e inglés; el contenido editorial se traduce desde la tienda.

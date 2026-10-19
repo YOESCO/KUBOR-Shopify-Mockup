@@ -21,4 +21,3 @@ Renders native Shopify filters and sort with a GET fallback.
 <button type="submit" class="button">{{ 'general.apply' | t }}</button>
 <a class="text-link" href="{% if results.terms %}{{ routes.search_url }}?q={{ results.terms | url_encode }}{% else %}{{ results.url }}{% endif %}">{{ 'collection.clear' | t }}</a>
 </form>
-

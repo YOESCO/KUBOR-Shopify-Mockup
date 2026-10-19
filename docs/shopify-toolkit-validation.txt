@@ -7,7 +7,7 @@
 
 ### File 1
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -15,7 +15,7 @@
 
 ### File 2
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -23,7 +23,7 @@
 
 ### File 3
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -31,7 +31,7 @@
 
 ### File 4
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -39,7 +39,7 @@
 
 ### File 5
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -47,7 +47,7 @@
 
 ### File 6
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -55,7 +55,7 @@
 
 ### File 7
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -63,7 +63,7 @@
 
 ### File 8
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -71,7 +71,7 @@
 
 ### File 9
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -79,7 +79,7 @@
 
 ### File 10
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -87,7 +87,7 @@
 
 ### File 11
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -95,7 +95,7 @@
 
 ### File 12
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -103,7 +103,7 @@
 
 ### File 13
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -111,7 +111,7 @@
 
 ### File 14
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -119,7 +119,7 @@
 
 ### File 15
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -127,7 +127,7 @@
 
 ### File 16
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -135,7 +135,7 @@
 
 ### File 17
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -143,7 +143,7 @@
 
 ### File 18
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -151,7 +151,7 @@
 
 ### File 19
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -159,7 +159,7 @@
 
 ### File 20
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -167,7 +167,7 @@
 
 ### File 21
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -175,7 +175,7 @@
 
 ### File 22
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -183,7 +183,7 @@
 
 ### File 23
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -191,7 +191,7 @@
 
 ### File 24
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -199,7 +199,7 @@
 
 ### File 25
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -207,7 +207,7 @@
 
 ### File 26
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -215,7 +215,7 @@
 
 ### File 27
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -223,7 +223,7 @@
 
 ### File 28
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -231,7 +231,7 @@
 
 ### File 29
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -239,7 +239,7 @@
 
 ### File 30
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -247,7 +247,7 @@
 
 ### File 31
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -255,7 +255,7 @@
 
 ### File 32
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -263,7 +263,7 @@
 
 ### File 33
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -271,7 +271,7 @@
 
 ### File 34
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -279,7 +279,7 @@
 
 ### File 35
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -287,7 +287,7 @@
 
 ### File 36
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -295,7 +295,7 @@
 
 ### File 37
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -303,7 +303,7 @@
 
 ### File 38
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -311,7 +311,7 @@
 
 ### File 39
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -319,7 +319,7 @@
 
 ### File 40
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -327,7 +327,7 @@
 
 ### File 41
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -335,7 +335,7 @@
 
 ### File 42
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -343,7 +343,7 @@
 
 ### File 43
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -351,7 +351,7 @@
 
 ### File 44
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -359,7 +359,7 @@
 
 ### File 45
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -367,7 +367,7 @@
 
 ### File 46
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -375,7 +375,7 @@
 
 ### File 47
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -383,7 +383,7 @@
 
 ### File 48
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -391,7 +391,7 @@
 
 ### File 49
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -399,7 +399,7 @@
 
 ### File 50
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -407,7 +407,7 @@
 
 ### File 51
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -415,7 +415,7 @@
 
 ### File 52
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -423,7 +423,7 @@
 
 ### File 53
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -431,7 +431,7 @@
 
 ### File 54
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -439,7 +439,7 @@
 
 ### File 55
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -447,7 +447,7 @@
 
 ### File 56
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -455,7 +455,7 @@
 
 ### File 57
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -463,7 +463,7 @@
 
 ### File 58
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -471,7 +471,7 @@
 
 ### File 59
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -479,7 +479,7 @@
 
 ### File 60
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -487,7 +487,7 @@
 
 ### File 61
 **Artifact ID:** kubor-ride-beyond-1
-**Revision:** 2
+**Revision:** 3
 *Use same ID & increment revision when retrying on an improvement of this artifact*
 
 **Status:** ✅ SUCCESS
@@ -575,14 +575,14 @@ ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-no
 Failed to load or transform loadResource(shopify_system_translations) with the following error:
 ENOENT: no such file or directory, open '/home/agent/.cache/theme-liquid-docs-nodejs/shopify_system_translations.json'
 Loaded fallback resource
-	tags from
-	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/tags.json
-Loaded fallback resource
 	filters from
 	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/filters.json
 Loaded fallback resource
-	objects from
-	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/objects.json
+	tags from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/tags.json
 Loaded fallback resource
 	shopify_system_translations from
 	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/shopify_system_translations.json
+Loaded fallback resource
+	objects from
+	/workspace/kubor/node_modules/@shopify/theme-check-docs-updater/data/objects.json

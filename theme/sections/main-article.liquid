@@ -1,4 +1,3 @@
 <article class="container section prose"><a class="text-link" href="{{ blog.url }}">← {{ blog.title | escape }}</a><p class="eyebrow">{{ article.published_at | date: '%d/%m/%Y' }} / {{ article.author | escape }}</p><h1>{{ article.title | escape }}</h1>{% if article.image %}{{ article.image | image_url: width: 1600 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '600,1000,1600', sizes: '(min-width: 1000px) 900px, 100vw' }}{% endif %}<div class="rte">{{ article.content }}</div></article>
 <script type="application/ld+json">{{ article | structured_data }}</script>
 {% schema %}{"name":"Artículo","settings":[]}{% endschema %}
-

@@ -184,7 +184,7 @@ export async function build() {
     }
     fixture.predictions[source.id]=await section('predictive-search','predictive-search',{}, {predictive_search:{performed:true,terms:source.title,resources:{products:[prepareProduct(source)],collections:[],articles:[],pages:[]}}});
   }
-  for(const [file,html] of output) await fs.writeFile(path.join(root,file),html);
+  for(const [file,html] of output) await fs.writeFile(path.join(root,file),html.replace(/[\t ]+$/gm, '').trimEnd() + '\n');
   await fs.writeFile(path.join(root,'preview/fixtures.json'),JSON.stringify(fixture));
   await fs.writeFile(path.join(root,'preview/pages.json'),JSON.stringify([...output.keys()],null,2));
   console.log('Rendered '+output.size+' pages from the actual Liquid theme.');
