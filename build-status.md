@@ -1,3 +1,5 @@
+> Documento histórico del mockup anterior. El estado vigente se describe en [README](README.md), [auditoría](docs/auditoria.md) y [QA](qa-checklist.md).
+
 # KUBOR Mockup Build Status
 
 Current review build: `2026.10.15-sprint1V-visual-consolidation`

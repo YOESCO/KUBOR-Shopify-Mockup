@@ -1,40 +1,45 @@
-# KUBOR Shopify Mockup
+# KUBOR — Ride Beyond
 
-Repositorio público dedicado a visualizar el sistema UI/UX del nuevo KUBOR Shopify Theme sin tocar el repositorio productivo ni el trabajo activo de Codex.
+Theme nativo para Shopify Online Store 2.0 con vista previa estática reproducible. Conserva la identidad navy/cyan, los logotipos originales y el degradado de HYPERGOGO. Sustituye los parches del mockup por secciones Liquid, una hoja de estilos y JavaScript sin dependencias de ejecución.
 
-## Objetivo
-Validar en HTML/CSS/JS el shell global, Home, PLP, PDP, ecommerce, cuenta, soporte y contenido antes de traducir el diseño aprobado a Liquid/Shopify.
+**Estado:** preparado para importar como borrador. Validación local: 40 pruebas aprobadas en Chromium escritorio/móvil, cero hallazgos de Theme Check y 77 rutas sin enlaces locales a archivos inexistentes. Falta validar instalación y pedido de prueba dentro de Shopify; no se ha publicado ni modificado su catálogo.
 
-## Fuente de verdad de avance
+- [Auditoría y capturas](docs/auditoria.md)
+- [Instalación en Shopify](docs/instalacion-shopify.md)
+- [Fuentes y recursos](docs/fuentes.md)
+- [Arquitectura](shopify-architecture.md) · [Sistema visual](design-system.md) · [QA](qa-checklist.md)
 
-**[`docs/ui-ux-master-checklist.md`](docs/ui-ux-master-checklist.md)** es el checklist maestro. Una página no se considera terminada por el simple hecho de existir: debe aprobar visual, interacción, responsive, accesibilidad y mapeo Shopify.
+## Entrega
 
-Para navegar las pantallas del mockup usa `site-map.html`.
+`npm run package` genera `dist/KUBOR-Ride-Beyond-1.0.0.zip`. Importa ese ZIP en **Tienda online → Temas → Importar tema → Subir archivo ZIP**. Contiene solo el theme, sin catálogo de demostración, pruebas ni dependencias de desarrollo.
 
-`remaining-pages-checklist.md` queda únicamente como inventario de archivos existentes.
+`theme/` es la fuente de verdad. Los HTML de la raíz son la demo generada: no se suben a Shopify ni se editan directamente. Las rutas antiguas relevantes se mantienen como vistas o redirecciones locales.
 
-## Shell / sistema actual
-- Topbar / announcement.
-- Header.
-- Mega menú desktop.
-- Menú móvil drawer.
-- Cart drawer.
-- Predictive search drawer.
-- Account entry.
-- Filter drawer.
-- Footer modular.
-- Responsive baseline.
-- Librería de iconos SVG.
-- Mapa de handoff a Shopify.
+## Desarrollo
 
-## Logos
-Los logos no se generan con IA. Se usan los SVG oficiales entregados por el usuario, conservando geometría y colores.
+Requiere Node.js 20.19+ y Python 3.
 
-## GitHub Pages
-Este repo es público y el sitio está en la raíz (`index.html`), por lo que puede publicarse directamente con GitHub Pages usando `main` / root.
+```sh
+npm ci
+npm run build
+npm run dev
+```
 
-## Regla visual
-Los mockups aprobados por el usuario son la autoridad visual primaria. Trek, Specialized, Canyon, Santa Cruz y otras referencias se usan para mejorar UX, arquitectura y componentes, pero no para sustituir la dirección visual aprobada.
+Abre http://127.0.0.1:4173. La demo usa LiquidJS y un adaptador local: simula inventario, carrito y formularios; no procesa pagos ni envía mensajes. Fotos y precios de seis productos son una referencia pública del 16 de octubre de 2026, no disponibilidad vigente.
 
-## Regla de implementación
-Este repositorio es un mockup visual/funcional. No es código productivo de Shopify y no debe sustituir ni modificar el theme hasta que el usuario apruebe los contratos visuales y funcionales que después se migrarán a Liquid, sections, blocks, snippets, metafields/metaobjects o extensiones/apps cuando corresponda.
+```sh
+npm run check
+npx playwright install chromium
+npm test
+npm run package
+```
+
+Las pruebas guardan capturas en `docs/evidence/` y resultados en `test-results/`. El navegador móvil es emulación Chromium, no un iPhone físico. Las pruebas locales no sustituyen verificar Liquid, apps, checkout y datos reales en Shopify.
+
+## Funcionalidad
+
+Portada modular; navegación de tres niveles; colecciones con filtros y ordenación nativos; producto con medios, variantes, stock, guía de tallas y bloques de apps; búsqueda con sugerencias; carrito lateral y completo; contacto y newsletter nativos; blog, artículos, FAQ, páginas de marca, orientación por uso, contraseña y gift card. Las cuentas usan las rutas de Shopify. Interfaz en español e inglés; el contenido editorial se traduce desde la tienda.
+
+Se retiran reseñas inventadas, comparación sin especificaciones verificadas, wishlist simulada y seguimiento/garantías ficticios. Esos servicios requieren datos o integraciones reales.
+
+El historial anterior se conserva en Git, referencia inicial `28ad4bd3687cb22a65b3a1cccbfdcd5394438804`. Los documentos de sprints son históricos y no certifican esta entrega.

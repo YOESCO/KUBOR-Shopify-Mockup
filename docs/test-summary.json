@@ -1,0 +1,29 @@
+{
+  "environment": "Local LiquidJS preview, Chromium desktop and mobile emulation",
+  "stats": {
+    "startTime": "2026-10-16T15:17:31.162Z",
+    "duration": 30584.367000000002,
+    "expected": 40,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "errors": [],
+  "projects": [
+    "desktop 1440x1000",
+    "mobile 390x844"
+  ],
+  "note": "Not a live Shopify checkout or editor test.",
+  "final_content_recheck": {
+    "stats": {
+      "startTime": "2026-10-19T08:12:45.038Z",
+      "duration": 9767.521,
+      "expected": 6,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    },
+    "errors": [],
+    "scope": "home, bike finder and contact in both viewports"
+  }
+}

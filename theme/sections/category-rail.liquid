@@ -1,0 +1,11 @@
+<section class="category-section container section" id="Explore">
+<div class="section-heading"><div><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p><h2>{{ section.settings.heading | escape }}</h2></div><p class="muted">{{ section.settings.text | escape }}</p></div>
+<div class="category-grid">
+{% for block in section.blocks %}<a class="category-card" href="{{ block.settings.collection.url | default: block.settings.link | default: routes.all_products_collection_url }}" {{ block.shopify_attributes }}>
+<span class="category-card__number">0{{ forloop.index }}</span><div><h3>{{ block.settings.title | escape }}</h3><p>{{ block.settings.text | escape }}</p></div><span class="category-card__arrow">{% render 'icon', name: 'arrow' %}</span>
+</a>{% endfor %}
+</div></section>
+{% schema %}
+{"name":"Explorar por disciplina","settings":[{"type":"text","id":"eyebrow","label":"Antetítulo","default":"TU TERRENO. TU BICICLETA."},{"type":"text","id":"heading","label":"Título","default":"¿A DÓNDE VAMOS?"},{"type":"textarea","id":"text","label":"Descripción","default":"Elige cómo te gusta rodar."}],"max_blocks":8,"blocks":[{"type":"category","name":"Disciplina","settings":[{"type":"text","id":"title","label":"Nombre","default":"Montaña"},{"type":"text","id":"text","label":"Descripción","default":"Fuera del asfalto."},{"type":"collection","id":"collection","label":"Colección"},{"type":"url","id":"link","label":"Enlace alternativo"}]}],"presets":[{"name":"Explorar por disciplina","blocks":[{"type":"category","settings":{"title":"Montaña","text":"Explora fuera del asfalto."}},{"type":"category","settings":{"title":"Ruta","text":"Cada kilómetro cuenta."}},{"type":"category","settings":{"title":"Gravel","text":"Elige el camino largo."}},{"type":"category","settings":{"title":"Urbana","text":"Muévete a tu ritmo."}}]}]}
+{% endschema %}
+

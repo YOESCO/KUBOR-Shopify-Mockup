@@ -1,0 +1,45 @@
+{
+  "sections": {
+    "hero_0": {
+      "type": "hero",
+      "settings": {
+        "gradient": true,
+        "use_editorial_image": false,
+        "eyebrow": "HYPERGOGO / ELECTRIC FUN",
+        "heading": "RIDE ELECTRIC.\nMAKE IT FUN.",
+        "text": "Pequeñas aventuras. Grandes recuerdos. Descubre una forma diferente de explorar en familia.",
+        "button_label": "Explorar HYPERGOGO",
+        "button_link": "/collections/hypergogo",
+        "secondary_label": "Antes de elegir",
+        "secondary_link": "#safety",
+        "caption": "COLOR. ENERGÍA. DIVERSIÓN."
+      }
+    },
+    "featured_products_1": {
+      "type": "featured-products",
+      "settings": {
+        "collection": "hypergogo",
+        "eyebrow": "ELIGE SU PRÓXIMA AVENTURA",
+        "heading": "ENCUENTRA SU RITMO."
+      }
+    },
+    "editorial_2": {
+      "type": "editorial",
+      "settings": {
+        "gradient": true,
+        "use_editorial_image": false,
+        "eyebrow": "DIVERSIÓN CON CONFIANZA",
+        "heading": "EL PRIMER PASO:\nELEGIR BIEN.",
+        "text": "<p>Consulta la edad recomendada, el peso máximo y las condiciones de uso en la ficha de cada modelo. Usa casco y equipo de protección. La supervisión adulta forma parte de cada aventura.</p>",
+        "button_label": "Consultar un modelo",
+        "button_link": "/pages/contacto",
+        "anchor": "safety"
+      }
+    }
+  },
+  "order": [
+    "hero_0",
+    "featured_products_1",
+    "editorial_2"
+  ]
+}

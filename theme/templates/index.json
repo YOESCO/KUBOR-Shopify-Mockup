@@ -1,0 +1,162 @@
+{
+  "sections": {
+    "hero_0": {
+      "type": "hero",
+      "settings": {
+        "secondary_link": "/pages/bike-finder"
+      }
+    },
+    "category_rail_1": {
+      "type": "category-rail",
+      "settings": {},
+      "blocks": {
+        "block_0": {
+          "type": "category",
+          "settings": {
+            "title": "Montaña",
+            "text": "Explora fuera del asfalto.",
+            "link": "/collections/mtb"
+          }
+        },
+        "block_1": {
+          "type": "category",
+          "settings": {
+            "title": "Ruta",
+            "text": "Cada kilómetro cuenta.",
+            "link": "/collections/ruta"
+          }
+        },
+        "block_2": {
+          "type": "category",
+          "settings": {
+            "title": "Gravel",
+            "text": "Elige el camino largo.",
+            "link": "/collections/gravel"
+          }
+        },
+        "block_3": {
+          "type": "category",
+          "settings": {
+            "title": "Urbana",
+            "text": "Muévete a tu ritmo.",
+            "link": "/collections/urbanas"
+          }
+        }
+      },
+      "block_order": [
+        "block_0",
+        "block_1",
+        "block_2",
+        "block_3"
+      ]
+    },
+    "featured_products_2": {
+      "type": "featured-products",
+      "settings": {
+        "collection": "frontpage"
+      }
+    },
+    "editorial_3": {
+      "type": "editorial",
+      "settings": {
+        "button_link": "/pages/nosotros"
+      }
+    },
+    "service_links_4": {
+      "type": "service-links",
+      "settings": {},
+      "blocks": {
+        "block_0": {
+          "type": "service",
+          "settings": {
+            "label": "EL AJUSTE IMPORTA",
+            "title": "Una bici a tu medida.",
+            "text": "Conoce qué revisar al elegir talla y consulta la geometría de cada modelo.",
+            "button": "Guía de tallas",
+            "link": "/pages/guia-de-tallas"
+          }
+        },
+        "block_1": {
+          "type": "service",
+          "settings": {
+            "label": "TU FORMA DE RODAR",
+            "title": "Encuentra tu camino.",
+            "text": "Montaña, asfalto o ciudad. Empieza por cómo quieres usar tu bicicleta.",
+            "button": "Ayúdame a elegir",
+            "link": "/pages/bike-finder"
+          }
+        },
+        "block_2": {
+          "type": "service",
+          "settings": {
+            "label": "ANTES Y DESPUÉS",
+            "title": "Siempre en la ruta.",
+            "text": "Resuelve tus dudas sobre modelos, mantenimiento y soporte.",
+            "button": "Hablar con KUBOR",
+            "link": "/pages/contacto"
+          }
+        }
+      },
+      "block_order": [
+        "block_0",
+        "block_1",
+        "block_2"
+      ]
+    },
+    "editorial_5": {
+      "type": "editorial",
+      "settings": {
+        "gradient": true,
+        "use_editorial_image": false,
+        "eyebrow": "HYPERGOGO / ELECTRIC FUN",
+        "heading": "OTRA FORMA\nDE SENTIRLO.",
+        "text": "<p>Color, energía y nuevas maneras de explorar. Descubre la familia HYPERGOGO y encuentra el modelo adecuado para cada aventura.</p>",
+        "button_label": "Descubrir HYPERGOGO",
+        "button_link": "/pages/hypergogo"
+      }
+    },
+    "faq_6": {
+      "type": "faq",
+      "settings": {
+        "contact": "/pages/contacto"
+      },
+      "blocks": {
+        "block_0": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cómo sé qué bicicleta es para mí?",
+            "answer": "<p>Empieza por el terreno y el uso que le darás. Compara las características de cada modelo y pide asesoría si tienes dudas.</p>"
+          }
+        },
+        "block_1": {
+          "type": "question",
+          "settings": {
+            "question": "¿Cómo elijo la talla correcta?",
+            "answer": "<p>Consulta la guía del modelo. Tu estatura es una referencia inicial; la entrepierna, la geometría y tu posición de manejo también importan.</p>"
+          }
+        },
+        "block_2": {
+          "type": "question",
+          "settings": {
+            "question": "¿Dónde consulto envío y devoluciones?",
+            "answer": "<p>Las políticas vigentes están enlazadas al pie de la tienda. El costo y las opciones de envío se muestran al finalizar tu compra.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "block_0",
+        "block_1",
+        "block_2"
+      ]
+    }
+  },
+  "order": [
+    "hero_0",
+    "category_rail_1",
+    "featured_products_2",
+    "editorial_3",
+    "service_links_4",
+    "editorial_5",
+    "faq_6"
+  ]
+}

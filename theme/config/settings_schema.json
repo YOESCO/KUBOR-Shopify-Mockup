@@ -1,0 +1,20 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "KUBOR Ride Beyond",
+    "theme_author": "KUBOR",
+    "theme_version": "1.0.0",
+    "theme_documentation_url": "https://github.com/YOESCO/KUBOR-Shopify-Mockup",
+    "theme_support_url": "https://github.com/YOESCO/KUBOR-Shopify-Mockup/issues"
+  },
+  {
+    "name": "Identidad",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon"
+      }
+    ]
+  }
+]

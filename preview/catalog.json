@@ -1,0 +1,576 @@
+{
+  "captured_at": "2026-10-16",
+  "notice": "Public product snapshot. Stock simulated for UI tests; no checkout or live inventory.",
+  "products": [
+    {
+      "id": 1,
+      "handle": "bicicleta-montana-rodada-29-doble-suspension-kubor-mallory",
+      "title": "Bicicleta de Montaña Mallory R29 de 21V KUBOR",
+      "vendor": "KUBOR",
+      "type": "Montaña",
+      "description": "<p data-end=\"328\" data-start=\"34\">La Kubor Mallory Rodada 29 es una bicicleta de montaña con doble suspensión, diseñada para brindar mayor comodidad, estabilidad y control en senderos, caminos de terracería y recorridos recreativos. Su cuadro de aluminio, transmisión Shimano Tourney de 21 velocidades y frenos de disco ofrecen un desempeño confiable en distintos terrenos, mientras que sus llantas Kenda rodada 29 proporcionan excelente tracción y seguridad para disfrutar cada aventura con mayor confianza.<br></p>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"302\" style=\"border-collapse: collapse; width: 228pt;\">\n<colgroup>\n<col width=\"139\" style=\"mso-width-source: userset; mso-width-alt: 4864; width: 105pt;\"> <col width=\"163\" style=\"mso-width-source: userset; mso-width-alt: 5701; width: 123pt;\"> </colgroup>\n<tbody>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td colspan=\"2\" height=\"21\" class=\"xl66\" width=\"302\" style=\"height: 16.0pt; width: 228pt;\">DETALLES MALLORY<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Tipo</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Montaña</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Genero<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Unisex</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Edad</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">A partir de los 13 años<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Estatura Sugerida<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">1.60 a 1.80 m</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Peso tolerado</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">120 kg<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Cuadro<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Aluminio 6061</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Rodada</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">29</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Velocidades<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">21</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Transmisión<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">7x3</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Talla del cuadro</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">M<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Palanca de Cambios<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Shimano EF500</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Suspensión<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Delantera con Resorte / Amortiguador Trasero de Resorte<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Multiplicación<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">De 3 Platos</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Tipo de Freno<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Mecánicos</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Palanca de Freno<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Shimano EF500</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Desviadores</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Shimano Tourney</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Eje de Centro<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Kenli Sellado de 33mm<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Llanta</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Kenda 29\" x 2.10<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Cableado</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Externo<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Asiento</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Sintético Ergonómico Ajustable<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Material de Pedales</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Plástico con Reflejantes</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Accesorios<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Reflejante Delantero<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p>\n<p><strong>Contenido</strong>:</p>\n<p>Una bicicleta armada al 85%, por lo que es necesario armar llanta delantera, asiento y manubrio, ajustar velocidades y de frenos.</p>\n<p><strong>+ Información</strong></p>\n<p>Recomendamos que la bicicleta sea armada y ajustada por un mecánico calificado.<br>Garantía solo por defecto de fábrica, no se aplica en partes plásticas.</p>",
+      "source": "https://kuborbikes.com/products/bicicleta-montana-rodada-29-doble-suspension-kubor-mallory",
+      "options": [
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            "Verde",
+            "Gris",
+            "Naranja"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "id": 53463103701314,
+          "src": "preview/assets/product-0-53463103701314.jpg",
+          "width": 1200,
+          "height": 1200,
+          "alt": "Bicicleta de Montaña Mallory R29 de 21V KUBOR",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/M_1.jpg?v=1788208376"
+        },
+        {
+          "id": 53463134601538,
+          "src": "preview/assets/product-0-53463134601538.jpg",
+          "width": 1254,
+          "height": 1254,
+          "alt": "Bicicleta de Montaña Mallory R29 de 21V KUBOR",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/M_2.png?v=1788208554"
+        },
+        {
+          "id": 53463111663938,
+          "src": "preview/assets/product-0-53463111663938.jpg",
+          "width": 1200,
+          "height": 1200,
+          "alt": "Bicicleta de Montaña Mallory R29 de 21V KUBOR",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/M1.jpg?v=1788208422"
+        },
+        {
+          "id": 51650996437314,
+          "src": "preview/assets/product-0-51650996437314.jpg",
+          "width": 1024,
+          "height": 768,
+          "alt": "Bicicleta de Montaña Mallory R29 de 21V KUBOR",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/Sin-titulo-1_0010_Capa-5_bf4d478b-6a7e-4497-a95d-d8c2399c0e4f.png?v=1772136373"
+        }
+      ],
+      "variants": [
+        {
+          "id": 100,
+          "title": "Verde",
+          "price": 769900,
+          "compare_at_price": 1099857,
+          "available": true,
+          "source_available": false,
+          "options": [
+            "Verde"
+          ],
+          "featured_media": {
+            "id": 53463111663938,
+            "src": "preview/assets/product-0-53463111663938.jpg",
+            "width": 1200,
+            "height": 1200,
+            "alt": "Bicicleta de Montaña Mallory R29 de 21V KUBOR",
+            "media_type": "image",
+            "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/M1.jpg?v=1788208422"
+          }
+        },
+        {
+          "id": 101,
+          "title": "Gris",
+          "price": 769900,
+          "compare_at_price": 1099857,
+          "available": false,
+          "source_available": false,
+          "options": [
+            "Gris"
+          ],
+          "featured_media": {
+            "id": 53463103701314,
+            "src": "preview/assets/product-0-53463103701314.jpg",
+            "width": 1200,
+            "height": 1200,
+            "alt": "Bicicleta de Montaña Mallory R29 de 21V KUBOR",
+            "media_type": "image",
+            "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/M_1.jpg?v=1788208376"
+          }
+        },
+        {
+          "id": 102,
+          "title": "Naranja",
+          "price": 769900,
+          "compare_at_price": 1099857,
+          "available": true,
+          "source_available": false,
+          "options": [
+            "Naranja"
+          ],
+          "featured_media": {
+            "id": 51650996437314,
+            "src": "preview/assets/product-0-51650996437314.jpg",
+            "width": 1024,
+            "height": 768,
+            "alt": "Bicicleta de Montaña Mallory R29 de 21V KUBOR",
+            "media_type": "image",
+            "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/Sin-titulo-1_0010_Capa-5_bf4d478b-6a7e-4497-a95d-d8c2399c0e4f.png?v=1772136373"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "handle": "kubor-bicicleta-montana-r29-tornado-arena",
+      "title": "Bicicleta de Montaña Tornado R29 de 12V Kubor",
+      "vendor": "KUBOR",
+      "type": "Montaña",
+      "description": "<p>La KUBOR Tornado R29 es nuestra bicicleta de montaña para senderos exigentes. Combina una transmisión monoplato Shimano Deore de 12 velocidades, frenos hidráulicos Shimano MT200 y suspensión SR Suntour XCE28 con bloqueo.</p>\n<p>La rodada 29 con llantas Kenda de 2.20\" le da tracción y estabilidad sobre piedras y raíces, y el cableado interno mantiene la bici limpia y protegida del polvo. Hecha para quien ya rueda y quiere subir de nivel.</p>\n<h3>Especificaciones</h3>\n<table><tbody>\n<tr><th colspan=\"2\">Cuadro y talla</th></tr>\n<tr>\n<td>Cuadro</td>\n<td>Aluminio</td>\n</tr>\n<tr>\n<td>Talla</td>\n<td>M</td>\n</tr>\n<tr>\n<td>Estatura sugerida</td>\n<td>1.60 a 1.80 m</td>\n</tr>\n<tr>\n<td>Uso</td>\n<td>Montaña</td>\n</tr>\n<tr>\n<td>Edad</td>\n<td>A partir de 13 años</td>\n</tr>\n<tr>\n<td>Peso máximo</td>\n<td>120 kg</td>\n</tr>\n<tr><th colspan=\"2\">Transmisión</th></tr>\n<tr>\n<td>Configuración</td>\n<td>1x12 (monoplato)</td>\n</tr>\n<tr>\n<td>Mandos</td>\n<td>Shimano Deore</td>\n</tr>\n<tr>\n<td>Desviador trasero</td>\n<td>Shimano Deore</td>\n</tr>\n<tr>\n<td>Multiplicación</td>\n<td>Monoplato</td>\n</tr>\n<tr>\n<td>Eje de centro</td>\n<td>Hueco tipo Hollowtech</td>\n</tr>\n<tr><th colspan=\"2\">Frenos y suspensión</th></tr>\n<tr>\n<td>Frenos</td>\n<td>Hidráulicos</td>\n</tr>\n<tr>\n<td>Palancas de freno</td>\n<td>Shimano MT200</td>\n</tr>\n<tr>\n<td>Suspensión</td>\n<td>SR Suntour XCE28 de resorte con bloqueo</td>\n</tr>\n<tr><th colspan=\"2\">Ruedas y componentes</th></tr>\n<tr>\n<td>Llantas</td>\n<td>Kenda 29\" x 2.20</td>\n</tr>\n<tr>\n<td>Cableado</td>\n<td>Interno</td>\n</tr>\n<tr>\n<td>Asiento</td>\n<td>Sintético, ergonómico y ajustable</td>\n</tr>\n<tr>\n<td>Pedales</td>\n<td>Aluminio con reflejantes</td>\n</tr>\n<tr>\n<td>Incluye</td>\n<td>Reflejantes delantero y trasero</td>\n</tr>\n</tbody></table>\n<p><strong>Incluye:</strong> bicicleta armada al 85%. Solo colocas rueda delantera, asiento y manubrio, y ajustas frenos y cambios.</p>",
+      "source": "https://kuborbikes.com/products/kubor-bicicleta-montana-r29-tornado-arena",
+      "options": [
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            "Arena"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "id": 53901621756226,
+          "src": "preview/assets/product-1-53901621756226.jpg",
+          "width": 1000,
+          "height": 1000,
+          "alt": "Bicicleta de Montaña Tornado R29 de 12V Kubor",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/TornadoTRND29SND.3_8a5c4db7-2a30-4d6e-bafb-ae1b2dd7d5fa.jpg?v=1790710309"
+        },
+        {
+          "id": 53901621690690,
+          "src": "preview/assets/product-1-53901621690690.jpg",
+          "width": 1000,
+          "height": 1000,
+          "alt": "Bicicleta de Montaña Tornado R29 de 12V Kubor",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/TornadoTRND29SND.1_4ae74cd4-825c-4901-b174-782c5389068d.jpg?v=1790710308"
+        }
+      ],
+      "variants": [
+        {
+          "id": 200,
+          "title": "Arena",
+          "price": 1809900,
+          "compare_at_price": 0,
+          "available": true,
+          "source_available": true,
+          "options": [
+            "Arena"
+          ],
+          "featured_media": {
+            "id": 53901621756226,
+            "src": "preview/assets/product-1-53901621756226.jpg",
+            "width": 1000,
+            "height": 1000,
+            "alt": "Bicicleta de Montaña Tornado R29 de 12V Kubor",
+            "media_type": "image",
+            "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/TornadoTRND29SND.3_8a5c4db7-2a30-4d6e-bafb-ae1b2dd7d5fa.jpg?v=1790710309"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "handle": "bicicleta-de-montana-calipso-4-r29-9v",
+      "title": "Bicicleta de Montaña Calipso 4 R29 de 9V KUBOR",
+      "vendor": "KUBOR",
+      "type": "Montaña",
+      "description": "<p>La KUBOR Calipso 4 R29 equilibra rendimiento, comodidad y control. Tiene cuadro de aluminio 6061, transmisión monoplato de 9 velocidades con mandos Shimano Altus y desviador Shimano Acera, y suspensión delantera con bloqueo.</p>\n<p>Sus frenos hidráulicos y llantas Kenda rodada 29 aportan estabilidad y tracción en senderos, terracería y recorridos recreativos.</p>\n<h3>Especificaciones</h3>\n<table><tbody>\n<tr><th colspan=\"2\">Cuadro y talla</th></tr>\n<tr>\n<td>Cuadro</td>\n<td>Aluminio 6061</td>\n</tr>\n<tr>\n<td>Talla</td>\n<td>M</td>\n</tr>\n<tr>\n<td>Estatura sugerida</td>\n<td>1.60 a 1.80 m</td>\n</tr>\n<tr>\n<td>Uso</td>\n<td>Montaña</td>\n</tr>\n<tr>\n<td>Edad</td>\n<td>A partir de 13 años</td>\n</tr>\n<tr>\n<td>Peso máximo</td>\n<td>120 kg</td>\n</tr>\n<tr><th colspan=\"2\">Transmisión</th></tr>\n<tr>\n<td>Configuración</td>\n<td>1x9 (monoplato)</td>\n</tr>\n<tr>\n<td>Mandos</td>\n<td>Shimano Altus</td>\n</tr>\n<tr>\n<td>Desviador trasero</td>\n<td>Shimano Acera</td>\n</tr>\n<tr>\n<td>Multiplicación</td>\n<td>Monoplato de aleación de aluminio</td>\n</tr>\n<tr>\n<td>Eje de centro</td>\n<td>Sellado Kenli de 33 mm</td>\n</tr>\n<tr><th colspan=\"2\">Frenos y suspensión</th></tr>\n<tr>\n<td>Frenos</td>\n<td>Hidráulicos</td>\n</tr>\n<tr>\n<td>Palancas de freno</td>\n<td>Logan</td>\n</tr>\n<tr>\n<td>Suspensión</td>\n<td>Delantera de resorte con bloqueo</td>\n</tr>\n<tr><th colspan=\"2\">Ruedas y componentes</th></tr>\n<tr>\n<td>Llantas</td>\n<td>Kenda 29\" x 2.10</td>\n</tr>\n<tr>\n<td>Cableado</td>\n<td>Interno</td>\n</tr>\n<tr>\n<td>Asiento</td>\n<td>Sintético, ergonómico y ajustable</td>\n</tr>\n<tr>\n<td>Pedales</td>\n<td>Aluminio con reflejantes</td>\n</tr>\n<tr>\n<td>Incluye</td>\n<td>Reflejante delantero</td>\n</tr>\n</tbody></table>\n<p><strong>Incluye:</strong> bicicleta armada al 85%. Solo colocas rueda delantera, asiento y manubrio, y ajustas frenos y cambios.</p>",
+      "source": "https://kuborbikes.com/products/bicicleta-de-montana-calipso-4-r29-9v",
+      "options": [
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            "Azul",
+            "Púrpura"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "id": 53848313790786,
+          "src": "preview/assets/product-2-53848313790786.jpg",
+          "width": 1000,
+          "height": 1000,
+          "alt": "Bicicleta de Montaña Calipso 4 R29 de 9V KUBOR",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/CALIPSO429AzulCLP429BO.3_8b992268-4e76-4694-be62-80db01cab070.png?v=1790271892"
+        },
+        {
+          "id": 53848314052930,
+          "src": "preview/assets/product-2-53848314052930.jpg",
+          "width": 1000,
+          "height": 1000,
+          "alt": "Bicicleta de Montaña Calipso 4 R29 de 9V KUBOR",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/CALIPSO429AzulCLP429BO.11.png?v=1790271892"
+        },
+        {
+          "id": 53848314380610,
+          "src": "preview/assets/product-2-53848314380610.jpg",
+          "width": 1200,
+          "height": 1200,
+          "alt": "Bicicleta de Montaña Calipso 4 R29 de 9V KUBOR",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/CALIPSO_4_29_Morada_CLP429PC.3.png?v=1790271909"
+        }
+      ],
+      "variants": [
+        {
+          "id": 300,
+          "title": "Azul",
+          "price": 939900,
+          "compare_at_price": 0,
+          "available": true,
+          "source_available": true,
+          "options": [
+            "Azul"
+          ],
+          "featured_media": {
+            "id": 53848313790786,
+            "src": "preview/assets/product-2-53848313790786.jpg",
+            "width": 1000,
+            "height": 1000,
+            "alt": "Bicicleta de Montaña Calipso 4 R29 de 9V KUBOR",
+            "media_type": "image",
+            "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/CALIPSO429AzulCLP429BO.3_8b992268-4e76-4694-be62-80db01cab070.png?v=1790271892"
+          }
+        },
+        {
+          "id": 301,
+          "title": "Púrpura",
+          "price": 939900,
+          "compare_at_price": 0,
+          "available": false,
+          "source_available": true,
+          "options": [
+            "Púrpura"
+          ],
+          "featured_media": {
+            "id": 53848314380610,
+            "src": "preview/assets/product-2-53848314380610.jpg",
+            "width": 1200,
+            "height": 1200,
+            "alt": "Bicicleta de Montaña Calipso 4 R29 de 9V KUBOR",
+            "media_type": "image",
+            "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/CALIPSO_4_29_Morada_CLP429PC.3.png?v=1790271909"
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "handle": "bicicleta-de-montana-rodada-29-21-velocidades-kubor-alpine5",
+      "title": "Bicicleta de Montaña Alpine R29 de 21V KUBOR",
+      "vendor": "KUBOR",
+      "type": "Montaña",
+      "description": "<div id=\"description\" class=\"ui-pdp-container__row ui-pdp-container__row--description\">\n<div class=\"ui-pdp-description\">\n<p data-start=\"34\" data-end=\"330\">La Kubor Alpine rodada 29 es una bicicleta de montaña diseñada para ofrecer ligereza, control y versatilidad en senderos y recorridos urbanos. Su cuadro de aluminio con cableado interno, transmisión Shimano de 21 velocidades y suspensión delantera brindan una conducción cómoda y eficiente en distintos terrenos. Además, sus frenos de disco y llantas Kenda rodada 29 proporcionan mayor estabilidad, tracción y seguridad para disfrutar cada aventura con total confianza.</p>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"302\" style=\"border-collapse: collapse; width: 227pt;\">\n<colgroup> <col width=\"137\" style=\"width: 137px;\"> <col width=\"165\" style=\"width: 165px;\"> </colgroup>\n<tbody>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td colspan=\"2\" height=\"21\" class=\"xl66\" width=\"302\" style=\"height: 16.0pt; width: 227pt;\">DETALLES ALPINE</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Tipo</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Montaña</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Genero<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Unisex</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Edad</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">A partir de los 13 años<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Estatura Sugerida<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">1.60 a 1.80 m</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Peso tolerado</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">120 kg<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Cuadro<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Aluminio 6061</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Rodada</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">29</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Velocidades<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">21</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Transmisión<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">7x3</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Talla del cuadro</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">M</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Palanca de Cambios<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Shimano EF500</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Suspensión<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Delantera</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Multiplicación<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">3 Platos de Acero</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Tipo de Freno<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Mecánicos</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Palanca de Freno<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Shimano EF500</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Desviadores</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Shimano Tourney<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Eje de Centro<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Kenli Sellado de 33mm<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Llanta</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Kenda 29\" x 2.10<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Cableado</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Interno<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Asiento</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Sintético Ergonómico Ajustable<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl65\" style=\"height: 16.0pt; border-top: none;\">Material de Pedales</td>\n<td class=\"xl65\" style=\"border-top: none; border-left: none;\">Plástico<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n<div class=\"ui-pdp-description\">\n<span style=\"vertical-align: inherit;\"><span style=\"vertical-align: inherit;\"></span></span><br>\n</div>\n<div class=\"ui-pdp-description\"><br></div>\n<div class=\"ui-pdp-description\"><br></div>\n<div class=\"ui-pdp-description\">\n<meta charset=\"utf-8\">\n<h3>Contenido:</h3>\n<p>Una bicicleta armada al 85%, por lo que es necesario armar llanta delantera, asiento y manubrio, ajustar velocidades y de frenos.</p>\n<h3>+ Información</h3>\n<p>Recomendamos que la bicicleta sea armada y ajustada por un mecánico calificado.<br>Garantía solo por defecto de fábrica, no se aplica en partes plásticas</p>\n<p class=\"MsoNormal\"> </p>\n<br>\n</div>\n</div>",
+      "source": "https://kuborbikes.com/products/bicicleta-de-montana-rodada-29-21-velocidades-kubor-alpine5",
+      "options": [
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            "Blanco",
+            "Negro",
+            "Azul"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "id": 53848272109890,
+          "src": "preview/assets/product-3-53848272109890.jpg",
+          "width": 1000,
+          "height": 1000,
+          "alt": "Bicicleta de Montaña Alpine R29 de 21V KUBOR",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/Alpine5_29_Azul_Ice_ALPN29BLE.3.png?v=1790271044"
+        },
+        {
+          "id": 53848225087810,
+          "src": "preview/assets/product-3-53848225087810.jpg",
+          "width": 1200,
+          "height": 1200,
+          "alt": "Bicicleta de Montaña Alpine R29 de 21V KUBOR",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/Alpine529AzulIceALPN29BLE.11.png?v=1790270293"
+        },
+        {
+          "id": 53982451630402,
+          "src": "preview/assets/product-3-53982451630402.jpg",
+          "width": 1000,
+          "height": 1000,
+          "alt": "Bicicleta de Montaña Alpine R29 de 21V KUBOR",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/Alpine5_29_ALPN29WHT.4_b2577644-67e0-4ba1-977b-23aa820c99fc.jpg?v=1791397598"
+        },
+        {
+          "id": 53848267292994,
+          "src": "preview/assets/product-3-53848267292994.jpg",
+          "width": 1200,
+          "height": 1200,
+          "alt": "Bicicleta de Montaña Alpine R29 de 21V KUBOR",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/Alpine5_29_Negro_ALPN29BLK.3_6d54bfb1-f648-456a-9efa-3deb34c730a7.png?v=1790270919"
+        }
+      ],
+      "variants": [
+        {
+          "id": 400,
+          "title": "Blanco",
+          "price": 599900,
+          "compare_at_price": 857000,
+          "available": true,
+          "source_available": false,
+          "options": [
+            "Blanco"
+          ],
+          "featured_media": {
+            "id": 53982451630402,
+            "src": "preview/assets/product-3-53982451630402.jpg",
+            "width": 1000,
+            "height": 1000,
+            "alt": "Bicicleta de Montaña Alpine R29 de 21V KUBOR",
+            "media_type": "image",
+            "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/Alpine5_29_ALPN29WHT.4_b2577644-67e0-4ba1-977b-23aa820c99fc.jpg?v=1791397598"
+          }
+        },
+        {
+          "id": 401,
+          "title": "Negro",
+          "price": 599900,
+          "compare_at_price": 857000,
+          "available": false,
+          "source_available": false,
+          "options": [
+            "Negro"
+          ],
+          "featured_media": {
+            "id": 53848267292994,
+            "src": "preview/assets/product-3-53848267292994.jpg",
+            "width": 1200,
+            "height": 1200,
+            "alt": "Bicicleta de Montaña Alpine R29 de 21V KUBOR",
+            "media_type": "image",
+            "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/Alpine5_29_Negro_ALPN29BLK.3_6d54bfb1-f648-456a-9efa-3deb34c730a7.png?v=1790270919"
+          }
+        },
+        {
+          "id": 402,
+          "title": "Azul",
+          "price": 599900,
+          "compare_at_price": 857000,
+          "available": true,
+          "source_available": false,
+          "options": [
+            "Azul"
+          ],
+          "featured_media": {
+            "id": 53848272109890,
+            "src": "preview/assets/product-3-53848272109890.jpg",
+            "width": 1000,
+            "height": 1000,
+            "alt": "Bicicleta de Montaña Alpine R29 de 21V KUBOR",
+            "media_type": "image",
+            "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/Alpine5_29_Azul_Ice_ALPN29BLE.3.png?v=1790271044"
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "handle": "moto-electrica-infantil-hypergogo-cruiser-12-pro",
+      "title": "Moto Eléctrica Infantil Hyper Gogo Cruiser 12 Pro",
+      "vendor": "HYPERGOGO",
+      "type": "Movilidad eléctrica",
+      "description": "<p>¡Descubre la emoción de la velocidad de una manera segura y ecológica con nuestras motos eléctricas para niños!</p>\n<p>En HyperGogo, estamos comprometidos con la diversión y la seguridad de tus pequeños aventureros, por eso hemos creado una línea de motos eléctricas especialmente diseñadas para niños. Permite a los niños explorar el mundo que los rodea mientras aprenden sobre la importancia de la sostenibilidad y el cuidado del medio ambiente.</p>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"388\" style=\"border-collapse: collapse; width: 479px;\" height=\"418\">\n<colgroup> <col width=\"171\" style=\"width: 215px;\"> <col width=\"217\" style=\"width: 263px;\"> </colgroup>\n<tbody>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" width=\"171\" style=\"height: 16.0pt; width: 129pt;\">DETALLES</td>\n<td class=\"xl66\" width=\"217\" style=\"border-left: none; width: 163pt;\"> </td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl67\" width=\"171\" style=\"height: 16.0pt; border-top: none; width: 129pt;\">Tipo</td>\n<td class=\"xl67\" width=\"217\" style=\"border-top: none; border-left: none; width: 163pt;\">Infantil</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl67\" width=\"171\" style=\"height: 16.0pt; border-top: none; width: 129pt;\">Genero<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl67\" width=\"217\" style=\"border-top: none; border-left: none; width: 163pt;\">Unisex</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl67\" width=\"171\" style=\"height: 16.0pt; border-top: none; width: 129pt;\">Rodada</td>\n<td class=\"xl67\" width=\"217\" style=\"border-top: none; border-left: none; width: 163pt;\">12</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl67\" width=\"171\" style=\"height: 16.0pt; border-top: none; width: 129pt;\">Edad Sugerida<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl68\" width=\"217\" style=\"border-top: none; border-left: none; width: 163pt;\">6 a 11 años</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl67\" width=\"171\" style=\"height: 16.0pt; border-top: none; width: 129pt;\">Peso Tolerado Sugerido<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl68\" width=\"217\" style=\"border-top: none; border-left: none; width: 163pt;\">50 kg<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl67\" width=\"171\" style=\"height: 16.0pt; border-top: none; width: 129pt;\">Llanta<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl67\" width=\"217\" style=\"border-top: none; border-left: none; width: 163pt;\">12\"x 3.0<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl67\" width=\"171\" style=\"height: 16.0pt; border-top: none; width: 129pt;\">Marco<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl67\" width=\"217\" style=\"border-top: none; border-left: none; width: 163pt;\">Acero de alta resisitencia</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl67\" width=\"171\" style=\"height: 16.0pt; border-top: none; width: 129pt;\">Batería<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl67\" width=\"217\" style=\"border-top: none; border-left: none; width: 163pt;\">Iones de litio 21,9 V 5,2 A</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl67\" width=\"171\" style=\"height: 16.0pt; border-top: none; width: 129pt;\">Cargador</td>\n<td class=\"xl67\" width=\"217\" style=\"border-top: none; border-left: none; width: 163pt;\">DC24V 1.5A</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl67\" width=\"171\" style=\"height: 16.0pt; border-top: none; width: 129pt;\">Motor</td>\n<td class=\"xl67\" width=\"217\" style=\"border-top: none; border-left: none; width: 163pt;\">24V 160W</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl67\" width=\"171\" style=\"height: 16.0pt; border-top: none; width: 129pt;\">Velocidades</td>\n<td class=\"xl67\" width=\"217\" style=\"border-top: none; border-left: none; width: 163pt;\">3 Niveles<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl67\" width=\"171\" style=\"height: 16.0pt; border-top: none; width: 129pt;\">Velocidad<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl67\" width=\"217\" style=\"border-top: none; border-left: none; width: 163pt;\">Max. De hasta 16 km/h</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl67\" width=\"171\" style=\"height: 16.0pt; border-top: none; width: 129pt;\">Freno</td>\n<td class=\"xl67\" width=\"217\" style=\"border-top: none; border-left: none; width: 163pt;\">Buje trasero</td>\n</tr>\n<tr height=\"107\" style=\"height: 80.0pt;\">\n<td height=\"107\" class=\"xl67\" width=\"171\" style=\"height: 80.0pt; border-top: none; width: 129pt;\">Accesorios</td>\n<td class=\"xl67\" width=\"217\" style=\"border-top: none; border-left: none; width: 163pt;\">Luz LED<span style=\"mso-spacerun: yes;\">                                                  </span>Bocina Bluetooth<span style=\"mso-spacerun: yes;\">                               </span>Humo, con recipiente para agua<span style=\"mso-spacerun: yes;\">             </span>Soporte de APP (control música y luces)</td>\n</tr>\n</tbody>\n</table>\n<h3><strong>Ecología y sostenibilidad</strong></h3>\n<p>Al ser eléctricas, nuestras motos no emiten gases nocivos ni ruidos molestos, lo que las convierte en una opción respetuosa con el medio ambiente y perfecta para jugar en interiores y exteriores.</p>\n<h3><strong>Diversión sin límites</strong></h3>\n<p>Ya sea en el jardín de casa, en el parque o en un circuito especializado, nuestros modelos ofrecen emocionantes momentos de diversión y aventura para los pequeños pilotos.<br></p>\n<p> </p>",
+      "source": "https://kuborbikes.com/products/moto-electrica-infantil-hypergogo-cruiser-12-pro",
+      "options": [
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            "Naranja",
+            "Negro"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "id": 52572529525058,
+          "src": "preview/assets/product-4-52572529525058.jpg",
+          "width": 1000,
+          "height": 1000,
+          "alt": "Moto Eléctrica Infantil Hyper Gogo Cruiser 12 Pro",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/CRICER12PLUSNARANJA1.png?v=1781216307"
+        },
+        {
+          "id": 52572525265218,
+          "src": "preview/assets/product-4-52572525265218.jpg",
+          "width": 1000,
+          "height": 1000,
+          "alt": "Moto Eléctrica Infantil Hyper Gogo Cruiser 12 Pro",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/CRICER12PLUSVERDE1.png?v=1781216166"
+        },
+        {
+          "id": 44050109366594,
+          "src": "preview/assets/product-4-44050109366594.jpg",
+          "width": 1000,
+          "height": 1000,
+          "alt": "Moto Eléctrica Infantil Hyper Gogo Cruiser 12 Pro",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/CRUSSIER12PLUSCONAPPNEGRO3.jpg?v=1708623789"
+        }
+      ],
+      "variants": [
+        {
+          "id": 500,
+          "title": "Naranja",
+          "price": 871900,
+          "compare_at_price": 1245571,
+          "available": true,
+          "source_available": false,
+          "options": [
+            "Naranja"
+          ],
+          "featured_media": {
+            "id": 52572529525058,
+            "src": "preview/assets/product-4-52572529525058.jpg",
+            "width": 1000,
+            "height": 1000,
+            "alt": "Moto Eléctrica Infantil Hyper Gogo Cruiser 12 Pro",
+            "media_type": "image",
+            "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/CRICER12PLUSNARANJA1.png?v=1781216307"
+          }
+        },
+        {
+          "id": 501,
+          "title": "Negro",
+          "price": 871900,
+          "compare_at_price": 1245571,
+          "available": false,
+          "source_available": true,
+          "options": [
+            "Negro"
+          ],
+          "featured_media": {
+            "id": 44050109366594,
+            "src": "preview/assets/product-4-44050109366594.jpg",
+            "width": 1000,
+            "height": 1000,
+            "alt": "Moto Eléctrica Infantil Hyper Gogo Cruiser 12 Pro",
+            "media_type": "image",
+            "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/CRUSSIER12PLUSCONAPPNEGRO3.jpg?v=1708623789"
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "handle": "moto-electrica-infantil-hypergogo-pioneer-12-plus",
+      "title": "Moto Eléctrica Infantil Hyper Gogo Pioneer 12 Plus",
+      "vendor": "HYPERGOGO",
+      "type": "Movilidad eléctrica",
+      "description": "<p>¡Descubre la emoción de la velocidad de una manera segura y ecológica con nuestras motos eléctricas para niños!</p>\n<p>En HyperGogo, estamos comprometidos con la diversión y la seguridad de tus pequeños aventureros, por eso hemos creado una línea de motos eléctricas especialmente diseñadas para niños. Permite a los niños explorar el mundo que los rodea mientras aprenden sobre la importancia de la sostenibilidad y el cuidado del medio ambiente.</p>\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"239\" style=\"border-collapse: collapse; width: 294px;\" height=\"420\">\n<colgroup> <col width=\"80\" style=\"width: 107.5px;\"> <col width=\"159\" style=\"width: 185.5px;\"> </colgroup>\n<tbody>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td colspan=\"2\" height=\"21\" class=\"xl65\" width=\"239\" style=\"height: 16.0pt; width: 179pt;\">DETALLES</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" style=\"height: 16.0pt; border-top: none;\">Tipo</td>\n<td class=\"xl66\" style=\"border-top: none; border-left: none;\">Infantil</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" style=\"height: 16.0pt; border-top: none;\">Genero<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl66\" style=\"border-top: none; border-left: none;\">Unisex</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" style=\"height: 16.0pt; border-top: none;\">Rodada</td>\n<td class=\"xl66\" style=\"border-top: none; border-left: none;\">12</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" style=\"height: 16.0pt; border-top: none;\">Edad Sugerida<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl67\" style=\"border-top: none; border-left: none;\">6 a 11 años</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" style=\"height: 16.0pt; border-top: none;\">Peso Tolerado Sugerido<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl67\" style=\"border-top: none; border-left: none;\">50 kg<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" style=\"height: 16.0pt; border-top: none;\">Llanta<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl66\" style=\"border-top: none; border-left: none;\">12\"x 3.0<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" style=\"height: 16.0pt; border-top: none;\">Marco<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl66\" style=\"border-top: none; border-left: none;\">Acero de alta resisitencia</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" style=\"height: 16.0pt; border-top: none;\">Batería<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl66\" style=\"border-top: none; border-left: none;\">Iones de litio 21,9 V 5,2 A</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" style=\"height: 16.0pt; border-top: none;\">Cargador</td>\n<td class=\"xl66\" style=\"border-top: none; border-left: none;\">DC24V 1.5A</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" style=\"height: 16.0pt; border-top: none;\">Motor</td>\n<td class=\"xl66\" style=\"border-top: none; border-left: none;\">24V 160W</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" style=\"height: 16.0pt; border-top: none;\">Velocidades</td>\n<td class=\"xl66\" style=\"border-top: none; border-left: none;\">3 Niveles<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" style=\"height: 16.0pt; border-top: none;\">Velocidad<span style=\"mso-spacerun: yes;\"> </span>\n</td>\n<td class=\"xl66\" style=\"border-top: none; border-left: none;\">Max. De hasta 16 km/h</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" style=\"height: 16.0pt; border-top: none;\">Freno</td>\n<td class=\"xl66\" style=\"border-top: none; border-left: none;\">Buje trasero</td>\n</tr>\n<tr height=\"21\" style=\"height: 16.0pt;\">\n<td height=\"21\" class=\"xl66\" style=\"height: 16.0pt; border-top: none;\">Accesorios</td>\n<td class=\"xl66\" style=\"border-top: none; border-left: none;\">Luz LED<span style=\"mso-spacerun: yes;\">                         </span>Bocina Bluetooth<span style=\"mso-spacerun: yes;\">              </span>Humo, con recipiente para agua</td>\n</tr>\n</tbody>\n</table>\n<h3> </h3>\n<h3><strong style=\"font-size: 0.875rem;\">Ecología y sostenibilidad</strong></h3>\n<p>Al ser eléctricas, nuestras motos no emiten gases nocivos ni ruidos molestos, lo que las convierte en una opción respetuosa con el medio ambiente y perfecta para jugar en interiores y exteriores.</p>\n<h3><strong>Diversión sin límites</strong></h3>\n<p>Ya sea en el jardín de casa, en el parque o en un circuito especializado, nuestros modelos ofrecen emocionantes momentos de diversión y aventura para los pequeños pilotos.<br></p>",
+      "source": "https://kuborbikes.com/products/moto-electrica-infantil-hypergogo-pioneer-12-plus",
+      "options": [
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            "Naranja",
+            "Azul Petroleo"
+          ]
+        }
+      ],
+      "media": [
+        {
+          "id": 44050214191426,
+          "src": "preview/assets/product-5-44050214191426.jpg",
+          "width": 1000,
+          "height": 1000,
+          "alt": "Moto Eléctrica Infantil Hyper Gogo Pioneer 12 Plus",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/PIONEER12PLUSNARANJA2.jpg?v=1708630968"
+        },
+        {
+          "id": 52572718399810,
+          "src": "preview/assets/product-5-52572718399810.jpg",
+          "width": 4000,
+          "height": 4000,
+          "alt": "Moto Eléctrica Infantil Hyper Gogo Pioneer 12 Plus",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/MB-05.403.png?v=1781219239"
+        },
+        {
+          "id": 44050208751938,
+          "src": "preview/assets/product-5-44050208751938.jpg",
+          "width": 1000,
+          "height": 1000,
+          "alt": "Moto Eléctrica Infantil Hyper Gogo Pioneer 12 Plus",
+          "media_type": "image",
+          "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/PIONEER12PLUSAZUL3.jpg?v=1707334050"
+        }
+      ],
+      "variants": [
+        {
+          "id": 600,
+          "title": "Naranja",
+          "price": 794900,
+          "compare_at_price": 1135571,
+          "available": true,
+          "source_available": false,
+          "options": [
+            "Naranja"
+          ],
+          "featured_media": {
+            "id": 44050214191426,
+            "src": "preview/assets/product-5-44050214191426.jpg",
+            "width": 1000,
+            "height": 1000,
+            "alt": "Moto Eléctrica Infantil Hyper Gogo Pioneer 12 Plus",
+            "media_type": "image",
+            "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/PIONEER12PLUSNARANJA2.jpg?v=1708630968"
+          }
+        },
+        {
+          "id": 601,
+          "title": "Azul Petroleo",
+          "price": 794900,
+          "compare_at_price": 1135571,
+          "available": false,
+          "source_available": true,
+          "options": [
+            "Azul Petroleo"
+          ],
+          "featured_media": {
+            "id": 44050208751938,
+            "src": "preview/assets/product-5-44050208751938.jpg",
+            "width": 1000,
+            "height": 1000,
+            "alt": "Moto Eléctrica Infantil Hyper Gogo Pioneer 12 Plus",
+            "media_type": "image",
+            "source": "https://cdn.shopify.com/s/files/1/0672/3348/1026/files/PIONEER12PLUSAZUL3.jpg?v=1707334050"
+          }
+        }
+      ]
+    }
+  ]
+}

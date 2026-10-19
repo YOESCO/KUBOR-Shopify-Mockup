@@ -1,0 +1,41 @@
+{
+  "type": "footer",
+  "name": "Pie de página",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {},
+      "blocks": {
+        "shop": {
+          "type": "menu",
+          "settings": {
+            "title": "Explora",
+            "menu": "footer-shop"
+          }
+        },
+        "support": {
+          "type": "menu",
+          "settings": {
+            "title": "Te ayudamos",
+            "menu": "footer-support"
+          }
+        },
+        "brand": {
+          "type": "menu",
+          "settings": {
+            "title": "Universo KUBOR",
+            "menu": "footer-brand"
+          }
+        }
+      },
+      "block_order": [
+        "shop",
+        "support",
+        "brand"
+      ]
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

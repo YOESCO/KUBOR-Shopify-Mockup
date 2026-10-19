@@ -1,0 +1,16 @@
+<section class="collection-hero"><div class="container"><nav class="breadcrumbs" aria-label="{{ 'general.breadcrumbs' | t }}"><a href="{{ routes.root_url }}">{{ 'general.home' | t }}</a><span>/</span><span>{{ collection.title | escape }}</span></nav><p class="eyebrow">{{ 'collection.eyebrow' | t }}</p><h1>{{ collection.title | escape }}</h1>{% if collection.description != blank %}<div class="rte">{{ collection.description }}</div>{% endif %}</div></section>
+<section class="container section">
+<div class="collection-toolbar"><p>{{ 'collection.count' | t: count: collection.products_count }}</p><a class="text-link" href="#CollectionFilters">{{ 'collection.filter_sort' | t }} ↓</a></div>
+<div class="collection-layout">
+<details class="filter-panel" id="CollectionFilters" open><summary>{{ 'collection.filter_sort' | t }}</summary>{% render 'facets', results: collection, form_id: 'CollectionFilterForm' %}</details>
+<div>
+<div class="active-filters">{% for filter in collection.filters %}{% for value in filter.active_values %}<a href="{{ value.url_to_remove }}">{{ filter.label | escape }}: {{ value.label | escape }} <span aria-hidden="true">×</span><span class="sr-only">{{ 'cart.remove' | t }}</span></a>{% endfor %}{% if filter.type == 'price_range' %}{% if filter.min_value.value or filter.max_value.value %}<a href="{{ filter.url_to_remove }}">{{ filter.label | escape }} <span aria-hidden="true">×</span><span class="sr-only">{{ 'cart.remove' | t }}</span></a>{% endif %}{% endif %}{% endfor %}</div>
+{% paginate collection.products by section.settings.page_size %}
+<div class="product-grid">{% for product in collection.products %}{% assign eager = false %}{% if forloop.index <= 4 %}{% assign eager = true %}{% endif %}{% render 'card-product', product: product, eager: eager %}{% else %}<div class="empty-state"><h2>{{ 'collection.empty' | t }}</h2><p>{{ 'collection.empty_hint' | t }}</p><a class="button" href="{{ collection.url }}">{{ 'collection.clear' | t }}</a></div>{% endfor %}</div>
+{% if paginate.pages > 1 %}<nav class="pagination" aria-label="{{ 'general.pagination' | t }}">{{ paginate | default_pagination }}</nav>{% endif %}
+{% endpaginate %}
+</div></div></section>
+{% schema %}
+{"name":"Colección","settings":[{"type":"range","id":"page_size","label":"Productos por página","min":8,"max":32,"step":4,"default":16}]}
+{% endschema %}
+

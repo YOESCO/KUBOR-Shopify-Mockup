@@ -1,0 +1,22 @@
+{% doc %}
+Renders a catalog product without inferring its variant.
+@param {product} product - Product
+@param {boolean} [eager] - Eager image loading
+{% enddoc %}
+{% assign loading = 'lazy' %}{% if eager %}{% assign loading = 'eager' %}{% endif %}
+<article class="product-card">
+<a class="product-card__media" href="{{ product.url }}" aria-label="{{ product.title | escape }}">
+{% if product.featured_image %}
+{{ product.featured_image | image_url: width: 800 | image_tag: loading: loading, alt: product.title, widths: '320,480,640,800', sizes: '(min-width: 1000px) 25vw, (min-width: 600px) 33vw, 90vw' }}
+{% else %}{{ 'product-1' | placeholder_svg_tag: 'placeholder' }}{% endif %}
+{% unless product.available %}<span class="badge">{{ 'product.sold_out' | t }}</span>{% else %}{% if product.compare_at_price > product.price %}<span class="badge">{{ 'product.sale' | t }}</span>{% endif %}{% endunless %}
+<span class="card-arrow">{% render 'icon', name: 'arrow' %}</span>
+</a>
+<div class="product-card__body">
+<p class="eyebrow muted">{{ product.vendor | escape }}{% if product.type != blank %} / {{ product.type | escape }}{% endif %}</p>
+<h3><a href="{{ product.url }}">{{ product.title | escape }}</a></h3>
+{% render 'price', product: product %}
+<a class="text-link" href="{{ product.url }}">{{ 'product.view' | t }} <span aria-hidden="true">↗</span></a>
+</div>
+</article>
+

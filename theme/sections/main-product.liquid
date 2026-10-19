@@ -1,0 +1,56 @@
+{% assign selected_variant = product.selected_or_first_available_variant %}
+<section class="container section product-section" data-product-section data-section-id="{{ section.id }}" data-product-url="{{ product.url }}" data-variant-id="{{ selected_variant.id }}">
+<nav class="breadcrumbs" aria-label="{{ 'general.breadcrumbs' | t }}"><a href="{{ routes.root_url }}">{{ 'general.home' | t }}</a><span>/</span><a href="{{ routes.all_products_collection_url }}">{{ 'general.bikes' | t }}</a><span>/</span><span>{{ product.title | escape }}</span></nav>
+<div class="product-layout">
+<div class="product-gallery">
+{% assign active_media = selected_variant.featured_media | default: product.featured_media %}
+{% if active_media %}<div class="product-gallery__main">
+{% if active_media.media_type == 'image' %}<a href="{{ active_media | image_url: width: 2400 }}" data-open-dialog="Zoom-{{ section.id }}" aria-label="{{ 'product.zoom' | t }}">{{ active_media | image_url: width: 1400 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '600,900,1100,1400', sizes: '(min-width: 900px) 58vw, 100vw' }}</a>
+{% else %}{{ active_media | media_tag: image_size: '1400x', controls: true, preload: 'none' }}{% endif %}
+</div>{% else %}{{ 'product-1' | placeholder_svg_tag: 'placeholder product-gallery__main' }}{% endif %}
+<div class="product-gallery__grid">{% for media in product.media %}{% unless media.id == active_media.id %}<div>{% if media.media_type == 'image' %}<a href="{{ media | image_url: width: 2400 }}" target="_blank" rel="noopener" aria-label="{{ 'product.zoom' | t }}">{{ media | image_url: width: 700 | image_tag: loading: 'lazy', widths: '350,500,700', sizes: '(min-width: 900px) 28vw, 50vw' }}</a>{% else %}{{ media | media_tag: image_size: '700x', controls: true, preload: 'none' }}{% endif %}</div>{% endunless %}{% endfor %}</div>
+{% if active_media.media_type == 'image' %}<dialog class="zoom-dialog" id="Zoom-{{ section.id }}" aria-label="{{ 'product.zoom' | t }}"><button type="button" class="icon-button" data-close-dialog aria-label="{{ 'general.close' | t }}">{% render 'icon', name: 'close' %}</button>{{ active_media | image_url: width: 2400 | image_tag: loading: 'lazy', widths: '900,1400,2000,2400', sizes: '90vw' }}</dialog>{% endif %}
+</div>
+<div class="buybox">
+<p class="eyebrow">{{ product.vendor | escape }} / {{ product.type | escape }}</p><h1>{{ product.title | escape }}</h1>
+<p class="product-intro">{{ product.description | strip_html | truncate: 180 }}</p>
+{% render 'price', product: product, variant: selected_variant %}
+<p class="muted">{{ 'product.tax_shipping' | t }}</p>
+{% unless product.has_only_default_variant %}
+<form action="{{ product.url }}" method="get" class="variant-picker" data-variant-form>
+{% for option in product.options_with_values %}
+<fieldset><legend>{{ option.name | escape }}</legend><div class="option-values">
+{% for value in option.values %}
+<label class="option-value{% unless value.available %} option-value--unavailable{% endunless %}">
+<input type="radio" name="option-{{ option.position }}" value="{{ value.id }}" data-option-value data-product-url="{{ value.product_url }}" {% if value.selected %}checked{% endif %}>
+<span>{{ value | escape }}{% unless value.available %}<span class="sr-only"> — {{ 'product.unavailable' | t }}</span>{% endunless %}</span>
+</label>
+{% endfor %}</div></fieldset>
+{% endfor %}
+</form>
+<noscript><form method="get" action="{{ product.url }}"><label for="VariantFallback">{{ 'product.variant' | t }}</label><select id="VariantFallback" name="variant">{% for variant in product.variants %}<option value="{{ variant.id }}"{% if variant.id == selected_variant.id %} selected{% endif %}>{{ variant.title | escape }} — {{ variant.price | money }}{% unless variant.available %} — {{ 'product.sold_out' | t }}{% endunless %}</option>{% endfor %}</select><button type="submit" class="button">{{ 'general.apply' | t }}</button></form></noscript>
+{% endunless %}
+{% if section.settings.size_guide != blank %}<a class="text-link size-guide-link" href="{{ section.settings.size_guide.url }}">{{ 'product.size_guide' | t }} ↗</a>{% endif %}
+<div class="availability" role="status">{% if selected_variant == blank %}{{ 'product.unavailable' | t }}{% elsif selected_variant.available %}<span class="status-dot"></span>{{ 'product.available' | t }}{% else %}{{ 'product.sold_out' | t }}{% endif %}</div>
+{% assign product_form_id = 'ProductForm-' | append: section.id %}
+{% form 'product', product, id: product_form_id, class: 'product-form', data-product-form: '' %}
+<input type="hidden" name="id" value="{{ selected_variant.id }}"{% unless selected_variant.available %} disabled{% endunless %}>
+<label for="Quantity-{{ section.id }}">{{ 'product.quantity' | t }}</label>
+<input id="Quantity-{{ section.id }}" name="quantity" type="number" min="{{ selected_variant.quantity_rule.min | default: 1 }}" step="{{ selected_variant.quantity_rule.increment | default: 1 }}"{% if selected_variant.quantity_rule.max %} max="{{ selected_variant.quantity_rule.max }}"{% endif %} value="{{ selected_variant.quantity_rule.min | default: 1 }}" inputmode="numeric">
+<div class="product-purchase"><button class="button" type="submit" name="add"{% unless selected_variant.available %} disabled{% endunless %}>{% if selected_variant == blank %}{{ 'product.unavailable' | t }}{% elsif selected_variant.available %}{{ 'product.add' | t }}{% else %}{{ 'product.sold_out' | t }}{% endif %}{% render 'icon', name: 'bag' %}</button></div>
+{% if section.settings.dynamic_checkout and selected_variant.available %}{{ form | payment_button }}{% endif %}
+<p class="form-error" data-product-error role="alert"></p>
+{% endform %}
+<div class="product-accordions">
+{% if product.description != blank %}<details><summary>{{ 'product.description' | t }}</summary><div class="rte">{{ product.description }}</div></details>{% endif %}
+{% for block in section.blocks %}{% case block.type %}{% when '@app' %}{% render block %}{% when 'information' %}<details {{ block.shopify_attributes }}><summary>{{ block.settings.heading | escape }}</summary><div class="rte">{{ block.settings.content }}{{ block.settings.page.content }}</div></details>{% endcase %}{% endfor %}
+{% if shop.shipping_policy != blank %}<details><summary>{{ 'product.shipping' | t }}</summary><div class="rte">{{ shop.shipping_policy.body }}</div></details>{% endif %}
+{% if shop.refund_policy != blank %}<details><summary>{{ 'product.returns' | t }}</summary><div class="rte">{{ shop.refund_policy.body }}</div></details>{% endif %}
+</div>
+</div></div>
+<script type="application/ld+json">{{ product | structured_data }}</script>
+</section>
+{% schema %}
+{"name":"Producto","settings":[{"type":"page","id":"size_guide","label":"Guía de tallas"},{"type":"checkbox","id":"dynamic_checkout","label":"Checkout acelerado","default":true}],"blocks":[{"type":"@app"},{"type":"information","name":"Información del producto","settings":[{"type":"text","id":"heading","label":"Título","default":"Especificaciones"},{"type":"richtext","id":"content","label":"Contenido (admite fuentes dinámicas)"},{"type":"page","id":"page","label":"Página de contenido"}]}]}
+{% endschema %}
+

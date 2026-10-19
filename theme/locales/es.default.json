@@ -1,0 +1,121 @@
+{
+  "general": {
+    "skip": "Saltar al contenido",
+    "close": "Cerrar",
+    "navigation": "Navegación principal",
+    "mobile_navigation": "Navegación móvil",
+    "account": "Mi cuenta",
+    "menu": "Abrir menú",
+    "explore": "Explorar",
+    "see_all": "Ver todo",
+    "bikes": "Bicicletas",
+    "collections": "Colecciones",
+    "home": "Inicio",
+    "breadcrumbs": "Ruta de navegación",
+    "apply": "Aplicar",
+    "pagination": "Paginación",
+    "read": "Leer historia",
+    "select_collection": "Selecciona una colección en el editor.",
+    "error": "No pudimos completar la acción. Intenta de nuevo o recarga la página.",
+    "loading": "Cargando…",
+    "not_found": "Este camino no existe.",
+    "not_found_hint": "Prueba con otra ruta. Tu próxima bicicleta puede estar más cerca de lo que crees."
+  },
+  "product": {
+    "from": "Desde",
+    "regular_price": "Precio habitual",
+    "view": "Conocer modelo",
+    "sale": "Oferta",
+    "sold_out": "Agotado",
+    "quantity": "Cantidad",
+    "add": "Agregar al carrito",
+    "available": "Disponible",
+    "unavailable": "Combinación no disponible",
+    "variant": "Color y talla",
+    "size_guide": "Consulta tu talla",
+    "zoom": "Ampliar imagen",
+    "tax_shipping": "Impuestos y envío calculados al finalizar la compra.",
+    "description": "Conoce el modelo",
+    "shipping": "Envío",
+    "returns": "Cambios y devoluciones"
+  },
+  "cart": {
+    "title": "Tu carrito",
+    "selection": "TU PRÓXIMA AVENTURA",
+    "empty": "Aún hay camino por elegir.",
+    "empty_hint": "Explora nuestras bicicletas y encuentra la próxima compañera de ruta.",
+    "continue": "Seguir explorando",
+    "view": "Ver carrito completo",
+    "remove": "Eliminar",
+    "increase": "Aumentar cantidad",
+    "decrease": "Disminuir cantidad",
+    "subtotal": "Subtotal",
+    "shipping_note": "Envío, impuestos y descuentos se confirman al finalizar la compra.",
+    "note": "Nota del pedido (opcional)",
+    "update": "Actualizar carrito",
+    "checkout": "Finalizar compra",
+    "added": "Producto agregado al carrito.",
+    "updated": "Carrito actualizado."
+  },
+  "search": {
+    "title": "¿Qué estás buscando?",
+    "eyebrow": "ENCUENTRA TU CAMINO",
+    "label": "Buscar bicicletas, accesorios y guías",
+    "submit": "Buscar",
+    "products": "Productos",
+    "see_all": "Ver todos los resultados",
+    "count": "{{ count }} resultados para «{{ terms }}»",
+    "empty": "No encontramos coincidencias.",
+    "empty_hint": "Prueba con el nombre de un modelo o una disciplina."
+  },
+  "collection": {
+    "sort": "Ordenar por",
+    "min": "Desde",
+    "max": "Hasta",
+    "clear": "Limpiar filtros",
+    "filter_sort": "Filtrar y ordenar",
+    "eyebrow": "TU TERRENO. TU RITMO.",
+    "count": "{{ count }} productos",
+    "empty": "No hay modelos con estos filtros.",
+    "empty_hint": "Prueba con otra selección para encontrar tu próxima bicicleta."
+  },
+  "footer": {
+    "community": "COMUNIDAD",
+    "email": "Correo electrónico",
+    "subscribe": "Suscribirme",
+    "consent": "Quiero recibir novedades de KUBOR.",
+    "privacy": "política de privacidad",
+    "success": "Gracias. Recibimos tu suscripción.",
+    "country": "País / moneda",
+    "language": "Idioma"
+  },
+  "contact": {
+    "name": "Nombre",
+    "topic": "¿En qué podemos ayudarte?",
+    "buying": "Elegir mi bicicleta",
+    "order": "Mi pedido",
+    "support": "Soporte y garantía",
+    "message": "Tu mensaje",
+    "consent": "Autorizo el uso de mis datos para atender esta consulta.",
+    "send": "Enviar mensaje",
+    "success": "Recibimos tu mensaje. Nuestro equipo te contactará por correo.",
+    "more_help": "Hablar con KUBOR"
+  },
+  "blog": {
+    "eyebrow": "HISTORIAS PARA SEGUIR RODANDO",
+    "categories": "Categorías del Journal",
+    "empty": "Las próximas historias llegarán pronto."
+  },
+  "password": {
+    "eyebrow": "NOS VEMOS EN EL CAMINO",
+    "label": "Contraseña de la tienda",
+    "enter": "Entrar"
+  },
+  "gift": {
+    "title": "Una nueva aventura, de regalo.",
+    "code": "Usa este código al finalizar tu compra:",
+    "unavailable": "Esta tarjeta no está disponible.",
+    "expires": "Válida hasta",
+    "wallet": "Agregar a Apple Wallet"
+  }
+}

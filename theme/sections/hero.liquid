@@ -1,0 +1,17 @@
+<section class="hero{% if section.settings.gradient %} hero--gradient{% endif %}">
+<div class="hero__media">
+{% if section.settings.image != blank %}
+<picture>{% if section.settings.mobile_image != blank %}<source media="(max-width: 700px)" srcset="{{ section.settings.mobile_image | image_url: width: 900 }}">{% endif %}{{ section.settings.image | image_url: width: 2200 | image_tag: loading: 'eager', fetchpriority: 'high', widths: '750,1100,1500,1800,2200', sizes: '100vw' }}</picture>
+{% elsif section.settings.use_editorial_image %}<img src="{{ 'ride-editorial.jpg' | asset_url }}" width="1920" height="1280" alt="" fetchpriority="high">{% endif %}
+</div>
+<div class="container hero__content"><p class="eyebrow">{{ section.settings.eyebrow | escape }}</p>
+<h1{% if section.settings.gradient %} class="gradient-text"{% endif %}>{{ section.settings.heading | escape | newline_to_br }}</h1>
+<p class="hero__description">{{ section.settings.text | escape }}</p>
+<div class="button-row">{% if section.settings.button_label != blank %}<a class="button" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }} {% render 'icon', name: 'arrow' %}</a>{% endif %}{% if section.settings.secondary_label != blank and section.settings.secondary_link != blank %}<a class="button button--outline" href="{{ section.settings.secondary_link }}">{{ section.settings.secondary_label | escape }}</a>{% endif %}</div>
+<div class="hero__caption"><span>{{ section.settings.caption | escape }}</span><span aria-hidden="true">↓</span></div>
+</div>
+</section>
+{% schema %}
+{"name":"Hero editorial","settings":[{"type":"text","id":"eyebrow","label":"Antetítulo","default":"KUBOR / RIDE BEYOND"},{"type":"textarea","id":"heading","label":"Título","default":"EL CAMINO\nLO HACES TÚ."},{"type":"textarea","id":"text","label":"Descripción","default":"De tu primera rodada a tu próxima aventura. Encuentra una bicicleta que siga tu ritmo."},{"type":"image_picker","id":"image","label":"Imagen de escritorio"},{"type":"image_picker","id":"mobile_image","label":"Imagen móvil"},{"type":"checkbox","id":"use_editorial_image","label":"Usar fotografía editorial incluida","default":true},{"type":"checkbox","id":"gradient","label":"Degradado HYPERGOGO","default":false},{"type":"text","id":"button_label","label":"Botón principal","default":"Explorar bicicletas"},{"type":"url","id":"button_link","label":"Destino principal"},{"type":"text","id":"secondary_label","label":"Botón secundario","default":"Encuentra tu estilo"},{"type":"url","id":"secondary_link","label":"Destino secundario"},{"type":"text","id":"caption","label":"Texto inferior","default":"MENOS RUTINA. MÁS CAMINO."}],"presets":[{"name":"Hero editorial"}]}
+{% endschema %}
+
